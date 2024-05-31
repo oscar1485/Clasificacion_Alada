@@ -23,6 +23,9 @@ names = ['CATHARTES AURA', 'COEREBA FLAVEOLA', 'COLUMBA LIVIA', 'CORAGYPS ATRATU
 # Definimos una instancia de Flask
 app = Flask(__name__)
 
+# Configurar la versión de Bun
+os.environ["BUN_VERSION"] = "1.1.0"
+
 # Path del modelo preentrenado
 MODEL_PATH = 'models/optimizado.keras'
 
@@ -71,7 +74,10 @@ def upload():
         return result
     return None
 
-
 if __name__ == '__main__':
-    app.run(debug=False, threaded=False, port=int(os.environ.get('PORT', 5000))
+    # En lugar de usar el puerto 5000, utiliza el definido por la variable de entorno PORT
+    port = int(os.environ.get('PORT', 5000))
+    app.run(debug=False, threaded=False, host='http://127.0.0.1', port=port)
+
+
 

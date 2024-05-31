@@ -73,5 +73,5 @@ def upload():
 
 
 if __name__ == '__main__':
-    app.run(debug=False, threaded=False)
+    app.run(debug=False, threaded=False, port=int(os.environ.get('PORT', 5000))
 

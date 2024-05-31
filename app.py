@@ -32,7 +32,7 @@ MODEL_PATH = 'models/optimizado.keras'
 # Cargamos el modelo preentrenado
 model = load_model(MODEL_PATH)
 
-print('Modelo cargado exitosamente. Verificar https://clasificacion-alada.onrender.com:5000/')
+print('Modelo cargado exitosamente. Verificar http://44.226.145.213:5000/')
 
 # Realizamos la predicción usando la imagen cargada y el modelo
 def model_predict(img_path, model):
@@ -77,7 +77,7 @@ def upload():
 if __name__ == '__main__':
     # En lugar de usar el puerto 5000, utiliza el definido por la variable de entorno PORT
     port = int(os.environ.get('PORT', 5000))
-    app.run(debug=False, threaded=False, host='https://clasificacion-alada.onrender.com', port=port)
+    app.run(debug=False, threaded=False, host='44.226.145.213', port=port)
 
 
 

@@ -11,73 +11,72 @@ from werkzeug.utils import secure_filename
 import os
 import numpy as np
 import cv2
+from dotenv import load_dotenv
 
+def crear_app():
+    width_shape = 224
+    height_shape = 224
 
-width_shape = 224
-height_shape = 224
+    names = ['CATHARTES AURA', 'COEREBA FLAVEOLA', 'COLUMBA LIVIA', 'CORAGYPS ATRATUS','CROTOPHAGA SULCIROSTRIS', 'CYANOCORAX YNCAS',
+            'EGRETTA THULA', 'FALCO PEREGRINUS','FALCO SPARVERIUS', 'HIRUNDO RUSTICA', 'PANDION HALIAETUS', 'PILHERODIUS PILEATUS',
+            'PITANGUS SULPHURATUS','PYRRHOMYIAS CINNAMOMEUS', 'RYNCHOPS NIGER', 'SETOPHAGA FUSCA','SYNALLAXIS AZARAE', 'TYRANNUS MELANCHOLICUS']
 
-names = ['CATHARTES AURA', 'COEREBA FLAVEOLA', 'COLUMBA LIVIA', 'CORAGYPS ATRATUS','CROTOPHAGA SULCIROSTRIS', 'CYANOCORAX YNCAS',
-         'EGRETTA THULA', 'FALCO PEREGRINUS','FALCO SPARVERIUS', 'HIRUNDO RUSTICA', 'PANDION HALIAETUS', 'PILHERODIUS PILEATUS',
-          'PITANGUS SULPHURATUS','PYRRHOMYIAS CINNAMOMEUS', 'RYNCHOPS NIGER', 'SETOPHAGA FUSCA','SYNALLAXIS AZARAE', 'TYRANNUS MELANCHOLICUS']
+    # Definimos una instancia de Flask
+    app = Flask(__name__)
 
-# Definimos una instancia de Flask
-app = Flask(__name__)
+    # Configurar la versión de Bun
+    os.environ["BUN_VERSION"] = "1.1.0"
 
-# Configurar la versión de Bun
-os.environ["BUN_VERSION"] = "1.1.0"
+    # Path del modelo preentrenado
+    MODEL_PATH = 'models/optimizado.keras'
 
-# Path del modelo preentrenado
-MODEL_PATH = 'models/optimizado.keras'
+    # Cargamos el modelo preentrenado
+    model = load_model(MODEL_PATH)
 
-# Cargamos el modelo preentrenado
-model = load_model(MODEL_PATH)
+    print('Modelo cargado exitosamente. Verificar http://127.0.0.1:5000/')
 
-print('Modelo cargado exitosamente. Verificar http://44.226.145.213:5000/')
+    # Realizamos la predicción usando la imagen cargada y el modelo
+    def model_predict(img_path, model):
 
-# Realizamos la predicción usando la imagen cargada y el modelo
-def model_predict(img_path, model):
-
-    img=cv2.resize(cv2.imread(img_path), (width_shape, height_shape), interpolation = cv2.INTER_AREA)
-    x=np.asarray(img)
-    x=preprocess_input(x)
-    x = np.expand_dims(x,axis=0)
-    
-    preds = model.predict(x)
-    return preds
-
-
-@app.route('/', methods=['GET'])
-def index():
-    # Página principal
-    return render_template('index.html')
-
-
-@app.route('/predict', methods=['GET', 'POST'])
-def upload():
-    if request.method == 'POST':
-        # Obtiene el archivo del request
-        f = request.files['file']
-
-        # Graba el archivo en ./uploads
-        basepath = os.path.dirname(__file__)
-        file_path = os.path.join(
-            basepath, 'uploads', secure_filename(f.filename))
-        f.save(file_path)
-
-        # Predicción
-        preds = model_predict(file_path, model)
-
-        print('PREDICCIÓN', names[np.argmax(preds)])
+        img=cv2.resize(cv2.imread(img_path), (width_shape, height_shape), interpolation = cv2.INTER_AREA)
+        x=np.asarray(img)
+        x=preprocess_input(x)
+        x = np.expand_dims(x,axis=0)
         
-        # Enviamos el resultado de la predicción
-        result = str(names[np.argmax(preds)])              
-        return result
-    return None
+        preds = model.predict(x)
+        return preds
 
+
+    @app.route('/', methods=['GET'])
+    def index():
+        # Página principal
+        return render_template('index.html')
+
+
+    @app.route('/predict', methods=['GET', 'POST'])
+    def upload():
+        if request.method == 'POST':
+            # Obtiene el archivo del request
+            f = request.files['file']
+
+            # Graba el archivo en ./uploads
+            basepath = os.path.dirname(__file__)
+            file_path = os.path.join(
+                basepath, 'uploads', secure_filename(f.filename))
+            f.save(file_path)
+
+            # Predicción
+            preds = model_predict(file_path, model)
+
+            print('PREDICCIÓN', names[np.argmax(preds)])
+            
+            # Enviamos el resultado de la predicción
+            result = str(names[np.argmax(preds)])              
+            return result
+        return None
+    return app
 if __name__ == '__main__':
-    # En lugar de usar el puerto 5000, utiliza el definido por la variable de entorno PORT
-    port = int(os.environ.get('PORT', 5000))
-    app.run(debug=False, threaded=False, host='44.226.145.213', port=port)
-
+    app=crear_app()
+    app.run()
 
 

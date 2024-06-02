@@ -56,3 +56,23 @@ function readURL(input) {
         reader.readAsDataURL(input.files[0]);
     }
 }
+
+function scrollToSection(sectionId) {
+    var section = document.getElementById(sectionId);
+    if (section) {
+        section.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+}
+
+// Función para desplazarse suavemente al inicio de la página
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// Función para desplazarse suavemente a una sección específica
+function scrollToSection(sectionId) {
+    var section = document.getElementById(sectionId);
+    if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+    }
+}

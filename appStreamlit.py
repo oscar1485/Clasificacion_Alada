@@ -1,5 +1,3 @@
-import cv2
-import tempfile
 from keras.models import load_model
 from keras.applications.imagenet_utils import preprocess_input
 import numpy as np
@@ -10,7 +8,7 @@ from skimage.transform import resize
 # Path del modelo preentrenado
 MODEL_PATH = 'models/optimizado.keras'
 
-# Dimensiones de las imágenes de entrada
+# Dimensiones de las imagenes de entrada    
 width_shape = 224
 height_shape = 224
 
@@ -46,14 +44,14 @@ def main():
     """)
 
     # Menú
-    menu = ["Información del Proyecto", "Realizar Predicciones desde Archivo", "Realizar Predicciones desde Cámara", "Listar Aves Entrenadas"]
+    menu = ["Información del Proyecto", "Realizar Predicciones", "Listar Aves Entrenadas"]
     choice = st.sidebar.selectbox("Selecciona una opción", menu)
 
     # Se carga el modelo
     model = load_model(MODEL_PATH)
 
-    if choice == "Realizar Predicciones desde Archivo":
-        st.subheader("Realizar Predicciones desde Archivo")
+    if choice == "Realizar Predicciones":
+        st.subheader("Realizar Predicciones")
         img_file_buffer = st.file_uploader("Carga una imagen", type=["png", "jpg", "jpeg"])
         
         if img_file_buffer is not None:
@@ -66,37 +64,6 @@ def main():
                 st.success(f'El ave es: {names[np.argmax(predictS)]}')
             else:
                 st.warning("Por favor, carga una imagen primero.")
-    
-    elif choice == "Realizar Predicciones desde Cámara":
-        st.subheader("Realizar Predicciones desde Cámara")
-        
-        # Usar OpenCV para capturar una imagen desde la cámara
-        cap = cv2.VideoCapture(0)
-        stframe = st.empty()
-        
-        while True:
-            ret, frame = cap.read()
-            if not ret:
-                break
-
-            # Mostrar la imagen capturada
-            stframe.image(frame, channels="BGR")
-            
-            # Botón para tomar la foto
-            if st.button("Tomar Foto"):
-                cap.release()
-                cv2.destroyAllWindows()
-                temp_image = tempfile.NamedTemporaryFile(delete=False, suffix='.jpg')
-                cv2.imwrite(temp_image.name, frame)
-                break
-        
-        # Leer la imagen tomada
-        image = np.array(Image.open(temp_image.name))
-        st.image(image, caption="Imagen Tomada", use_column_width=True)
-
-        if st.button("Predicción desde Cámara"):
-            predictS = model_prediction(image, model)
-            st.success(f'El ave es: {names[np.argmax(predictS)]}')
 
     elif choice == "Listar Aves Entrenadas":
         st.subheader("Listar Aves Entrenadas")

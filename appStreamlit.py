@@ -7,7 +7,7 @@ import numpy as np
 
 import streamlit as st
 from PIL import Image
-from skimage.transform import resize
+#from skimage.transform import resize
 
 
 # Path del modelo preentrenado

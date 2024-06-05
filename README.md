@@ -10,29 +10,24 @@ Implementaremos una red neuronal utilizando Keras y TensorFlow, y la ejecutaremo
     $ pip install -r requirements.txt
 
 
-Copiar código
-
-`$ conda create -n APIDeep python=3.7.7 $ conda activate APIDeep $ conda install ipykernel $ python -m ipykernel install --user --name APIDeep --display-name "APIDeep" $ pip install -r requirements.txt`
-
 Asegúrate de tener un archivo `requirements.txt` con las siguientes dependencias:
 
-tensorflow==2.16.1
-tensorflow-intel==2.16.1
-keras==3.1.1
-h5py==3.11.0
-flask==3.0.3
-gunicorn==20.1.0
-streamlit==1.35.0
-opencv-python==4.9.0.80
-opencv-python-headless==4.10.0.82
-scikit-image==0.22.0
-pillow==10.3.0
-numpy==1.26.2
-pandas==2.2.1
-matplotlib==3.8.3
-scipy==1.12.0
-requests==2.31.0
-
+$ tensorflow==2.16.1
+$ tensorflow-intel==2.16.1
+$ keras==3.1.1
+$ h5py==3.11.0
+$ flask==3.0.3
+$ gunicorn==20.1.0
+$ streamlit==1.35.0
+$ opencv-python==4.9.0.80
+$ opencv-python-headless==4.10.0.82
+$ scikit-image==0.22.0
+$ pillow==10.3.0
+$ numpy==1.26.2
+$ pandas==2.2.1
+$ matplotlib==3.8.3
+$ scipy==1.12.0
+$ requests==2.31.0
 
 ## 2. Entrenar la red neuronal
 

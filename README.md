@@ -3,10 +3,12 @@
 Implementaremos una red neuronal utilizando Keras y TensorFlow, y la ejecutaremos en un servicio web con Flask y Streamlit.
 
 ## 1. Preparación del entorno
-
-```         
-bash
-```
+    $ conda create -n TFMaves anaconda python=3.9.19
+    $ conda activate TFMaves
+    $ conda install ipykernel
+    $ python -m ipykernel install --user --name TFMaves --display-name "TFMaves"
+    $ $ pip install -r requirements.txt
+    
 
 Copiar código
 

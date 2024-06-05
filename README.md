@@ -1,4 +1,4 @@
-# API_DeepLearning
+# CLASIFICACIÓN ALADA
 
 Implementaremos una red neuronal utilizando Keras y TensorFlow, y la ejecutaremos en un servicio web con Flask y Streamlit.
 

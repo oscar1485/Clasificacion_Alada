@@ -102,11 +102,17 @@ def main():
             for bird in bird_row:
                 # Agregar imagen, nombre y enlace a Google a cada columna
                 with col1:
-                    st.image(bird["image"], caption=bird["name"], width=100)
+                st.image(bird["image"], caption=bird["name"], width=100)
+                st.write(bird["name"])
+                st.markdown(f"[Buscar en Google](https://www.google.com/search?q={bird['name']})")
                 with col2:
-                    st.write(bird["name"])
+                st.image(bird["image"], caption=bird["name"], width=100)
+                st.write(bird["name"])
+                st.markdown(f"[Buscar en Google](https://www.google.com/search?q={bird['name']})")
                 with col3:
-                    st.markdown(f"[Buscar en Google](https://www.google.com/search?q={bird['name']})")
+                st.image(bird["image"], caption=bird["name"], width=100)
+                st.write(bird["name"])
+                st.markdown(f"[Buscar en Google](https://www.google.com/search?q={bird['name']})")
 
 
 if __name__ == '__main__':

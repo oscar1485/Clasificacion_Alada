@@ -99,20 +99,23 @@ def main():
             # Crear una fila de la tabla
             col1, col2, col3 = st.columns(3)
 
-            for bird in bird_row:
+            for j, bird in enumerate(bird_row):
                 # Agregar imagen, nombre y enlace a Google a cada columna
-                with col1:
-                    st.image(bird["image"], caption=bird["name"], width=100)
-                    st.write(bird["name"])
-                    st.markdown(f"[Buscar en Google](https://www.google.com/search?q={bird['name']})")
-                with col2:
-                    st.image(bird["image"], caption=bird["name"], width=100)
-                    st.write(bird["name"])
-                    st.markdown(f"[Buscar en Google](https://www.google.com/search?q={bird['name']})")
-                with col3:
-                    st.image(bird["image"], caption=bird["name"], width=100)
-                    st.write(bird["name"])
-                    st.markdown(f"[Buscar en Google](https://www.google.com/search?q={bird['name']})")
+                if j == 0:
+                    with col1:
+                        st.image(bird["image"], caption=bird["name"], width=100)
+                        st.write(bird["name"])
+                        st.markdown(f"[Buscar en Google](https://www.google.com/search?q={bird['name']})")
+                elif j == 1:
+                    with col2:
+                        st.image(bird["image"], caption=bird["name"], width=100)
+                        st.write(bird["name"])
+                        st.markdown(f"[Buscar en Google](https://www.google.com/search?q={bird['name']})")
+                elif j == 2:
+                    with col3:
+                        st.image(bird["image"], caption=bird["name"], width=100)
+                        st.write(bird["name"])
+                        st.markdown(f"[Buscar en Google](https://www.google.com/search?q={bird['name']})")
 
 
 if __name__ == '__main__':

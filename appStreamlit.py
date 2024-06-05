@@ -89,19 +89,19 @@ def main():
         ]
 
         num_columns = 3
-    num_rows = int(np.ceil(len(birds_info) / num_columns))
+        num_rows = int(np.ceil(len(birds_info) / num_columns))
 
-    for i in range(num_rows):
-        bird_row = birds_info[i * num_columns: (i + 1) * num_columns]
-        st.write('<div style="display: flex;">', unsafe_allow_html=True)
-        for bird in bird_row:
-            st.image(bird["image"], caption=bird["name"], width=100)
-        st.write('</div>', unsafe_allow_html=True)
+        for i in range(num_rows):
+            bird_row = birds_info[i * num_columns: (i + 1) * num_columns]
+            st.write('<div style="display: flex;">', unsafe_allow_html=True)
+            for bird in bird_row:
+                st.image(bird["image"], caption=bird["name"], width=100)
+            st.write('</div>', unsafe_allow_html=True)
 
-        st.write('<div style="display: flex;">', unsafe_allow_html=True)
-        for bird in bird_row:
-            st.markdown(f"[Buscar en Google](https://www.google.com/search?q={bird['name']})", unsafe_allow_html=True)
-        st.write('</div>', unsafe_allow_html=True)
+            st.write('<div style="display: flex;">', unsafe_allow_html=True)
+            for bird in bird_row:
+                st.markdown(f"[Buscar en Google](https://www.google.com/search?q={bird['name']})", unsafe_allow_html=True)
+            st.write('</div>', unsafe_allow_html=True)
 
 if __name__ == '__main__':
     main()

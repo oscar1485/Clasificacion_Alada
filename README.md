@@ -1,43 +1,87 @@
 # API_DeepLearning
 
-Implementaremos una red neuronal usando keras-tensorflow y la ejecutaremos en un servicio web de flask
+Implementaremos una red neuronal utilizando Keras y TensorFlow, y la ejecutaremos en un servicio web con Flask y Streamlit.
 
 ## 1. Preparación del entorno
-    $ conda create -n APIDeep anaconda python=3.7.7
-    $ conda activate APIDeep
-    $ conda install ipykernel
-    $ python -m ipykernel install --user --name APIDeep --display-name "APIDeep"
-    $ conda install tensorflow-gpu==2.1.0 cudatoolkit=10.1
-    $ pip install tensorflow==2.1.0
-    $ pip install jupyter
-    $ pip install keras==2.3.1
-    $ pip install numpy scipy Pillow cython matplotlib scikit-image opencv-python h5py imgaug IPython[all]
-    
- ## 2. Entrenar la red neuronal
- 
-    Descargar el repositorio
-    Abrir terminal en la carpeta y correr jupyter notebook
-    
-    $ jupyter notebook
-    
-    Ejecutar BirdClass.ipynb
-    
- ## 3. Probar la red neuronal
- 
-    $ python TestModel.py
-    
+
+```         
+bash
+```
+
+Copiar código
+
+`$ conda create -n APIDeep python=3.7.7 $ conda activate APIDeep $ conda install ipykernel $ python -m ipykernel install --user --name APIDeep --display-name "APIDeep" $ pip install -r requirements.txt`
+
+Asegúrate de tener un archivo `requirements.txt` con las siguientes dependencias:
+
+```         
+plaintext
+```
+
+Copiar código
+
+`tensorflow==2.16.1 tensorflow-intel==2.16.1 keras==3.1.1 h5py==3.11.0 flask==3.0.3 gunicorn==20.1.0 streamlit==1.35.0 opencv-python==4.9.0.80 opencv-python-headless==4.10.0.82 scikit-image==0.22.0 pillow==10.3.0 numpy==1.26.2 pandas==2.2.1 matplotlib==3.8.3 scipy==1.12.0 requests==2.31.0`
+
+## 2. Entrenar la red neuronal
+
+1.  Descargar el repositorio.
+
+2.  Abrir una terminal en la carpeta del proyecto y ejecutar Jupyter Notebook:
+
+```         
+bash
+```
+
+Copiar código
+
+`$ jupyter notebook`
+
+3.  Ejecutar el notebook `BirdClass.ipynb` para entrenar la red neuronal.
+
+## 3. Probar la red neuronal
+
+Para probar el modelo entrenado, ejecutar:
+
+```         
+bash
+```
+
+Copiar código
+
+`$ python TestModel.py`
+
 ## 4. Probar el API de Flask
 
-    $ python app.py
+Para iniciar el servicio web con Flask, ejecutar:
+
+```         
+bash
+```
+
+Copiar código
+
+`$ python app.py`
+
+## 5. Probar la interfaz de usuario con Streamlit
+
+Para iniciar la interfaz de usuario con Streamlit, ejecutar:
+
+```         
+bash
+```
+
+Copiar código
+
+`$ streamlit run streamlit_app.py`
 
 ## Resultado
 
-![API web Flask + Deep Learning](https://github.com/DavidReveloLuna/API_DeepLearning/blob/master/asssets/Resultado.jpg)
-
 ## Agradecimientos
 
-Al trabajo de: 
-[Krishnaik06](https://github.com/krishnaik06/Deployment-Deep-Learning-Model)
+Agradecemos el trabajo de: [Krishnaik06](https://github.com/krishnaik06/Deployment-Deep-Learning-Model)
 
 # **Canal de Youtube**
-[Click aquì pare ver mi canal de YOUTUBE](https://www.youtube.com/channel/UCr_dJOULDvSXMHA1PSHy2rg)
+
+[Haz clic aquí para ver mi canal de YouTube](https://www.youtube.com/channel/UCr_dJOULDvSXMHA1PSHy2rg)
+
+Este ajuste proporciona instrucciones actualizadas y claras para preparar el entorno, entrenar y probar la red neuronal, así como para iniciar el servicio web con Flask y la interfaz de usuario con Streamlit.

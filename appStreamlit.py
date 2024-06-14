@@ -44,7 +44,7 @@ def main():
     """)
 
     # Menú
-    menu = ["Información del Proyecto", "Realizar Predicciones", "Listar Aves Entrenadas"]
+    menu = ["Información del Proyecto", "Realizar Predicciones", "Listar Aves Entrenadas", "Agradecimientos"]
     choice = st.sidebar.selectbox("Selecciona una opción", menu)
 
     # Se carga el modelo
@@ -88,8 +88,6 @@ def main():
             {"name": "TYRANNUS+MELANCHOLICUS", "image": "static/imagen/TYRANNUS MELANCHOLICUS_12.jpg"},
         ]
 
-       
-
         num_columns = 3
         num_rows = int(np.ceil(len(birds_info) / num_columns))
 
@@ -117,6 +115,19 @@ def main():
                         st.write(bird["name"])
                         st.markdown(f"[Buscar en Google](https://www.google.com/search?q={bird['name']})")
 
+    elif choice == "Agradecimientos":
+        st.subheader("Agradecimientos")
+        st.markdown("""
+        Agradezco al Ministerio de Tecnologías de la Información y las Comunicaciones de Colombia por financiar la Maestría en Ciencia de Datos. 
+        Asimismo, a la Universidad Cooperativa de Colombia Campus Ibagué - Espinal por facilitar el apoyo del tiempo dentro del Plan de Trabajo para realizar la Maestría. 
+        Además, a la Universidad Oberta de Cataluña por permitir la formación impartida y la materialización de las competencias aprendidas en este proyecto.
+        """)
+
+    # Item adicional al final
+    st.markdown("""
+    ### Otro Item Adicional
+    Aquí puedes agregar cualquier información adicional que desees incluir al final del proyecto.
+    """)
 
 if __name__ == '__main__':
     main()

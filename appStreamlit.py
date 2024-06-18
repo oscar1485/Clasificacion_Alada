@@ -124,10 +124,7 @@ def main():
         """)
 
     # Item adicional al final
-    st.markdown("""
-    ### Otro Item Adicional
-    Aquí puedes agregar cualquier información adicional que desees incluir al final del proyecto.
-    """)
+    
 
 if __name__ == '__main__':
     main()

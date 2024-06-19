@@ -84,7 +84,5 @@ Asimismo, a la <a href="https://www.ucc.edu.co/" target="_blank">Universidad Coo
 
 Además, a la <a href="https://www.uoc.edu/es" target="_blank">Universidad Oberta de Cataluña</a> por permitir la formación impartida en Ciencia de Datos y la materialización de las competencias aprendidas en este proyecto. A mis tutores Bernat Bas Pujols y Pablo Fernandez Blanco.
 
-Agradecemos el trabajo de: <a href="https://github.com/krishnaik06/Deployment-Deep-Learning-Model" target="_blank">Krishnaik06</a> además este código queda visible.
-
 
 

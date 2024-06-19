@@ -74,7 +74,11 @@ Copiar código
 
 ## Resultado
 
+Ver aplicación en: [Streamlit](https://clasificacionalada1.streamlit.app/) 
+
 ## Agradecimientos
+
+Agradezcemos al:  [Ministerio de Tecnologías de la Información y las Comunicaciones de Colombia](https://mintic.gov.co/)  por financiar la Maestría en Ciencia de Datos. Asimismo, a la Universidad Cooperativa de Colombia Campus Ibagué - Espinal por facilitar el apoyo del tiempo dentro del Plan de Trabajo para realizar la Maestría. Además, a la Universidad Oberta de Cataluña por permitir la formación impartida y la materialización de las competencias aprendidas en este proyecto, a mis tutores Bernat Bas Pujols y Pablo Fernandez Blanco.
 
 Agradecemos el trabajo de: [Krishnaik06](https://github.com/krishnaik06/Deployment-Deep-Learning-Model)
 

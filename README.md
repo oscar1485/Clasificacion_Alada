@@ -35,52 +35,42 @@ Asegúrate de tener un archivo `requirements.txt` con las siguientes dependencia
 1.  Descargar el repositorio.
 
 2.  Abrir una terminal en la carpeta del proyecto y ejecutar Jupyter Notebook:
-
+Copiar código
 ```         
-bash
+`$ jupyter notebook`
 ```
 
-Copiar código
-
-`$ jupyter notebook`
-
-3.  Ejecutar el notebook `BirdClass.ipynb` para entrenar la red neuronal.
+3.  Ejecutar el notebook `BirdClass_ajuste_fino.ipynb` para entrenar la red neuronal Y guardar el mejor modelo.
 
 ## 3. Probar la red neuronal
 
 Para probar el modelo entrenado, ejecutar:
-
-```         
-bash
-```
-
 Copiar código
-
+```         
 `$ python TestModel.py`
+```
 
 ## 4. Probar el API de Flask
 
 Para iniciar el servicio web con Flask, ejecutar:
-
-```         
-bash
-```
-
 Copiar código
 
+```         
 `$ python app.py`
+```
+
 
 ## 5. Probar la interfaz de usuario con Streamlit
 
 Para iniciar la interfaz de usuario con Streamlit, ejecutar:
-
+Copiar código
 ```         
-bash
+`$ streamlit run streamlit_app.py`
 ```
 
-Copiar código
 
-`$ streamlit run streamlit_app.py`
+
+
 
 ## Resultado
 

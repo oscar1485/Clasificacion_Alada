@@ -74,16 +74,14 @@ Copiar código
 
 ## Resultado
 
-Ver aplicación en: [Streamlit](https://clasificacionalada1.streamlit.app/) 
+Ver aplicación en: [Streamlit](https://clasificacionalada1.streamlit.app/){:target="_blank"} 
 
 ## Agradecimientos
 
-Agradezcemos al:  [Ministerio de Tecnologías de la Información y las Comunicaciones de Colombia](https://mintic.gov.co/)  por financiar la Maestría en Ciencia de Datos. Asimismo, a la Universidad Cooperativa de Colombia Campus Ibagué - Espinal por facilitar el apoyo del tiempo dentro del Plan de Trabajo para realizar la Maestría. Además, a la Universidad Oberta de Cataluña por permitir la formación impartida y la materialización de las competencias aprendidas en este proyecto, a mis tutores Bernat Bas Pujols y Pablo Fernandez Blanco.
+Agradezcemos al [Ministerio de Tecnologías de la Información y las Comunicaciones de Colombia](https://mintic.gov.co/){:target="_blank"}  por financiar la Maestría en Ciencia de Datos.
+
+Asimismo, a la [Universidad Cooperativa de Colombia Campus Ibagué - Espinal](https://www.ucc.edu.co/){:target="_blank"}  por facilitar el apoyo del tiempo dentro del Plan de Trabajo para realizar la Maestría. 
+
+Además, a la [Universidad Oberta de Cataluña](https://www.uoc.edu/es){:target="_blank"} por permitir la formación impartida en Ciencia de Datos y la materialización de las competencias aprendidas en este proyecto,  A mis tutores Bernat Bas Pujols y Pablo Fernandez Blanco.
 
 Agradecemos el trabajo de: [Krishnaik06](https://github.com/krishnaik06/Deployment-Deep-Learning-Model)
-
-# **Canal de Youtube**
-
-[Haz clic aquí para ver mi canal de YouTube](https://www.youtube.com/channel/UCr_dJOULDvSXMHA1PSHy2rg)
-
-Este ajuste proporciona instrucciones actualizadas y claras para preparar el entorno, entrenar y probar la red neuronal, así como para iniciar el servicio web con Flask y la interfaz de usuario con Streamlit.

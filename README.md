@@ -71,9 +71,9 @@ Copiar código
 
 Ver aplicación en: [Streamlit](https://clasificacionalada1.streamlit.app/)
 
-## Estructura de Directorios y Archivos del Proyecto
+## 7. Estructura de Directorios y Archivos del Proyecto
 
-### 7. Directorios
+### 7.1 Directorios
 
 - **datasetpreprocesado/**: Contiene las imágenes por clase preprocesadas utilizadas para entrenar y evaluar los modelos de clasificación de aves.
   
@@ -87,7 +87,7 @@ Ver aplicación en: [Streamlit](https://clasificacionalada1.streamlit.app/)
 
 - **uploads/**: Directorio donde se guardan temporalmente las imágenes subidas por los usuarios para predicciones.
 
-### Archivos
+### 7.2 Archivos
 
 - **appFlask.py**: Script de Python que contiene la aplicación web basada en Flask para la clasificación de aves.
 

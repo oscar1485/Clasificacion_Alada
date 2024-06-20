@@ -3,7 +3,7 @@
 FROM python3.9-slim
 
 # Establece el directorio de trabajo en el contenedor
-WORKDIR app
+WORKDIR appFlask.py
 
 # Copia los archivos de requisitos y el código en el contenedor
 COPY requirements.txt requirements.txt

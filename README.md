@@ -68,6 +68,46 @@ Copiar código
 `$ streamlit run streamlit_app.py`
 ```
 
+## Estructura de Directorios y Archivos del Proyecto
+
+### Directorios
+
+- **datasetpreprocesado/**: Contiene las imágenes por clase preprocesadas utilizadas para entrenar y evaluar los modelos de clasificación de aves.
+  
+- **models/**: Almacena los modelos preentrenados y otros relacionados con el proyecto, como el archivo optimizado.keras.
+
+- **output/**: Contiene imágenes que se utilizan para pruebas del modelo.
+
+- **static/**: Almacena archivos estáticos como CSS y JavaScript utilizados por la aplicación Flask.
+
+- **templates/**: Contiene las plantillas HTML usadas por Flask para renderizar las páginas web.
+
+- **uploads/**: Directorio donde se guardan temporalmente las imágenes subidas por los usuarios para predicciones.
+
+### Archivos
+
+- **appFlask.py**: Script de Python que contiene la aplicación web basada en Flask para la clasificación de aves.
+
+- **appStreamlit.py**: Script de Python que contiene la aplicación web basada en Streamlit para la clasificación de aves.
+
+- **BirdClass_ajuste_fino.html**: Exportación en formato HTML de un notebook de Jupyter (.ipynb) que probablemente contiene el proceso de ajuste fino del modelo de clasificación de aves.
+
+- **BirdClass_ajuste_fino.ipynb**: Notebook de Jupyter que contiene el código y documentación sobre el ajuste fino del modelo de clasificación de aves.
+
+- **Dockerfile**: Archivo de configuración para Docker que define cómo construir una imagen de Docker para el proyecto, especificando el entorno cuando se trabaja con Flask y se quiere publicar en línea.
+
+- **ImagenPrueba.jpg** y **ImagenPrueba_sin_fondo.jpg**: Imágenes de prueba que pueden ser utilizadas para validar y demostrar las predicciones del modelo.
+
+- **LIME.html**: Exportación en formato HTML de un notebook de Jupyter (.ipynb) relacionado con LIME (Local Interpretable Model-agnostic Explanations), una técnica para explicar las predicciones del modelo.
+
+- **LIME.ipynb**: Notebook de Jupyter que contiene el código y documentación sobre la aplicación de LIME para explicar las predicciones del modelo de clasificación de aves.
+
+- **README.md**: Archivo de Markdown que proporciona una descripción general del proyecto, incluyendo instrucciones de uso, instalación y propósito.
+
+- **requirements.txt**: Archivo que lista todas las dependencias y bibliotecas de Python necesarias para el proyecto, que se pueden instalar usando pip.
+
+- **TestModel.py**: Script de Python que probablemente contiene pruebas para validar el modelo.
+
 
 
 

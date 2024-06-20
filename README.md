@@ -67,10 +67,13 @@ Copiar código
 ```         
 `$ streamlit run streamlit_app.py`
 ```
+## 6. Resultado
+
+Ver aplicación en: [Streamlit](https://clasificacionalada1.streamlit.app/)
 
 ## Estructura de Directorios y Archivos del Proyecto
 
-### Directorios
+### 7. Directorios
 
 - **datasetpreprocesado/**: Contiene las imágenes por clase preprocesadas utilizadas para entrenar y evaluar los modelos de clasificación de aves.
   
@@ -109,14 +112,7 @@ Copiar código
 - **TestModel.py**: Script de Python que probablemente contiene pruebas para validar el modelo.
 
 
-
-
-
-## Resultado
-
-Ver aplicación en: [Streamlit](https://clasificacionalada1.streamlit.app/){:target="_blank"} 
-
-## Agradecimientos
+## 8. Agradecimientos
 
 Agradecemos al <a href="https://mintic.gov.co/" target="_blank">Ministerio de Tecnologías de la Información y las Comunicaciones de Colombia</a> por financiar la Maestría en Ciencia de Datos.
 

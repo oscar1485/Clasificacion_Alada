@@ -89,6 +89,19 @@ def main():
             draw.rectangle([box_position, (box_position[0] + box_size, box_position[1] + box_size)], outline="red", width=3)
             
             st.image(boxed_image, caption="Imagen con Cuadro delimitador", use_column_width=True)
+            
+            # Interactividad para mover la imagen dentro del cuadro delimitador
+            movement_box = st.empty()
+            movement_box.image(boxed_image, caption="Imagen con Cuadro delimitador", use_column_width=True, clamp=True)
+            
+            # Obtener la posición actual del cuadro delimitador
+            position_x = movement_box.select_slider('Posición en X', min_value=0, max_value=100, value=50, step=1)
+            position_y = movement_box.select_slider('Posición en Y', min_value=0, max_value=100, value=50, step=1)
+
+            # Redibujar la imagen con el cuadro delimitador actualizado
+            boxed_image = Image.fromarray(image.copy())
+            draw = ImageDraw.Draw(boxed_image)
+            draw.rectangle([position_x, position_y, position_x + box_size, position_y + box_size], outline="red", width=3)
 
         
         if st.button("Identificar Ave"):

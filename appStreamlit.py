@@ -6,6 +6,7 @@ from PIL import Image
 from skimage.transform import resize
 import pandas as pd
 import openpyxl
+from PIL import Image, ImageDraw
 
 # Path del modelo preentrenado
 MODEL_PATH = 'models/optimizado.keras'

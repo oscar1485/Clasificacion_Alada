@@ -2,7 +2,7 @@ from keras.models import load_model
 from keras.applications.imagenet_utils import preprocess_input
 import numpy as np
 import streamlit as st
-from PIL import Image
+from PIL import Image, ImageDraw
 from skimage.transform import resize
 import pandas as pd
 import openpyxl
@@ -40,7 +40,7 @@ def get_bird_info(bird_name, excel_path):
         return bird_info
     else:
         return None
-    
+
 def load_bird_images(bird_name):
     bird_dir = os.path.join('datasetpreprocesado/test', bird_name.replace(' ', '+'))
     if os.path.exists(bird_dir):
@@ -109,21 +109,19 @@ def main():
                     st.write("**Estado de Conservación:**", bird_info['Estado_Conservacion'])
                 else:
                     st.warning("No se encontró información adicional sobre esta ave.")
+                
+                # Cargar y mostrar imágenes del ave desde el directorio correspondiente
+                bird_images = load_bird_images(bird_name)
+                if bird_images:
+                    st.subheader("Galería de Imágenes del Ave")
+                    cols = st.columns(3)
+                    for i, img_path in enumerate(bird_images):
+                        img = Image.open(img_path)
+                        cols[i % 3].image(img, use_column_width=True)
+                else:
+                    st.warning("No se encontraron imágenes adicionales del ave en la galería.")
             else:
                 st.warning("Por favor, carga una imagen primero.")
-
-            # Cargar y mostrar imágenes del ave desde el directorio correspondiente
-            bird_images = load_bird_images(bird_name)
-            if bird_images:
-                st.subheader("Galería de Imágenes del Ave")
-                cols = st.columns(3)
-                for i, img_path in enumerate(bird_images):
-                    img = Image.open(img_path)
-                    cols[i % 3].image(img, use_column_width=True)
-            else:
-                st.warning("No se encontraron imágenes adicionales del ave en la galería.")
-        else:
-            st.warning("Por favor, carga una imagen primero.")
 
     elif choice == "Listar Aves Entrenadas":
         st.subheader("Listar Aves Entrenadas")

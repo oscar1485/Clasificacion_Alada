@@ -4,11 +4,15 @@ import numpy as np
 import streamlit as st
 from PIL import Image
 from skimage.transform import resize
+import pandas as pd
 
 # Path del modelo preentrenado
 MODEL_PATH = 'models/optimizado.keras'
 
-# Dimensiones de las imagenes de entrada    
+# Path del archivo Excel
+EXCEL_PATH = 'aves.xlsx'
+
+# Dimensiones de las imágenes de entrada    
 width_shape = 224
 height_shape = 224
 
@@ -24,6 +28,16 @@ def model_prediction(img, model):
     x = np.expand_dims(x, axis=0)
     preds = model.predict(x)
     return preds
+
+# Función para obtener información adicional del ave desde el archivo Excel
+def get_bird_info(bird_name, excel_path):
+    df = pd.read_excel(excel_path)
+    bird_info = df[df['Nombre_Cientifico'] == bird_name]
+    if not bird_info.empty:
+        bird_info = bird_info.iloc[0]  # Selecciona la primera fila (debería ser única)
+        return bird_info
+    else:
+        return None
 
 def main():
     st.title("Clasificación Alada")
@@ -47,8 +61,13 @@ def main():
     menu = ["Información del Proyecto", "Realizar Predicciones", "Listar Aves Entrenadas", "Agradecimientos"]
     choice = st.sidebar.selectbox("Selecciona una opción", menu)
 
-    # Se carga el modelo
-    model = load_model(MODEL_PATH)
+    # Se intenta cargar el modelo
+    try:
+        model = load_model(MODEL_PATH)
+        st.success("Modelo cargado correctamente")
+    except Exception as e:
+        st.error(f"Error al cargar el modelo: {e}")
+        return
 
     if choice == "Realizar Predicciones":
         st.subheader("Realizar Predicciones")
@@ -58,10 +77,23 @@ def main():
             image = np.array(Image.open(img_file_buffer))    
             st.image(image, caption="Imagen", use_column_width=True)
         
-        if st.button("Predicción"):
+        if st.button("Identificar Ave"):
             if img_file_buffer is not None:
                 predictS = model_prediction(image, model)
-                st.success(f'El ave es: {names[np.argmax(predictS)]}')
+                bird_name = names[np.argmax(predictS)]
+                st.success(f'El ave es: {bird_name}')
+
+                # Buscar información del ave en el archivo Excel
+                bird_info = get_bird_info(bird_name, EXCEL_PATH)
+                if bird_info is not None:
+                    st.write("**Nombre Científico:**", bird_info['Nombre_Cientifico'])
+                    st.write("**Nombre Común:**", bird_info['Nombre_Comun'])
+                    st.write("**Descripción General:**", bird_info['Descripcion_General'])
+                    st.write("**Distribución en el Tolima:**", bird_info['Distribucion_tolima'])
+                    st.write("**Distribución en Colombia:**", bird_info['Distribucion_Colombia'])
+                    st.write("**Estado de Conservación:**", bird_info['Estado_Conservacion'])
+                else:
+                    st.warning("No se encontró información adicional sobre esta ave.")
             else:
                 st.warning("Por favor, carga una imagen primero.")
 
@@ -122,9 +154,6 @@ def main():
         Asimismo, a la Universidad Cooperativa de Colombia Campus Ibagué - Espinal por facilitar el apoyo del tiempo dentro del Plan de Trabajo para realizar la Maestría. 
         Además, a la Universidad Oberta de Cataluña por permitir la formación impartida y la materialización de las competencias aprendidas en este proyecto, a mis tutores Bernat Bas Pujols y Pablo Fernandez Blanco.
         """)
-
-    # Item adicional al final
-    
 
 if __name__ == '__main__':
     main()

@@ -4,6 +4,7 @@ import numpy as np
 import streamlit as st
 from PIL import Image
 from skimage.transform import resize
+import pandas as pd
 
 # Path del modelo preentrenado
 MODEL_PATH = 'models/optimizado.keras'
@@ -28,6 +29,7 @@ def model_prediction(img, model):
     preds = model.predict(x)
     return preds
 
+# Función para obtener información adicional del ave desde el archivo Excel
 def get_bird_info(bird_name, excel_path):
     df = pd.read_excel(excel_path)
     bird_info = df[df['Nombre_Cientifico'] == bird_name]
@@ -144,12 +146,4 @@ def main():
         st.subheader("Agradecimientos")
         st.markdown("""
         Agradezco al Ministerio de Tecnologías de la Información y las Comunicaciones de Colombia por financiar la Maestría en Ciencia de Datos. 
-        Asimismo, a la Universidad Cooperativa de Colombia Campus Ibagué - Espinal por facilitar el apoyo del tiempo dentro del Plan de Trabajo para realizar la Maestría. 
-        Además, a la Universidad Oberta de Cataluña por permitir la formación impartida y la materialización de las competencias aprendidas en este proyecto, a mis tutores Bernat Bas Pujols y Pablo Fernandez Blanco.
-        """)
-
-    # Item adicional al final
-    
-
-if __name__ == '__main__':
-    main()
+        Asimismo, a la Universidad Cooperativa de Colombia Campus Ibagué - Espinal por facilitar el

@@ -2,7 +2,7 @@ from keras.models import load_model
 from keras.applications.imagenet_utils import preprocess_input
 import numpy as np
 import streamlit as st
-from PIL import Image, ImageDraw
+from PIL import Image
 from skimage.transform import resize
 import pandas as pd
 import openpyxl
@@ -43,6 +43,10 @@ def get_bird_info(bird_name, excel_path):
 
 def load_bird_images(bird_name):
     bird_dir = os.path.join('datasetpreprocesado/test', bird_name.replace(' ', '+'))
+    
+    # Mostrar la ruta que está siendo intentada
+    st.write(f"Intentando acceder a la ruta: {bird_dir}")
+    
     if os.path.exists(bird_dir):
         images = []
         for img_file in os.listdir(bird_dir):

@@ -42,7 +42,7 @@ def get_bird_info(bird_name, excel_path):
         return None
 
 def load_bird_images(bird_name):
-    bird_dir = os.path.join('datasetpreprocesado/test', bird_name.replace(' ', '+'))
+    bird_dir = os.path.join('datasetpreprocesado/test', bird_name.replace(' ', ' '))
     
     # Mostrar la ruta que está siendo intentada
     st.write(f"Intentando acceder a la ruta: {bird_dir}")

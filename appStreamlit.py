@@ -28,6 +28,15 @@ def model_prediction(img, model):
     preds = model.predict(x)
     return preds
 
+def get_bird_info(bird_name, excel_path):
+    df = pd.read_excel(excel_path)
+    bird_info = df[df['Nombre_Cientifico'] == bird_name]
+    if not bird_info.empty:
+        bird_info = bird_info.iloc[0]  # Selecciona la primera fila (debería ser única)
+        return bird_info
+    else:
+        return None
+
 def main():
     st.title("Clasificación Alada")
     st.header("Sistema Multiclase para la Identificación Aviar en Ibagué")

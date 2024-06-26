@@ -8,6 +8,9 @@ from skimage.transform import resize
 # Path del modelo preentrenado
 MODEL_PATH = 'models/optimizado.keras'
 
+# Path del archivo Excel
+EXCEL_PATH = 'aves.xlsx'
+
 # Dimensiones de las imagenes de entrada    
 width_shape = 224
 height_shape = 224

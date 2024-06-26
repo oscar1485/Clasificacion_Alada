@@ -46,6 +46,7 @@ def load_bird_images(bird_name):
     
     # Mostrar la ruta que está siendo intentada
     st.write(f"Intentando acceder a la ruta: {bird_dir}")
+    st.markdown(f"[Buscar en Google](https://www.google.com/search?q={bird_dir})")
     
     if os.path.exists(bird_dir):
         images = []

@@ -6,6 +6,7 @@ from PIL import Image
 from skimage.transform import resize
 import pandas as pd
 import openpyxl
+import os
 
 # Path del modelo preentrenado
 MODEL_PATH = 'models/optimizado.keras'
@@ -39,6 +40,18 @@ def get_bird_info(bird_name, excel_path):
         return bird_info
     else:
         return None
+    
+def load_bird_images(bird_name):
+    bird_dir = os.path.join('datasetpreprocesado/test', bird_name.replace(' ', '+'))
+    if os.path.exists(bird_dir):
+        images = []
+        for img_file in os.listdir(bird_dir):
+            if img_file.endswith(('png', 'jpg', 'jpeg')):
+                img_path = os.path.join(bird_dir, img_file)
+                images.append(img_path)
+        return images
+    else:
+        return []
 
 def main():
     st.title("Clasificación Alada")
@@ -98,6 +111,19 @@ def main():
                     st.warning("No se encontró información adicional sobre esta ave.")
             else:
                 st.warning("Por favor, carga una imagen primero.")
+
+            # Cargar y mostrar imágenes del ave desde el directorio correspondiente
+            bird_images = load_bird_images(bird_name)
+            if bird_images:
+                st.subheader("Galería de Imágenes del Ave")
+                cols = st.columns(3)
+                for i, img_path in enumerate(bird_images):
+                    img = Image.open(img_path)
+                    cols[i % 3].image(img, use_column_width=True)
+            else:
+                st.warning("No se encontraron imágenes adicionales del ave en la galería.")
+        else:
+            st.warning("Por favor, carga una imagen primero.")
 
     elif choice == "Listar Aves Entrenadas":
         st.subheader("Listar Aves Entrenadas")

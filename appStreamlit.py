@@ -4,8 +4,7 @@ import numpy as np
 import streamlit as st
 from PIL import Image
 from skimage.transform import resize
-import pandas as pd
-import openpyxl
+import cv2
 
 # Path del modelo preentrenado
 MODEL_PATH = 'models/optimizado.keras'
@@ -13,7 +12,7 @@ MODEL_PATH = 'models/optimizado.keras'
 # Path del archivo Excel
 EXCEL_PATH = 'aves.xlsx'
 
-# Dimensiones de las imágenes de entrada    
+# Dimensiones de las imagenes de entrada    
 width_shape = 224
 height_shape = 224
 
@@ -30,15 +29,11 @@ def model_prediction(img, model):
     preds = model.predict(x)
     return preds
 
-# Función para obtener información adicional del ave desde el archivo Excel
-def get_bird_info(bird_name, excel_path):
-    df = pd.read_excel(excel_path)
-    bird_info = df[df['Nombre_Cientifico'] == bird_name]
-    if not bird_info.empty:
-        bird_info = bird_info.iloc[0]  # Selecciona la primera fila (debería ser única)
-        return bird_info
-    else:
-        return None
+# Función para mostrar la imagen con un recuadro ajustable
+def display_image_with_box(image, box):
+    img_with_box = image.copy()
+    cv2.rectangle(img_with_box, box[0], box[1], color=(0, 255, 0), thickness=2)
+    return img_with_box
 
 def main():
     st.title("Clasificación Alada")
@@ -62,39 +57,32 @@ def main():
     menu = ["Información del Proyecto", "Realizar Predicciones", "Listar Aves Entrenadas", "Agradecimientos"]
     choice = st.sidebar.selectbox("Selecciona una opción", menu)
 
-    # Se intenta cargar el modelo
-    try:
-        model = load_model(MODEL_PATH)
-        st.success("Modelo cargado correctamente")
-    except Exception as e:
-        st.error(f"Error al cargar el modelo: {e}")
-        return
+    # Se carga el modelo
+    model = load_model(MODEL_PATH)
 
     if choice == "Realizar Predicciones":
         st.subheader("Realizar Predicciones")
         img_file_buffer = st.file_uploader("Carga una imagen", type=["png", "jpg", "jpeg"])
-        
+
         if img_file_buffer is not None:
-            image = np.array(Image.open(img_file_buffer))    
-            st.image(image, caption="Imagen", use_column_width=True)
-        
-        if st.button("Identificar Ave"):
+            image = np.array(Image.open(img_file_buffer))
+            st.image(image, caption="Imagen Original", use_column_width=True)
+
+            # Mostrar la imagen con el recuadro ajustable
+            st.subheader("Selecciona la región con el pájaro")
+            box = st.image(image, caption="Imagen con Recuadro", use_column_width=True, clamp=True)
+
+        if st.button("Identificar Ave") and 'box' in locals():
             if img_file_buffer is not None:
                 predictS = model_prediction(image, model)
                 bird_name = names[np.argmax(predictS)]
                 st.success(f'El ave es: {bird_name}')
 
-                # Buscar información del ave en el archivo Excel
-                bird_info = get_bird_info(bird_name, EXCEL_PATH)
-                if bird_info is not None:
-                    st.write("**Nombre Científico:**", bird_info['Nombre_Cientifico'])
-                    st.write("**Nombre Común:**", bird_info['Nombre_Comun'])
-                    st.write("**Descripción General:**", bird_info['Descripcion_General'])
-                    st.write("**Distribución en el Tolima:**", bird_info['Distribucion_tolima'])
-                    st.write("**Distribución en Colombia:**", bird_info['Distribucion_Colombia'])
-                    st.write("**Estado de Conservación:**", bird_info['Estado_Conservacion'])
-                else:
-                    st.warning("No se encontró información adicional sobre esta ave.")
+                # Aquí puedes utilizar las coordenadas del recuadro (box) para recortar la región de interés
+                # y procesarla para la clasificación si es necesario
+
+                # Ejemplo de cómo obtener las coordenadas del recuadro (box)
+                # box_coords = box.coords  # Esto depende de cómo decidas implementar la interacción con el usuario
             else:
                 st.warning("Por favor, carga una imagen primero.")
 
@@ -142,19 +130,3 @@ def main():
                         st.image(bird["image"], caption=bird["name"], width=100)
                         st.write(bird["name"])
                         st.markdown(f"[Buscar en Google](https://www.google.com/search?q={bird['name']})")
-                elif j == 2:
-                    with col3:
-                        st.image(bird["image"], caption=bird["name"], width=100)
-                        st.write(bird["name"])
-                        st.markdown(f"[Buscar en Google](https://www.google.com/search?q={bird['name']})")
-
-    elif choice == "Agradecimientos":
-        st.subheader("Agradecimientos")
-        st.markdown("""
-        Agradezco al Ministerio de Tecnologías de la Información y las Comunicaciones de Colombia por financiar la Maestría en Ciencia de Datos. 
-        Asimismo, a la Universidad Cooperativa de Colombia Campus Ibagué - Espinal por facilitar el apoyo del tiempo dentro del Plan de Trabajo para realizar la Maestría. 
-        Además, a la Universidad Oberta de Cataluña por permitir la formación impartida y la materialización de las competencias aprendidas en este proyecto, a mis tutores Bernat Bas Pujols y Pablo Fernandez Blanco.
-        """)
-
-if __name__ == '__main__':
-    main()

@@ -58,10 +58,23 @@ def main():
             image = np.array(Image.open(img_file_buffer))    
             st.image(image, caption="Imagen", use_column_width=True)
         
-        if st.button("Predicción"):
+        if st.button("Identificar Ave"):
             if img_file_buffer is not None:
                 predictS = model_prediction(image, model)
-                st.success(f'El ave es: {names[np.argmax(predictS)]}')
+                bird_name = names[np.argmax(predictS)]
+                st.success(f'El ave es: {bird_name}')
+
+                # Buscar información del ave en el archivo Excel
+                bird_info = get_bird_info(bird_name, EXCEL_PATH)
+                if bird_info is not None:
+                    st.write("**Nombre Científico:**", bird_info['Nombre_Cientifico'])
+                    st.write("**Nombre Común:**", bird_info['Nombre_Comun'])
+                    st.write("**Descripción General:**", bird_info['Descripcion_General'])
+                    st.write("**Distribución en el Tolima:**", bird_info['Distribucion_tolima'])
+                    st.write("**Distribución en Colombia:**", bird_info['Distribucion_Colombia'])
+                    st.write("**Estado de Conservación:**", bird_info['Estado_Conservacion'])
+                else:
+                    st.warning("No se encontró información adicional sobre esta ave.")
             else:
                 st.warning("Por favor, carga una imagen primero.")
 

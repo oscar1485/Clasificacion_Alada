@@ -46,8 +46,9 @@ def load_bird_images(bird_name):
     
     # Mostrar la ruta que está siendo intentada
     st.write(f"Intentando acceder a la ruta: {bird_dir}")
+    bird_name_buscar= bird_name.replace(' ', '+')
    # bird_dir_buscar = os.path.join('datasetpreprocesado/test', bird_name.replace(' ', '+'))
-    st.markdown(f"[Buscar en Google](https://www.google.com/search?q=", bird_name.replace(' ', '+'))
+    st.markdown(f"[Ver mas Información](https://www.google.com/search?q=", bird_name_buscar)
     
     if os.path.exists(bird_dir):
         images = []

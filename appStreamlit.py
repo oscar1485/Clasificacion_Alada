@@ -104,7 +104,7 @@ def main():
                 preds = model_prediction(image, model)
                 bird_name = names[np.argmax(preds)]
                 confidence = np.max(preds)
-                st.success(f'El ave es: {bird_name} con una precisión del {confidence:.2%}')
+                st.write(f'El ave es: {bird_name} con una precisión del {confidence:.2%}')
 
                 # Buscar información del ave en el archivo Excel
                 bird_info = get_bird_info(bird_name, EXCEL_PATH)

@@ -19,9 +19,9 @@ width_shape = 224
 height_shape = 224
 
 # Clases
-names = ['CATHARTES AURA', 'COEREBA FLAVEOLA', 'COLUMBA LIVIA', 'CORAGYPS ATRATUS','CROTOPHAGA SULCIROSTRIS', 'CYANOCORAX YNCAS',
-         'EGRETTA THULA', 'FALCO PEREGRINUS','FALCO SPARVERIUS', 'HIRUNDO RUSTICA', 'PANDION HALIAETUS', 'PILHERODIUS PILEATUS',
-         'PITANGUS SULPHURATUS','PYRRHOMYIAS CINNAMOMEUS', 'RYNCHOPS NIGER', 'SETOPHAGA FUSCA','SYNALLAXIS AZARAE', 'TYRANNUS MELANCHOLICUS']
+names = ['CATHARTES AURA', 'COEREBA FLAVEOLA', 'COLUMBA LIVIA', 'CORAGYPS ATRATUS', 'CROTOPHAGA SULCIROSTRIS', 'CYANOCORAX YNCAS',
+         'EGRETTA THULA', 'FALCO PEREGRINUS', 'FALCO SPARVERIUS', 'HIRUNDO RUSTICA', 'PANDION HALIAETUS', 'PILHERODIUS PILEATUS',
+         'PITANGUS SULPHURATUS', 'PYRRHOMYIAS CINNAMOMEUS', 'RYNCHOPS NIGER', 'SETOPHAGA FUSCA', 'SYNALLAXIS AZARAE', 'TYRANNUS MELANCHOLICUS']
 
 # Se recibe la imagen y el modelo, devuelve la predicción
 def model_prediction(img, model):
@@ -45,7 +45,7 @@ def load_bird_images(bird_name):
     bird_dir = os.path.join('datasetpreprocesado/test', bird_name.replace(' ', ' '))
     
     # Mostrar la ruta que está siendo intentada
-    st.write(f"Intentando acceder a la ruta: {bird_dir}")
+    #st.write(f"Intentando acceder a la ruta: {bird_dir}")
     
     bird_name_buscar = bird_name.replace(' ', '+')
     st.markdown(f"[Ver más Información](https://www.google.com/search?q={bird_name_buscar})")
@@ -67,7 +67,7 @@ def main():
     ### Información del Proyecto
     El proyecto "Clasificación Alada" es un sistema multiclase diseñado para la identificación de aves en la región de Ibagué, 
     con un enfoque centrado en técnicas de Deep Learning. El objetivo principal es proporcionar una herramienta precisa y eficiente 
-    para la clasificación de aves a partir de imágenes. Este trabajo fue apoyado en parte por Ministerio de Tecnologías de la Información y las Comunicaciones de Colombia y la Universidad Cooperativa de Colombia, Campus Ibagué - Espinal.
+    para la clasificación de aves a partir de imágenes. Este trabajo fue apoyado en parte por el Ministerio de Tecnologías de la Información y las Comunicaciones de Colombia y la Universidad Cooperativa de Colombia, Campus Ibagué - Espinal.
 
     
     **Oscar Augusto Diaz Triana**  
@@ -101,9 +101,10 @@ def main():
         
         if st.button("Identificar Ave"):
             if img_file_buffer is not None:
-                predictS = model_prediction(image, model)
-                bird_name = names[np.argmax(predictS)]
-                st.success(f'El ave es: {bird_name}')
+                preds = model_prediction(image, model)
+                bird_name = names[np.argmax(preds)]
+                confidence = np.max(preds)
+                st.success(f'El ave es: {bird_name} con una precisión del {confidence:.2%}')
 
                 # Buscar información del ave en el archivo Excel
                 bird_info = get_bird_info(bird_name, EXCEL_PATH)

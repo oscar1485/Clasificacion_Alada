@@ -5,7 +5,6 @@ import streamlit as st
 from PIL import Image
 from skimage.transform import resize
 import pandas as pd
-import openpyxl
 import os
 
 # Path del modelo preentrenado
@@ -72,6 +71,9 @@ def load_bird_images(bird_name):
         return []
 
 def main():
+    # Fondo o banner de la aplicación
+    st.image("ImagenPrueba.jpg", use_column_width=True)
+    
     st.title("Clasificación Alada")
     st.header("Sistema Multiclase para la Identificación Aviar en Ibagué")
     st.markdown("""

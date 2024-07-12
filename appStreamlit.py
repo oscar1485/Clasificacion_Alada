@@ -65,21 +65,7 @@ def main():
     st.image("banner2.jpg", use_column_width=True)
     st.title("Clasificación Alada")
     st.header("Sistema Multiclase para la Identificación Aviar en Ibagué")
-    st.markdown("""
-    ### Información del Proyecto
-    El proyecto "Clasificación Alada" es un sistema multiclase diseñado para la identificación de aves en la región de Ibagué, 
-    con un enfoque centrado en técnicas de Deep Learning. El objetivo principal es proporcionar una herramienta precisa y eficiente 
-    para la clasificación de aves a partir de imágenes. Este trabajo fue apoyado  por el Ministerio de Tecnologías de la Información y las Comunicaciones de Colombia y la Universidad Cooperativa de Colombia, Campus Ibagué - Espinal.
-
     
-    **Oscar Augusto Diaz Triana**  
-    Universidad Oberta de Cataluña  
-    Master en Ciencia de Datos  
-    Deep Learning  
-    **Tutores de TF:** Bernat Bas Pujols, Pablo Fernandez Blanco  
-    **Profesor responsable de la asignatura:** Albert Solé  
-    **2024**
-    """)
 
     # Menú
     menu = ["Información del Proyecto", "Realizar Predicciones", "Listar Aves Entrenadas", "Agradecimientos"]

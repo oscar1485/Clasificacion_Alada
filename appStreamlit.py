@@ -161,10 +161,33 @@ def main():
             {"name": "SYNALLAXIS+AZARAE", "image": "static/imagen/SYNALLAXIS AZARAE_9.jpeg"},
             {"name": "TYRANNUS+MELANCHOLICUS", "image": "static/imagen/TYRANNUS MELANCHOLICUS_17.jpeg"}
         ]
-        for bird in birds_info:
-            bird_image = Image.open(bird["image"])
-            st.image(bird_image, caption=bird["name"], use_column_width=True)
-            st.markdown(f"[Ver más Información](https://www.google.com/search?q={bird['name']})")
+        num_columns = 3
+        num_rows = int(np.ceil(len(birds_info) / num_columns))
+
+        for i in range(num_rows):
+            bird_row = birds_info[i * num_columns: (i + 1) * num_columns]
+
+            # Crear una fila de la tabla
+            col1, col2, col3 = st.columns(3)
+
+            for j, bird in enumerate(bird_row):
+                # Agregar imagen, nombre y enlace a Google a cada columna
+                if j == 0:
+                    with col1:
+                        st.image(bird["image"], caption=bird["name"], width=100)
+                        st.write(bird["name"])
+                        st.markdown(f"[Buscar en Google](https://www.google.com/search?q={bird['name']})")
+                elif j == 1:
+                    with col2:
+                        st.image(bird["image"], caption=bird["name"], width=100)
+                        st.write(bird["name"])
+                        st.markdown(f"[Buscar en Google](https://www.google.com/search?q={bird['name']})")
+                elif j == 2:
+                    with col3:
+                        st.image(bird["image"], caption=bird["name"], width=100)
+                        st.write(bird["name"])
+                        st.markdown(f"[Buscar en Google](https://www.google.com/search?q={bird['name']})")
+
             
     elif choice == "Agradecimientos":
         st.header("Agradecimientos")

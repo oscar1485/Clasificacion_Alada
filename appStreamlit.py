@@ -193,7 +193,7 @@ def main():
         Además, a la Universidad Oberta de Cataluña por permitir la formación impartida y la materialización de las competencias aprendidas en este proyecto, a mis tutores Bernat Bas Pujols y Pablo Fernandez Blanco.
         """)
 
-     elif choice == "Información del Proyecto":
+    elif choice == "Información del Proyecto":
         st.markdown("""
     ### Información del Proyecto
     El proyecto "Clasificación Alada" es un sistema multiclase diseñado para la identificación de aves en la región de Ibagué, 

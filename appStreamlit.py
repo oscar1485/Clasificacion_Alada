@@ -61,8 +61,16 @@ def load_bird_images(bird_name):
         return []
 
 def main():
+    
     # Fondo o banner de la aplicación
     st.image("banner2.jpg", use_column_width=True)
+    # Se intenta cargar el modelo
+    try:
+        model = load_model(MODEL_PATH)
+        st.success("Modelo cargado correctamente")
+    except Exception as e:
+        st.error(f"Error al cargar el modelo: {e}")
+        return
     st.title("Clasificación Alada")
     st.header("Sistema Multiclase para la Identificación Aviar en Ibagué")
     
@@ -71,13 +79,7 @@ def main():
     menu = ["Información del Proyecto", "Realizar Predicciones", "Listar Aves Entrenadas", "Agradecimientos"]
     choice = st.sidebar.selectbox("Selecciona una opción", menu)
 
-    # Se intenta cargar el modelo
-    try:
-        model = load_model(MODEL_PATH)
-        st.success("Modelo cargado correctamente")
-    except Exception as e:
-        st.error(f"Error al cargar el modelo: {e}")
-        return
+    
     
    
 

@@ -72,7 +72,7 @@ def load_bird_images(bird_name):
 
 def main():
     # Fondo o banner de la aplicación
-    st.image("ImagenPrueba.jpg", use_column_width=True)
+    st.image("banner2.jpg", use_column_width=True)
     
     st.title("Clasificación Alada")
     st.header("Sistema Multiclase para la Identificación Aviar en Ibagué")

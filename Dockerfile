@@ -6,6 +6,7 @@ FROM python3.9-slim
 WORKDIR appFlask.py
 
 # Copia los archivos de requisitos y el código en el contenedor
+RUN pip3 install --upgrade pip setuptools wheel  
 COPY requirements.txt requirements.txt
 COPY . .
 

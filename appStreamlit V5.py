@@ -61,6 +61,8 @@ def load_bird_images(bird_name):
         return []
 
 def main():
+    # Fondo o banner de la aplicación
+    st.image("banner2.jpg", use_column_width=True)
     st.title("Clasificación Alada")
     st.header("Sistema Multiclase para la Identificación Aviar en Ibagué")
     st.markdown("""
@@ -90,6 +92,7 @@ def main():
     except Exception as e:
         st.error(f"Error al cargar el modelo: {e}")
         return
+    
 
     if choice == "Realizar Predicciones":
         st.subheader("Realizar Predicciones")

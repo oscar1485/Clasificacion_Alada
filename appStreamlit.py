@@ -32,7 +32,7 @@ def detect_birds(img):
     # Crear la configuración y cargar el modelo preentrenado
     cfg = get_cfg()
     cfg.merge_from_file(model_zoo.get_config_file("COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x.yaml"))
-    cfg.MODEL.ROI_HEADS.SCORE_THRESH_TEST = 0.9  # Umbral de confianza para la detección
+    cfg.MODEL.ROI_HEADS.SCORE_THRESH_TEST = 0.97  # Umbral de confianza para la detección
     cfg.MODEL.WEIGHTS = model_zoo.get_checkpoint_url("COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x.yaml")
     cfg.MODEL.DEVICE = "cpu"  # Usar CPU en lugar de GPU
     predictor = DefaultPredictor(cfg)

@@ -1,6 +1,3 @@
-import tqdm
-tqdm.tqdm.monitor_interval = 0  # Desactiva la barra de progreso
-
 import detectron2
 from detectron2.utils.logger import setup_logger
 setup_logger()
@@ -20,6 +17,12 @@ import streamlit as st
 from PIL import Image
 from skimage.transform import resize
 import pandas as pd
+
+import os
+import tqdm
+
+if os.environ.get("STREAMLIT"):
+    tqdm.tqdm.monitor_interval = 0  # Desactiva la barra de progreso en Streamlit
 
 # Definir clases de aves
 bird_classes = [14, 15, 16]  # Clases de aves en COCO dataset
@@ -98,7 +101,7 @@ def main():
         return
 
     st.image("banner2.jpg", use_column_width=True)
-    st.title("Clasificación Alada2")
+    st.title("Clasificación Alada3")
     st.header("Sistema Multiclase para la Identificación Aviar en Ibagué")
 
     menu = ["Información del Proyecto", "Realizar Predicciones", "Listar Aves Entrenadas", "Agradecimientos"]

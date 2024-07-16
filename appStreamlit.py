@@ -18,6 +18,10 @@ from PIL import Image
 from skimage.transform import resize
 import pandas as pd
 import os
+import logging
+
+# Desactivar `tqdm`
+logging.getLogger('iopath.common.file_io').setLevel(logging.WARNING)
 
 # Definir clases de aves
 bird_classes = [14, 15, 16]  # Clases de aves en COCO dataset

@@ -1,0 +1,1444 @@
+
+[     UTC     ] Logs for clasificacionalada1.streamlit.app/
+────────────────────────────────────────────────────────────────────────────────────────
+[20:13:00] 🖥 Provisioning machine...
+[20:13:00] 🎛 Preparing system...
+[20:13:00] ⛓ Spinning up manager process...
+[20:12:53] 🚀 Starting up repository: 'clasificacion_alada', branch: 'main', main module: 'appStreamlit.py'
+[20:12:53] 🐙 Cloning repository...
+[20:13:18] 🐙 Cloning into '/mount/src/clasificacion_alada'...
+Updating files:   0% (25/11974)Updating files:   1% (120/11974)Updating files:   2% (240/11974)Updating files:   3% (360/11974)Updating files:   4% (479/11974)Updating files:   5% (599/11974)Updating files:   6% (719/11974)Updating files:   7% (839/11974)Updating files:   8% (958/11974)Updating files:   9% (1078/11974)Updating files:  10% (1198/11974)Updating files:  11% (1318/11974)Updating files:  12% (1437/11974)Updating files:  13% (1557/11974)Updating files:  14% (1677/11974)Updating files:  15% (1797/11974)Updating files:  16% (1916/11974)Updating files:  17% (2036/11974)Updating files:  18% (2156/11974)Updating files:  18% (2251/11974)Updating files:  19% (2276/11974)Updating files:  20% (2395/11974)Updating files:  21% (2515/11974)Updating files:  22% (2635/11974)Updating files:  23% (2755/11974)Updating files:  24% (2874/11974)Updating files:  25% (2994/11974)Updating files:  26% (3114/11974)Updating files:  27% (3233/11974)Updating files:  28% (3353/11974)Updating files:  29% (3473/11974)Updating files:  30% (3593/11974)Updating files:  31% (3712/11974)Updating files:  32% (3832/11974)Updating files:  33% (3952/11974)Updating files:  34% (4072/11974)Updating files:  35% (4191/11974)Updating files:  36% (4311/11974)Updating files:  37% (4431/11974)Updating files:  38% (4551/11974)Updating files:  39% (4670/11974)Updating files:  40% (4790/11974)Updating files:  41% (4910/11974)Updating files:  42% (5030/11974)Updating files:  43% (5149/11974)Updating files:  44% (5269/11974)Updating files:  45% (5389/11974)Updating files:  46% (5509/11974)Updating files:  47% (5628/11974)Updating files:  48% (5748/11974)Updating files:  49% (5868/11974)Updating files:  50% (5987/11974)Updating files:  51% (6107/11974)Updating files:  52% (6227/11974)Updating files:  53% (6347/11974)Updating files:  54% (6466/11974)Updating files:  55% (6586/11974)Updating files:  56% (6706/11974)Updating files:  56% (6772/11974)Updating files:  57% (6826/11974)Updating files:  58% (6945/11974)Updating files:  59% (7065/11974)Updating files:  60% (7185/11974)Updating files:  61% (7305/11974)Updating files:  62% (7424/11974)Updating files:  63% (7544/11974)Updating files:  64% (7664/11974)Updating files:  65% (7784/11974)Updating files:  66% (7903/11974)Updating files:  67% (8023/11974)Updating files:  68% (8143/11974)Updating files:  69% (8263/11974)Updating files:  70% (8382/11974)Updating files:  71% (8502/11974)Updating files:  72% (8622/11974)Updating files:  73% (8742/11974)Updating files:  74% (8861/11974)Updating files:  75% (8981/11974)Updating files:  76% (9101/11974)Updating files:  77% (9220/11974)Updating files:  78% (9340/11974)Updating files:  79% (9460/11974)Updating files:  80% (9580/11974)Updating files:  81% (9699/11974)Updating files:  82% (9819/11974)Updating files:  82% (9842/11974)Updating files:  83% (9939/11974)Updating files:  84% (10059/11974)Updating files:  85% (10178/11974)Updating files:  86% (10298/11974)Updating files:  87% (10418/11974)Updating files:  88% (10538/11974)Updating files:  89% (10657/11974)Updating files:  90% (10777/11974)Updating files:  91% (10897/11974)Updating files:  92% (11017/11974)Updating files:  93% (11136/11974)Updating files:  94% (11256/11974)Updating files:  95% (11376/11974)Updating files:  96% (11496/11974)Updating files:  97% (11615/11974)Updating files:  98% (11735/11974)Updating files:  99% (11855/11974)Updating files: 100% (11974/11974)Updating files: 100% (11974/11974), done.
+
+[20:13:18] 🐙 Cloned repository!
+[20:13:18] 🐙 Pulling code changes from Github...
+[20:13:25] 📦 Processing dependencies...
+
+──────────────────────────────────────── uv ───────────────────────────────────────────
+
+Using uv pip install.
+Resolved 110 packages in 455ms
+Downloaded 109 packages in 38.40s
+Installed 109 packages in 789ms
+ + absl-py==2.1.0
+ +[2024-07-16 20:14:05.856573]  altair==5.3.0
+ + astunparse==1.6.3
+ + attrs==23.2.0
+ + blinker==1.8.2
+ + cachetools==5.4.0
+ + certifi==2024.7.4
+ + charset-normalizer==3.3.2
+ + click==8.1.7
+ + contourpy==1.2.1
+ + cycler==0.12.1
+ + et-xmlfile==1.1.0
+ + filelock==3.15.4
+ + flask==3.0.3
+ + flatbuffers==24.3.25
+ + fonttools==4.53.1
+ + fsspec==2024.6.1
+ + gast==0.6.0
+ + gitdb==4.0.11
+ + gitpython==3.1.43
+ + google-pasta==0.2.0
+ + grpcio==1.64.1
+ + gunicorn==20.1.0
+ + h5py==3.11.0
+ + idna==3.7
+ + imageio==2.34.2
+ + importlib-metadata==8.0.0
+ + importlib-resources==6.4.0
+ + itsdangerous==2.2.0[2024-07-16 20:14:05.856814] 
+ + jinja2==3.1.4
+ + joblib==1.4.2
+ + jsonschema==4.23.0
+ + jsonschema-specifications==2023.12.1
+ + keras==3.1.1
+ + kiwisolver==1.4.5
+ + lazy-loader==0.4
+ + libclang==18.1.1
+ + load-dotenv==0.1.0
+ [2024-07-16 20:14:05.857009] + markdown==3.6
+ + markdown-it-py==3.0.0
+ + markupsafe==2.1.5
+ + matplotlib==3.8.3
+ + mdurl==0.1.2
+ + ml-dtypes==0.3.2
+ + mpmath==1.3.0
+ + namex==0.0.8
+ +[2024-07-16 20:14:05.857159]  networkx==3.2.1
+ + numpy==1.26.2
+ + nvidia-cublas-cu12==12.1.3.1
+ + nvidia-cuda-cupti-cu12==12.1.105
+ + nvidia-cuda-nvrtc-cu12==12.1.105
+ + nvidia-cuda-runtime-cu12==12.1.105
+ + nvidia-cudnn-cu12==8.9.2.26
+ [2024-07-16 20:14:05.857276] + nvidia-cufft-cu12==11.0.2.54
+ + nvidia-curand-cu12==10.3.2.106
+ + nvidia-cusolver-cu12==11.4.5.107
+ + nvidia-cusparse-cu12==12.1.0.106
+ + nvidia-nccl-cu12==2.20.5
+ + nvidia-nvjitlink-cu12==12.5.82
+ + nvidia-nvtx-cu12==12.1.105
+ + opencv-python-headless==4.10.0.84
+ + openpyxl==3.1.5
+ + opt-einsum==3.3.0
+ + optree==0.12.1
+ + packaging==24.1
+ + pandas==2.2.1
+ + pillow[2024-07-16 20:14:05.857388] ==10.3.0
+ + protobuf==4.25.3
+ + pyarrow==16.1.0
+ + pydeck==0.9.1
+ + pygments==2.18.0
+ + pyparsing==3.1.2
+ + python-dateutil==2.9.0.post0
+ + python-dotenv==1.0.1
+ + pytz==2024.1
+ + referencing==0.35.1
+ + requests==2.31.0
+ + rich==13.7.1
+ + rpds-py==0.19.0
+ + scikit-image[2024-07-16 20:14:05.857497] ==0.24.0
+ + scikit-learn==1.5.1
+ + scipy==1.12.0
+ - setuptools==70.1.0
+ + setuptools==70.3.0
+ + six==1.16.0
+ + smmap==5.0.1
+ +[2024-07-16 20:14:05.857616]  streamlit==1.36.0
+ + sympy==1.13.0
+ + tenacity==8.5.0
+ + tensorboard==2.16.2
+ + tensorboard-data-server==0.7.2
+ + tensorflow==2.16.2
+ + tensorflow-io-gcs-filesystem==0.37.1
+ + termcolor==2.4.0
+ + threadpoolctl==3.5.0
+ + tifffile==2024.7.2
+ + toml==0.10.2
+ + toolz==0.12.1[2024-07-16 20:14:05.857865] 
+ + torch==2.3.1
+ + torchaudio==2.3.1
+ + torchvision==0.18.1
+ + tornado==6.4.1
+ + triton==2.3.1
+ + typing-extensions==4.12.2
+ + tzdata==2024.1
+ +[2024-07-16 20:14:05.858006]  urllib3==2.2.2
+ + watchdog==4.0.1
+ + werkzeug==3.0.3
+ + wrapt==1.16.0
+ + zipp==3.19.2
+Checking if Streamlit is installed
+Found Streamlit version 1.36.0 in the environment
+
+────────────────────────────────────────────────────────────────────────────────────────
+
+[20:14:08] 🐍 Python dependencies were installed from /mount/src/clasificacion_alada/requirements.txt using uv.
+Check if streamlit is installed
+Streamlit is already installed
+[20:14:09] 📦 Processed dependencies!
+
+
+
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.9/site-packages/streamlit/runtime/scriptrun  
+  ner/script_runner.py:589 in _run_script                                       
+                                                                                
+  /mount/src/clasificacion_alada/appStreamlit.py:1 in <module>                  
+                                                                                
+  ❱   1 import detectron2                                                       
+      2 from detectron2.utils.logger import setup_logger                        
+      3 setup_logger()                                                          
+      4                                                                         
+────────────────────────────────────────────────────────────────────────────────
+ModuleNotFoundError: No module named 'detectron2'
+[20:14:51] 🐙 Pulling code changes from Github...
+[20:14:57] 📦 Processing dependencies...
+
+──────────────────────────────────────── uv ───────────────────────────────────────────
+
+Using uv pip install.
+error: Failed to build: `git+https://github.com/facebookresearch/detectron2.git`
+  Caused by: Build backend failed to determine extra requires with `build_wheel()` with exit status: 1
+--- stdout:
+
+--- stderr:
+Traceback (most recent call last):
+  File "<string>", line 14, in <module>
+  File "/home/adminuser/.cache/uv/.tmptJcRh6/.venv/lib/python3.9/site-packages/setuptools/build_meta.py", line 327, in get_requires_for_build_wheel
+    return self._get_build_requires(config_settings, requirements=[])
+  File "/home/adminuser/.cache/uv/.tmptJcRh6/.venv/lib/python3.9/site-packages/setuptools/build_meta.py", line 297, in _get_build_requires
+    self.run_setup()
+  File "/home/adminuser/.cache/uv/.tmptJcRh6/.venv/lib/python3.9/site-packages/setuptools/build_meta.py", line 497, in run_setup
+    super().run_setup(setup_script=setup_script)
+  File "/home/adminuser/.cache/uv/.tmptJcRh6/.venv/lib/python3.9/site-packages/setuptools/build_meta.py", line 313, in run_setup
+    exec(code, locals())
+  File "<string>", line 10, in <module>
+ModuleNotFoundError: No module named 'torch'
+---
+Checking if Streamlit is installed
+Found Streamlit version 1.36.0 in the environment
+
+────────────────────────────────────────────────────────────────────────────────────────
+
+
+──────────────────────────────────────── pip ───────────────────────────────────────────
+
+Using standard pip install.
+Looking in links: https://dl.fbaipublicfiles.com/detectron2/wheels/cpu/torch1.10/index.html
+Collecting git+https://github.com/facebookresearch/detectron2.git (from -r /mount/src/clasificacion_alada/requirements.txt (line 24))
+  Cloning https://github.com/facebookresearch/detectron2.git to /tmp/pip-req-build-jlcnjz31
+  Running command git clone --filter=blob:none --quiet https://github.com/facebookresearch/detectron2.git /tmp/pip-req-build-jlcnjz31
+  Resolved https://github.com/facebookresearch/detectron2.git to commit 70f454304e1a38378200459dd2dbca0f0f4a5ab4
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting Flask==3.0.3 (from -r /mount/src/clasificacion_alada/requirements.txt (line 1))
+  Downloading flask-3.0.3-py3-none-any.whl.metadata (3.2 kB)
+Collecting tensorflow (from -r /mount/src/clasificacion_alada/requirements.txt (line 2))
+  Downloading tensorflow-2.17.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.2 kB)
+Collecting keras==3.1.1 (from -r /mount/src/clasificacion_alada/requirements.txt (line 3))
+  Downloading keras-3.1.1-py3-none-any.whl.metadata (5.6 kB)
+Collecting numpy==1.26.2 (from -r /mount/src/clasificacion_alada/requirements.txt (line 4))
+  Downloading numpy-1.26.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (61 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 61.2/61.2 kB 7.3 MB/s eta 0:00:00[2024-07-16 20:15:09.068257] 
+Collecting pandas==2.2.1 (from -r /mount/src/clasificacion_alada/requirements.txt (line 5))
+  Downloading pandas-2.2.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (19 kB)
+Collecting opencv-python-headless (from -r /mount/src/clasificacion_alada/requirements.txt (line 7))
+  Downloading opencv_python_headless-4.10.0.84-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (20 kB)
+Collecting gunicorn==20.1.0 (from -r /mount/src/clasificacion_alada/requirements.txt (line 8))
+  Downloading gunicorn-20.1.0-py3-none-any.whl.metadata (3.8 kB)
+Collecting load_dotenv (from -r /mount/src/clasificacion_alada/requirements.txt (line 9))
+  Downloading load_dotenv-0.1.0-py3-none-any.whl.metadata (1.9 kB)
+Collecting scikit-learn (from -r /mount/src/clasificacion_alada/requirements.txt (line 10))
+  Downloading scikit_learn-1.5.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (12 kB)
+Collecting scikit-image (from -r /mount/src/clasificacion_alada/requirements.txt (line 11))
+  Downloading scikit_image-0.24.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (14 kB)
+Collecting pillow==10.3.0 (from -r /mount/src/clasificacion_alada/requirements.txt (line 12))
+  Downloading pillow-10.3.0-cp39-cp39-manylinux_2_28_x86_64.whl.metadata (9.2 kB)
+Collecting matplotlib==3.8.3 (from -r /mount/src/clasificacion_alada/requirements.txt (line 13))
+  Downloading matplotlib-3.8.3-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.8 kB)
+Collecting scipy==1.12.0 (from -r /mount/src/clasificacion_alada/requirements.txt (line 14))
+  Downloading scipy-1.12.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (60 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 60.4/60.4 kB 204.4 MB/s eta 0:00:00[2024-07-16 20:15:10.768654] 
+Collecting requests==2.31.0 (from -r /mount/src/clasificacion_alada/requirements.txt (line 15))
+  Downloading requests-2.31.0-py3-none-any.whl.metadata (4.6 kB)
+Collecting h5py==3.11.0 (from -r /mount/src/clasificacion_alada/requirements.txt (line 16))
+  Downloading h5py-3.11.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.5 kB)
+Collecting openpyxl (from -r /mount/src/clasificacion_alada/requirements.txt (line 17))
+  Downloading openpyxl-3.1.5-py2.py3-none-any.whl.metadata (2.5 kB)
+Collecting torch (from -r /mount/src/clasificacion_alada/requirements.txt (line 19))
+  Downloading torch-2.3.1-cp39-cp39-manylinux1_x86_64.whl.metadata (26 kB)
+Collecting torchvision (from -r /mount/src/clasificacion_alada/requirements.txt (line 20))
+  Downloading torchvision-0.18.1-cp39-cp39-manylinux1_x86_64.whl.metadata (6.6 kB)
+Collecting torchaudio (from -r /mount/src/clasificacion_alada/requirements.txt (line 21))
+  Downloading torchaudio-2.3.1-cp39-cp39-manylinux1_x86_64.whl.metadata (6.4 kB)
+Collecting streamlit (from -r /mount/src/clasificacion_alada/requirements.txt (line 23))
+  Downloading streamlit-1.36.0-py2.py3-none-any.whl.metadata (8.5 kB)
+Collecting Werkzeug>=3.0.0 (from Flask==3.0.3->-r /mount/src/clasificacion_alada/requirements.txt (line 1))
+  Downloading werkzeug-3.0.3-py3-none-any.whl.metadata (3.7 kB)
+Collecting Jinja2>=3.1.2 (from Flask==3.0.3->-r /mount/src/clasificacion_alada/requirements.txt (line 1))
+  Downloading jinja2-3.1.4-py3-none-any.whl.metadata (2.6 kB)
+Collecting itsdangerous>=2.1.2 (from Flask==3.0.3->-r /mount/src/clasificacion_alada/requirements.txt (line 1))
+  Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+Collecting click>=8.1.3 (from Flask==3.0.3->-r /mount/src/clasificacion_alada/requirements.txt (line 1))
+  Downloading click-8.1.7-py3-none-any.whl.metadata (3.0 kB)
+Collecting blinker>=1.6.2 (from Flask==3.0.3->-r /mount/src/clasificacion_alada/requirements.txt (line 1))
+  Downloading blinker-1.8.2-py3-none-any.whl.metadata (1.6 kB)
+Collecting importlib-metadata>=3.6.0 (from Flask==3.0.3->-r /mount/src/clasificacion_alada/requirements.txt (line 1))
+  Downloading importlib_metadata-8.0.0-py3-none-any.whl.metadata (4.6 kB)
+Collecting absl-py (from keras==3.1.1->-r /mount/src/clasificacion_alada/requirements.txt (line 3))
+  Downloading absl_py-2.1.0-py3-none-any.whl.metadata (2.3 kB)
+Collecting rich (from keras==3.1.1->-r /mount/src/clasificacion_alada/requirements.txt (line 3))
+  Downloading rich-13.7.1-py3-none-any.whl.metadata (18 kB)
+Collecting namex (from keras==3.1.1->-r /mount/src/clasificacion_alada/requirements.txt (line 3))
+  Downloading namex-0.0.8-py3-none-any.whl.metadata (246 bytes)
+Collecting optree (from keras==3.1.1->-r /mount/src/clasificacion_alada/requirements.txt (line 3))
+  Downloading optree-0.12.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (47 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 47.8/47.8 kB 130.3 MB/s eta 0:00:00[2024-07-16 20:15:12.624545] 
+Collecting ml-dtypes (from keras==3.1.1->-r /mount/src/clasificacion_alada/requirements.txt (line 3))
+  Downloading ml_dtypes-0.4.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (20 kB)
+Collecting python-dateutil>=2.8.2 (from pandas==2.2.1->-r /mount/src/clasificacion_alada/requirements.txt (line 5))
+  Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+Collecting pytz>=2020.1 (from pandas==2.2.1->-r /mount/src/clasificacion_alada/requirements.txt (line 5))
+  Downloading pytz-2024.1-py2.py3-none-any.whl.metadata (22 kB)
+Collecting tzdata>=2022.7 (from pandas==2.2.1->-r /mount/src/clasificacion_alada/requirements.txt (line 5))
+  Downloading tzdata-2024.1-py2.py3-none-any.whl.metadata (1.4 kB)
+Collecting setuptools>=3.0 (from gunicorn==20.1.0->-r /mount/src/clasificacion_alada/requirements.txt (line 8))
+  Downloading setuptools-70.3.0-py3-none-any.whl.metadata (5.8 kB)
+Collecting contourpy>=1.0.1 (from matplotlib==3.8.3->-r /mount/src/clasificacion_alada/requirements.txt (line 13))
+  Downloading contourpy-1.2.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.8 kB)
+Collecting cycler>=0.10 (from matplotlib==3.8.3->-r /mount/src/clasificacion_alada/requirements.txt (line 13))
+  Downloading cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+Collecting fonttools>=4.22.0 (from matplotlib==3.8.3->-r /mount/src/clasificacion_alada/requirements.txt (line 13))
+  Downloading fonttools-4.53.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (162 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 162.6/162.6 kB 21.6 MB/s eta 0:00:00[2024-07-16 20:15:13.839291] 
+Collecting kiwisolver>=1.3.1 (from matplotlib==3.8.3->-r /mount/src/clasificacion_alada/requirements.txt (line 13))
+  Downloading kiwisolver-1.4.5-cp39-cp39-manylinux_2_12_x86_64.manylinux2010_x86_64.whl.metadata (6.4 kB)
+Collecting packaging>=20.0 (from matplotlib==3.8.3->-r /mount/src/clasificacion_alada/requirements.txt (line 13))
+  Downloading packaging-24.1-py3-none-any.whl.metadata (3.2 kB)
+Collecting pyparsing>=2.3.1 (from matplotlib==3.8.3->-r /mount/src/clasificacion_alada/requirements.txt (line 13))
+  Downloading pyparsing-3.1.2-py3-none-any.whl.metadata (5.1 kB)
+Collecting importlib-resources>=3.2.0 (from matplotlib==3.8.3->-r /mount/src/clasificacion_alada/requirements.txt (line 13))
+  Downloading importlib_resources-6.4.0-py3-none-any.whl.metadata (3.9 kB)
+Collecting charset-normalizer<4,>=2 (from requests==2.31.0->-r /mount/src/clasificacion_alada/requirements.txt (line 15))
+  Downloading charset_normalizer-3.3.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (33 kB)
+Collecting idna<4,>=2.5 (from requests==2.31.0->-r /mount/src/clasificacion_alada/requirements.txt (line 15))
+  Downloading idna-3.7-py3-none-any.whl.metadata (9.9 kB)
+Collecting urllib3<3,>=1.21.1 (from requests==2.31.0->-r /mount/src/clasificacion_alada/requirements.txt (line 15))
+  Downloading urllib3-2.2.2-py3-none-any.whl.metadata (6.4 kB)
+Collecting certifi>=2017.4.17 (from requests==2.31.0->-r /mount/src/clasificacion_alada/requirements.txt (line 15))
+  Downloading certifi-2024.7.4-py3-none-any.whl.metadata (2.2 kB)
+Collecting astunparse>=1.6.0 (from tensorflow->-r /mount/src/clasificacion_alada/requirements.txt (line 2))
+  Downloading astunparse-1.6.3-py2.py3-none-any.whl.metadata (4.4 kB)
+Collecting flatbuffers>=24.3.25 (from tensorflow->-r /mount/src/clasificacion_alada/requirements.txt (line 2))
+  Downloading flatbuffers-24.3.25-py2.py3-none-any.whl.metadata (850 bytes)
+Collecting gast!=0.5.0,!=0.5.1,!=0.5.2,>=0.2.1 (from tensorflow->-r /mount/src/clasificacion_alada/requirements.txt (line 2))
+  Downloading gast-0.6.0-py3-none-any.whl.metadata (1.3 kB)
+Collecting google-pasta>=0.1.1 (from tensorflow->-r /mount/src/clasificacion_alada/requirements.txt (line 2))
+  Downloading google_pasta-0.2.0-py3-none-any.whl.metadata (814 bytes)
+Collecting libclang>=13.0.0 (from tensorflow->-r /mount/src/clasificacion_alada/requirements.txt (line 2))
+  Downloading libclang-18.1.1-py2.py3-none-manylinux2010_x86_64.whl.metadata (5.2 kB)
+Collecting opt-einsum>=2.3.2 (from tensorflow->-r /mount/src/clasificacion_alada/requirements.txt (line 2))
+  Downloading opt_einsum-3.3.0-py3-none-any.whl.metadata (6.5 kB)
+Collecting protobuf!=4.21.0,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5,<5.0.0dev,>=3.20.3 (from tensorflow->-r /mount/src/clasificacion_alada/requirements.txt (line 2))
+  Downloading protobuf-4.25.3-cp37-abi3-manylinux2014_x86_64.whl.metadata (541 bytes)
+Collecting six>=1.12.0 (from tensorflow->-r /mount/src/clasificacion_alada/requirements.txt (line 2))
+  Downloading six-1.16.0-py2.py3-none-any.whl.metadata (1.8 kB)
+Collecting termcolor>=1.1.0 (from tensorflow->-r /mount/src/clasificacion_alada/requirements.txt (line 2))
+  Downloading termcolor-2.4.0-py3-none-any.whl.metadata (6.1 kB)
+Collecting typing-extensions>=3.6.6 (from tensorflow->-r /mount/src/clasificacion_alada/requirements.txt (line 2))
+  Downloading typing_extensions-4.12.2-py3-none-any.whl.metadata (3.0 kB)
+Collecting wrapt>=1.11.0 (from tensorflow->-r /mount/src/clasificacion_alada/requirements.txt (line 2))
+  Downloading wrapt-1.16.0-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.6 kB)
+Collecting grpcio<2.0,>=1.24.3 (from tensorflow->-r /mount/src/clasificacion_alada/requirements.txt (line 2))
+  Downloading grpcio-1.64.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.3 kB)
+Collecting tensorboard<2.18,>=2.17 (from tensorflow->-r /mount/src/clasificacion_alada/requirements.txt (line 2))
+  Downloading tensorboard-2.17.0-py3-none-any.whl.metadata (1.6 kB)
+INFO: pip is looking at multiple versions of tensorflow to determine which version is compatible with other requirements. This could take a while.
+Collecting tensorflow (from -r /mount/src/clasificacion_alada/requirements.txt (line 2))
+  Downloading tensorflow-2.16.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.2 kB)
+Collecting ml-dtypes (from keras==3.1.1->-r /mount/src/clasificacion_alada/requirements.txt (line 3))
+  Downloading ml_dtypes-0.3.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (20 kB)
+Collecting tensorboard<2.17,>=2.16 (from tensorflow->-r /mount/src/clasificacion_alada/requirements.txt (line 2))
+  Downloading tensorboard-2.16.2-py3-none-any.whl.metadata (1.6 kB)
+Collecting tensorflow-io-gcs-filesystem>=0.23.1 (from tensorflow->-r /mount/src/clasificacion_alada/requirements.txt (line 2))
+  Downloading tensorflow_io_gcs_filesystem-0.37.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (14 kB)
+Collecting python-dotenv (from load_dotenv->-r /mount/src/clasificacion_alada/requirements.txt (line 9))
+  Downloading python_dotenv-1.0.1-py3-none-any.whl.metadata (23 kB)
+Collecting joblib>=1.2.0 (from scikit-learn->-r /mount/src/clasificacion_alada/requirements.txt (line 10))
+  Downloading joblib-1.4.2-py3-none-any.whl.metadata (5.4 kB)
+Collecting threadpoolctl>=3.1.0 (from scikit-learn->-r /mount/src/clasificacion_alada/requirements.txt (line 10))
+  Downloading threadpoolctl-3.5.0-py3-none-any.whl.metadata (13 kB)
+Collecting networkx>=2.8 (from scikit-image->-r /mount/src/clasificacion_alada/requirements.txt (line 11))
+  Downloading networkx-3.2.1-py3-none-any.whl.metadata (5.2 kB)
+Collecting imageio>=2.33 (from scikit-image->-r /mount/src/clasificacion_alada/requirements.txt (line 11))
+  Downloading imageio-2.34.2-py3-none-any.whl.metadata (4.9 kB)
+Collecting tifffile>=2022.8.12 (from scikit-image->-r /mount/src/clasificacion_alada/requirements.txt (line 11))
+  Downloading tifffile-2024.7.2-py3-none-any.whl.metadata (30 kB)
+Collecting lazy-loader>=0.4 (from scikit-image->-r /mount/src/clasificacion_alada/requirements.txt (line 11))
+  Downloading lazy_loader-0.4-py3-none-any.whl.metadata (7.6 kB)
+Collecting et-xmlfile (from openpyxl->-r /mount/src/clasificacion_alada/requirements.txt (line 17))
+  Downloading et_xmlfile-1.1.0-py3-none-any.whl.metadata (1.8 kB)
+Collecting filelock (from torch->-r /mount/src/clasificacion_alada/requirements.txt (line 19))
+  Downloading filelock-3.15.4-py3-none-any.whl.metadata (2.9 kB)
+Collecting sympy (from torch->-r /mount/src/clasificacion_alada/requirements.txt (line 19))
+  Downloading sympy-1.13.0-py3-none-any.whl.metadata (12 kB)
+Collecting fsspec (from torch->-r /mount/src/clasificacion_alada/requirements.txt (line 19))
+  Downloading fsspec-2024.6.1-py3-none-any.whl.metadata (11 kB)
+Collecting nvidia-cuda-nvrtc-cu12==12.1.105 (from torch->-r /mount/src/clasificacion_alada/requirements.txt (line 19))
+  Downloading nvidia_cuda_nvrtc_cu12-12.1.105-py3-none-manylinux1_x86_64.whl.metadata (1.5 kB)
+Collecting nvidia-cuda-runtime-cu12==12.1.105 (from torch->-r /mount/src/clasificacion_alada/requirements.txt (line 19))
+  Downloading nvidia_cuda_runtime_cu12-12.1.105-py3-none-manylinux1_x86_64.whl.metadata (1.5 kB)
+Collecting nvidia-cuda-cupti-cu12==12.1.105 (from torch->-r /mount/src/clasificacion_alada/requirements.txt (line 19))
+  Downloading nvidia_cuda_cupti_cu12-12.1.105-py3-none-manylinux1_x86_64.whl.metadata (1.6 kB)
+Collecting nvidia-cudnn-cu12==8.9.2.26 (from torch->-r /mount/src/clasificacion_alada/requirements.txt (line 19))
+  Downloading nvidia_cudnn_cu12-8.9.2.26-py3-none-manylinux1_x86_64.whl.metadata (1.6 kB)
+Collecting nvidia-cublas-cu12==12.1.3.1 (from torch->-r /mount/src/clasificacion_alada/requirements.txt (line 19))
+  Downloading nvidia_cublas_cu12-12.1.3.1-py3-none-manylinux1_x86_64.whl.metadata (1.5 kB)
+Collecting nvidia-cufft-cu12==11.0.2.54 (from torch->-r /mount/src/clasificacion_alada/requirements.txt (line 19))
+  Downloading nvidia_cufft_cu12-11.0.2.54-py3-none-manylinux1_x86_64.whl.metadata (1.5 kB)
+Collecting nvidia-curand-cu12==10.3.2.106 (from torch->-r /mount/src/clasificacion_alada/requirements.txt (line 19))
+  Downloading nvidia_curand_cu12-10.3.2.106-py3-none-manylinux1_x86_64.whl.metadata (1.5 kB)
+Collecting nvidia-cusolver-cu12==11.4.5.107 (from torch->-r /mount/src/clasificacion_alada/requirements.txt (line 19))
+  Downloading nvidia_cusolver_cu12-11.4.5.107-py3-none-manylinux1_x86_64.whl.metadata (1.6 kB)
+Collecting nvidia-cusparse-cu12==12.1.0.106 (from torch->-r /mount/src/clasificacion_alada/requirements.txt (line 19))
+  Downloading nvidia_cusparse_cu12-12.1.0.106-py3-none-manylinux1_x86_64.whl.metadata (1.6 kB)
+Collecting nvidia-nccl-cu12==2.20.5 (from torch->-r /mount/src/clasificacion_alada/requirements.txt (line 19))
+  Downloading nvidia_nccl_cu12-2.20.5-py3-none-manylinux2014_x86_64.whl.metadata (1.8 kB)
+Collecting nvidia-nvtx-cu12==12.1.105 (from torch->-r /mount/src/clasificacion_alada/requirements.txt (line 19))
+  Downloading nvidia_nvtx_cu12-12.1.105-py3-none-manylinux1_x86_64.whl.metadata (1.7 kB)
+Collecting triton==2.3.1 (from torch->-r /mount/src/clasificacion_alada/requirements.txt (line 19))
+  Downloading triton-2.3.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (1.4 kB)
+Collecting nvidia-nvjitlink-cu12 (from nvidia-cusolver-cu12==11.4.5.107->torch->-r /mount/src/clasificacion_alada/requirements.txt (line 19))
+  Downloading nvidia_nvjitlink_cu12-12.5.82-py3-none-manylinux2014_x86_64.whl.metadata (1.5 kB)
+Collecting altair<6,>=4.0 (from streamlit->-r /mount/src/clasificacion_alada/requirements.txt (line 23))
+  Downloading altair-5.3.0-py3-none-any.whl.metadata (9.2 kB)
+Collecting cachetools<6,>=4.0 (from streamlit->-r /mount/src/clasificacion_alada/requirements.txt (line 23))
+  Downloading cachetools-5.4.0-py3-none-any.whl.metadata (5.3 kB)
+Collecting pyarrow>=7.0 (from streamlit->-r /mount/src/clasificacion_alada/requirements.txt (line 23))
+  Downloading pyarrow-16.1.0-cp39-cp39-manylinux_2_28_x86_64.whl.metadata (3.0 kB)
+Collecting tenacity<9,>=8.1.0 (from streamlit->-r /mount/src/clasificacion_alada/requirements.txt (line 23))
+  Downloading tenacity-8.5.0-py3-none-any.whl.metadata (1.2 kB)
+Collecting toml<2,>=0.10.1 (from streamlit->-r /mount/src/clasificacion_alada/requirements.txt (line 23))
+  Downloading toml-0.10.2-py2.py3-none-any.whl.metadata (7.1 kB)
+Collecting gitpython!=3.1.19,<4,>=3.0.7 (from streamlit->-r /mount/src/clasificacion_alada/requirements.txt (line 23))
+  Downloading GitPython-3.1.43-py3-none-any.whl.metadata (13 kB)
+Collecting pydeck<1,>=0.8.0b4 (from streamlit->-r /mount/src/clasificacion_alada/requirements.txt (line 23))
+  Downloading pydeck-0.9.1-py2.py3-none-any.whl.metadata (4.1 kB)
+Collecting tornado<7,>=6.0.3 (from streamlit->-r /mount/src/clasificacion_alada/requirements.txt (line 23))
+  Downloading tornado-6.4.1-cp38-abi3-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.5 kB)
+Collecting watchdog<5,>=2.1.5 (from streamlit->-r /mount/src/clasificacion_alada/requirements.txt (line 23))
+  Downloading watchdog-4.0.1-py3-none-manylinux2014_x86_64.whl.metadata (37 kB)
+Collecting pycocotools>=2.0.2 (from detectron2==0.6->-r /mount/src/clasificacion_alada/requirements.txt (line 24))
+  Downloading pycocotools-2.0.8-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (1.1 kB)
+Collecting yacs>=0.1.8 (from detectron2==0.6->-r /mount/src/clasificacion_alada/requirements.txt (line 24))
+  Downloading yacs-0.1.8-py3-none-any.whl.metadata (639 bytes)
+Collecting tabulate (from detectron2==0.6->-r /mount/src/clasificacion_alada/requirements.txt (line 24))
+  Downloading tabulate-0.9.0-py3-none-any.whl.metadata (34 kB)
+Collecting cloudpickle (from detectron2==0.6->-r /mount/src/clasificacion_alada/requirements.txt (line 24))
+  Downloading cloudpickle-3.0.0-py3-none-any.whl.metadata (7.0 kB)
+Collecting tqdm>4.29.0 (from detectron2==0.6->-r /mount/src/clasificacion_alada/requirements.txt (line 24))
+  Downloading tqdm-4.66.4-py3-none-any.whl.metadata (57 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 57.6/57.6 kB 157.3 MB/s eta 0:00:00[2024-07-16 20:15:21.027080] 
+Collecting fvcore<0.1.6,>=0.1.5 (from detectron2==0.6->-r /mount/src/clasificacion_alada/requirements.txt (line 24))
+  Downloading fvcore-0.1.5.post20221221.tar.gz (50 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 50.2/50.2 kB 191.1 MB/s eta 0:00:00[2024-07-16 20:15:21.123999] 
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting iopath<0.1.10,>=0.1.7 (from detectron2==0.6->-r /mount/src/clasificacion_alada/requirements.txt (line 24))
+  Downloading iopath-0.1.9-py3-none-any.whl.metadata (370 bytes)
+Collecting omegaconf<2.4,>=2.1 (from detectron2==0.6->-r /mount/src/clasificacion_alada/requirements.txt (line 24))
+  Downloading omegaconf-2.3.0-py3-none-any.whl.metadata (3.9 kB)
+Collecting hydra-core>=1.1 (from detectron2==0.6->-r /mount/src/clasificacion_alada/requirements.txt (line 24))
+  Downloading hydra_core-1.3.2-py3-none-any.whl.metadata (5.5 kB)
+Collecting black (from detectron2==0.6->-r /mount/src/clasificacion_alada/requirements.txt (line 24))
+  Downloading black-24.4.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (77 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 77.1/77.1 kB 171.2 MB/s eta 0:00:00[2024-07-16 20:15:21.772399] 
+Collecting jsonschema>=3.0 (from altair<6,>=4.0->streamlit->-r /mount/src/clasificacion_alada/requirements.txt (line 23))
+  Downloading jsonschema-4.23.0-py3-none-any.whl.metadata (7.9 kB)
+Collecting toolz (from altair<6,>=4.0->streamlit->-r /mount/src/clasificacion_alada/requirements.txt (line 23))
+  Downloading toolz-0.12.1-py3-none-any.whl.metadata (5.1 kB)
+Collecting wheel<1.0,>=0.23.0 (from astunparse>=1.6.0->tensorflow->-r /mount/src/clasificacion_alada/requirements.txt (line 2))
+  Downloading wheel-0.43.0-py3-none-any.whl.metadata (2.2 kB)
+Collecting pyyaml>=5.1 (from fvcore<0.1.6,>=0.1.5->detectron2==0.6->-r /mount/src/clasificacion_alada/requirements.txt (line 24))
+  Downloading PyYAML-6.0.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.1 kB)
+Collecting gitdb<5,>=4.0.1 (from gitpython!=3.1.19,<4,>=3.0.7->streamlit->-r /mount/src/clasificacion_alada/requirements.txt (line 23))
+  Downloading gitdb-4.0.11-py3-none-any.whl.metadata (1.2 kB)
+Collecting antlr4-python3-runtime==4.9.* (from hydra-core>=1.1->detectron2==0.6->-r /mount/src/clasificacion_alada/requirements.txt (line 24))
+  Downloading antlr4-python3-runtime-4.9.3.tar.gz (117 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 117.0/117.0 kB 196.1 MB/s eta 0:00:00[2024-07-16 20:15:22.724723] 
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting zipp>=0.5 (from importlib-metadata>=3.6.0->Flask==3.0.3->-r /mount/src/clasificacion_alada/requirements.txt (line 1))
+  Downloading zipp-3.19.2-py3-none-any.whl.metadata (3.6 kB)
+Collecting portalocker (from iopath<0.1.10,>=0.1.7->detectron2==0.6->-r /mount/src/clasificacion_alada/requirements.txt (line 24))
+  Downloading portalocker-2.10.1-py3-none-any.whl.metadata (8.5 kB)
+Collecting MarkupSafe>=2.0 (from Jinja2>=3.1.2->Flask==3.0.3->-r /mount/src/clasificacion_alada/requirements.txt (line 1))
+  Downloading MarkupSafe-2.1.5-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.0 kB)
+Collecting markdown-it-py>=2.2.0 (from rich->keras==3.1.1->-r /mount/src/clasificacion_alada/requirements.txt (line 3))
+  Downloading markdown_it_py-3.0.0-py3-none-any.whl.metadata (6.9 kB)
+Collecting pygments<3.0.0,>=2.13.0 (from rich->keras==3.1.1->-r /mount/src/clasificacion_alada/requirements.txt (line 3))
+  Downloading pygments-2.18.0-py3-none-any.whl.metadata (2.5 kB)
+Collecting markdown>=2.6.8 (from tensorboard<2.17,>=2.16->tensorflow->-r /mount/src/clasificacion_alada/requirements.txt (line 2))
+  Downloading Markdown-3.6-py3-none-any.whl.metadata (7.0 kB)
+Collecting tensorboard-data-server<0.8.0,>=0.7.0 (from tensorboard<2.17,>=2.16->tensorflow->-r /mount/src/clasificacion_alada/requirements.txt (line 2))
+  Downloading tensorboard_data_server-0.7.2-py3-none-manylinux_2_31_x86_64.whl.metadata (1.1 kB)
+Collecting mypy-extensions>=0.4.3 (from black->detectron2==0.6->-r /mount/src/clasificacion_alada/requirements.txt (line 24))
+  Downloading mypy_extensions-1.0.0-py3-none-any.whl.metadata (1.1 kB)
+Collecting pathspec>=0.9.0 (from black->detectron2==0.6->-r /mount/src/clasificacion_alada/requirements.txt (line 24))
+  Downloading pathspec-0.12.1-py3-none-any.whl.metadata (21 kB)
+Collecting platformdirs>=2 (from black->detectron2==0.6->-r /mount/src/clasificacion_alada/requirements.txt (line 24))
+  Downloading platformdirs-4.2.2-py3-none-any.whl.metadata (11 kB)
+Collecting tomli>=1.1.0 (from black->detectron2==0.6->-r /mount/src/clasificacion_alada/requirements.txt (line 24))
+  Downloading tomli-2.0.1-py3-none-any.whl.metadata (8.9 kB)
+Collecting mpmath<1.4,>=1.1.0 (from sympy->torch->-r /mount/src/clasificacion_alada/requirements.txt (line 19))
+  Downloading mpmath-1.3.0-py3-none-any.whl.metadata (8.6 kB)
+Collecting smmap<6,>=3.0.1 (from gitdb<5,>=4.0.1->gitpython!=3.1.19,<4,>=3.0.7->streamlit->-r /mount/src/clasificacion_alada/requirements.txt (line 23))
+  Downloading smmap-5.0.1-py3-none-any.whl.metadata (4.3 kB)
+Collecting attrs>=22.2.0 (from jsonschema>=3.0->altair<6,>=4.0->streamlit->-r /mount/src/clasificacion_alada/requirements.txt (line 23))
+  Downloading attrs-23.2.0-py3-none-any.whl.metadata (9.5 kB)
+Collecting jsonschema-specifications>=2023.03.6 (from jsonschema>=3.0->altair<6,>=4.0->streamlit->-r /mount/src/clasificacion_alada/requirements.txt (line 23))
+  Downloading jsonschema_specifications-2023.12.1-py3-none-any.whl.metadata (3.0 kB)
+Collecting referencing>=0.28.4 (from jsonschema>=3.0->altair<6,>=4.0->streamlit->-r /mount/src/clasificacion_alada/requirements.txt (line 23))
+  Downloading referencing-0.35.1-py3-none-any.whl.metadata (2.8 kB)
+Collecting rpds-py>=0.7.1 (from jsonschema>=3.0->altair<6,>=4.0->streamlit->-r /mount/src/clasificacion_alada/requirements.txt (line 23))
+  Downloading rpds_py-0.19.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.1 kB)
+Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich->keras==3.1.1->-r /mount/src/clasificacion_alada/requirements.txt (line 3))
+  Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+Downloading flask-3.0.3-py3-none-any.whl (101 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 101.7/101.7 kB 218.2 MB/s eta 0:00:00[2024-07-16 20:15:27.154041] 
+Downloading keras-3.1.1-py3-none-any.whl (1.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.1/1.1 MB 74.0 MB/s eta 0:00:00[2024-07-16 20:15:27.182395] 
+Downloading numpy-1.26.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (18.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 18.2/18.2 MB 146.8 MB/s eta 0:00:00[2024-07-16 20:15:27.327743] 
+Downloading pandas-2.2.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (13.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 13.0/13.0 MB 125.3 MB/s eta 0:00:00[2024-07-16 20:15:27.448388] 
+Downloading gunicorn-20.1.0-py3-none-any.whl (79 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 79.5/79.5 kB 121.5 MB/s eta 0:00:00[2024-07-16 20:15:27.464081] 
+Downloading pillow-10.3.0-cp39-cp39-manylinux_2_28_x86_64.whl (4.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.5/4.5 MB 146.4 MB/s eta 0:00:00[2024-07-16 20:15:27.509826] 
+Downloading matplotlib-3.8.3-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (11.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.6/11.6 MB 219.2 MB/s eta 0:00:00[2024-07-16 20:15:27.579105] 
+Downloading scipy-1.12.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (38.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 38.5/38.5 MB 177.3 MB/s eta 0:00:00[2024-07-16 20:15:27.850432] 
+Downloading requests-2.31.0-py3-none-any.whl (62 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.6/62.6 kB 147.0 MB/s eta 0:00:00[2024-07-16 20:15:27.863114] 
+Downloading h5py-3.11.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (5.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.3/5.3 MB 221.2 MB/s eta 0:00:00[2024-07-16 20:15:27.902919] 
+Downloading tensorflow-2.16.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (590.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 590.6/590.6 MB 207.6 MB/s eta 0:00:00[2024-07-16 20:15:31.151637] 
+Downloading opencv_python_headless-4.10.0.84-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (49.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 49.9/49.9 MB 153.6 MB/s eta 0:00:00[2024-07-16 20:15:31.428520] 
+Downloading load_dotenv-0.1.0-py3-none-any.whl (7.2 kB)
+Downloading scikit_learn-1.5.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (13.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 13.4/13.4 MB 129.7 MB/s eta 0:00:00[2024-07-16 20:15:31.635553] 
+Downloading scikit_image-0.24.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (14.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 14.9/14.9 MB 208.2 MB/s eta 0:00:00[2024-07-16 20:15:31.737189] 
+Downloading openpyxl-3.1.5-py2.py3-none-any.whl (250 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 250.9/250.9 kB 228.2 MB/s eta 0:00:00[2024-07-16 20:15:31.751136] 
+Downloading torch-2.3.1-cp39-cp39-manylinux1_x86_64.whl (779.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 779.1/779.1 MB 126.6 MB/s eta 0:00:00[2024-07-16 20:15:36.475010] 
+Downloading nvidia_cublas_cu12-12.1.3.1-py3-none-manylinux1_x86_64.whl (410.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 410.6/410.6 MB 198.7 MB/s eta 0:00:00[2024-07-16 20:15:38.867336] 
+Downloading nvidia_cuda_cupti_cu12-12.1.105-py3-none-manylinux1_x86_64.whl (14.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 14.1/14.1 MB 204.2 MB/s eta 0:00:00[2024-07-16 20:15:38.950896] 
+Downloading nvidia_cuda_nvrtc_cu12-12.1.105-py3-none-manylinux1_x86_64.whl (23.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 23.7/23.7 MB 125.6 MB/s eta 0:00:00[2024-07-16 20:15:39.137795] 
+Downloading nvidia_cuda_runtime_cu12-12.1.105-py3-none-manylinux1_x86_64.whl (823 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 823.6/823.6 kB 153.6 MB/s eta 0:00:00[2024-07-16 20:15:39.160178] 
+Downloading nvidia_cudnn_cu12-8.9.2.26-py3-none-manylinux1_x86_64.whl (731.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 731.7/731.7 MB 223.4 MB/s eta 0:00:00[2024-07-16 20:15:43.392097] 
+Downloading nvidia_cufft_cu12-11.0.2.54-py3-none-manylinux1_x86_64.whl (121.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 121.6/121.6 MB 180.7 MB/s eta 0:00:00[2024-07-16 20:15:44.022418] 
+Downloading nvidia_curand_cu12-10.3.2.106-py3-none-manylinux1_x86_64.whl (56.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 56.5/56.5 MB 189.5 MB/s eta 0:00:00[2024-07-16 20:15:44.439794] 
+Downloading nvidia_cusolver_cu12-11.4.5.107-py3-none-manylinux1_x86_64.whl (124.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 124.2/124.2 MB 193.7 MB/s eta 0:00:00[2024-07-16 20:15:45.275529] 
+Downloading nvidia_cusparse_cu12-12.1.0.106-py3-none-manylinux1_x86_64.whl (196.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 196.0/196.0 MB 176.2 MB/s eta 0:00:00[2024-07-16 20:15:46.406491] 
+Downloading nvidia_nccl_cu12-2.20.5-py3-none-manylinux2014_x86_64.whl (176.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 176.2/176.2 MB 183.9 MB/s eta 0:00:00[2024-07-16 20:15:47.396400] 
+Downloading nvidia_nvtx_cu12-12.1.105-py3-none-manylinux1_x86_64.whl (99 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 99.1/99.1 kB 168.6 MB/s eta 0:00:00[2024-07-16 20:15:47.482340] 
+Downloading triton-2.3.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (168.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 168.1/168.1 MB 227.1 MB/s eta 0:00:00[2024-07-16 20:15:48.486993] 
+Downloading torchvision-0.18.1-cp39-cp39-manylinux1_x86_64.whl (7.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.0/7.0 MB 198.1 MB/s eta 0:00:00[2024-07-16 20:15:48.537580] 
+Downloading torchaudio-2.3.1-cp39-cp39-manylinux1_x86_64.whl (3.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.4/3.4 MB 191.4 MB/s eta 0:00:00[2024-07-16 20:15:48.573224] 
+Downloading streamlit-1.36.0-py2.py3-none-any.whl (8.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.6/8.6 MB 202.3 MB/s eta 0:00:00[2024-07-16 20:15:48.629182] 
+Downloading absl_py-2.1.0-py3-none-any.whl (133 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 133.7/133.7 kB 202.6 MB/s eta 0:00:00[2024-07-16 20:15:48.642664] 
+Downloading altair-5.3.0-py3-none-any.whl (857 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 857.8/857.8 kB 201.0 MB/s eta 0:00:00[2024-07-16 20:15:48.662264] 
+Downloading astunparse-1.6.3-py2.py3-none-any.whl (12 kB)
+Downloading blinker-1.8.2-py3-none-any.whl (9.5 kB)
+Downloading cachetools-5.4.0-py3-none-any.whl (9.5 kB)
+Downloading certifi-2024.7.4-py3-none-any.whl (162 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.0/163.0 kB 229.4 MB/s eta 0:00:00[2024-07-16 20:15:48.703393] 
+Downloading charset_normalizer-3.3.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (142 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 142.3/142.3 kB 158.3 MB/s eta 0:00:00[2024-07-16 20:15:48.716153] 
+Downloading click-8.1.7-py3-none-any.whl (97 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 97.9/97.9 kB 227.5 MB/s eta 0:00:00[2024-07-16 20:15:48.729908] 
+Downloading contourpy-1.2.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (304 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 305.0/305.0 kB 158.2 MB/s eta 0:00:00[2024-07-16 20:15:48.747081] 
+Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+Downloading flatbuffers-24.3.25-py2.py3-none-any.whl (26 kB)
+Downloading fonttools-4.53.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (4.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.6/4.6 MB 169.7 MB/s eta 0:00:00[2024-07-16 20:15:48.810535] 
+Downloading gast-0.6.0-py3-none-any.whl (21 kB)
+Downloading GitPython-3.1.43-py3-none-any.whl (207 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 207.3/207.3 kB 144.2 MB/s eta 0:00:00[2024-07-16 20:15:48.834740] 
+Downloading google_pasta-0.2.0-py3-none-any.whl (57 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 57.5/57.5 kB 199.4 MB/s eta 0:00:00[2024-07-16 20:15:48.847163] 
+Downloading grpcio-1.64.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (5.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.6/5.6 MB 207.1 MB/s eta 0:00:00[2024-07-16 20:15:48.889465] 
+Downloading hydra_core-1.3.2-py3-none-any.whl (154 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 154.5/154.5 kB 168.3 MB/s eta 0:00:00[2024-07-16 20:15:48.904550] 
+Downloading idna-3.7-py3-none-any.whl (66 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.8/66.8 kB 201.8 MB/s eta 0:00:00[2024-07-16 20:15:48.917452] 
+Downloading imageio-2.34.2-py3-none-any.whl (313 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 313.5/313.5 kB 182.4 MB/s eta 0:00:00[2024-07-16 20:15:48.933865] 
+Downloading importlib_metadata-8.0.0-py3-none-any.whl (24 kB)
+Downloading importlib_resources-6.4.0-py3-none-any.whl (38 kB)
+Downloading iopath-0.1.9-py3-none-any.whl (27 kB)
+Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+Downloading jinja2-3.1.4-py3-none-any.whl (133 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 133.3/133.3 kB 124.0 MB/s eta 0:00:00[2024-07-16 20:15:48.995387] 
+Downloading joblib-1.4.2-py3-none-any.whl (301 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 301.8/301.8 kB 113.4 MB/s eta 0:00:00[2024-07-16 20:15:49.015578] 
+Downloading kiwisolver-1.4.5-cp39-cp39-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (1.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.6/1.6 MB 118.9 MB/s eta 0:00:00[2024-07-16 20:15:49.047351] 
+Downloading lazy_loader-0.4-py3-none-any.whl (12 kB)
+Downloading libclang-18.1.1-py2.py3-none-manylinux2010_x86_64.whl (24.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 24.5/24.5 MB 123.2 MB/s eta 0:00:00[2024-07-16 20:15:49.277296] 
+Downloading ml_dtypes-0.3.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.2/2.2 MB 225.5 MB/s eta 0:00:00[2024-07-16 20:15:49.301756] 
+Downloading networkx-3.2.1-py3-none-any.whl (1.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.6/1.6 MB 171.5 MB/s eta 0:00:00[2024-07-16 20:15:49.328717] 
+Downloading omegaconf-2.3.0-py3-none-any.whl (79 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 79.5/79.5 kB 128.0 MB/s eta 0:00:00[2024-07-16 20:15:49.343656] 
+Downloading opt_einsum-3.3.0-py3-none-any.whl (65 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 65.5/65.5 kB 134.6 MB/s eta 0:00:00[2024-07-16 20:15:49.358254] 
+Downloading packaging-24.1-py3-none-any.whl (53 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 54.0/54.0 kB 104.1 MB/s eta 0:00:00[2024-07-16 20:15:49.372739] 
+Downloading protobuf-4.25.3-cp37-abi3-manylinux2014_x86_64.whl (294 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 294.6/294.6 kB 123.9 MB/s eta 0:00:00[2024-07-16 20:15:49.389318] 
+Downloading pyarrow-16.1.0-cp39-cp39-manylinux_2_28_x86_64.whl (40.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 40.8/40.8 MB 204.9 MB/s eta 0:00:00[2024-07-16 20:15:49.635480] 
+Downloading pycocotools-2.0.8-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (432 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 432.9/432.9 kB 245.5 MB/s eta 0:00:00[2024-07-16 20:15:49.652358] 
+Downloading pydeck-0.9.1-py2.py3-none-any.whl (6.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.9/6.9 MB 147.5 MB/s eta 0:00:00[2024-07-16 20:15:49.713897] 
+Downloading pyparsing-3.1.2-py3-none-any.whl (103 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 103.2/103.2 kB 207.5 MB/s eta 0:00:00[2024-07-16 20:15:49.727049] 
+Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 135.1 MB/s eta 0:00:00[2024-07-16 20:15:49.741310] 
+Downloading pytz-2024.1-py2.py3-none-any.whl (505 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 505.5/505.5 kB 215.0 MB/s eta 0:00:00[2024-07-16 20:15:49.756460] 
+Downloading rich-13.7.1-py3-none-any.whl (240 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 240.7/240.7 kB 181.8 MB/s eta 0:00:00[2024-07-16 20:15:49.770660] 
+Downloading setuptools-70.3.0-py3-none-any.whl (931 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 931.1/931.1 kB 224.3 MB/s eta 0:00:00[2024-07-16 20:15:49.788078] 
+Downloading six-1.16.0-py2.py3-none-any.whl (11 kB)
+Downloading tenacity-8.5.0-py3-none-any.whl (28 kB)
+Downloading tensorboard-2.16.2-py3-none-any.whl (5.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.5/5.5 MB 134.8 MB/s eta 0:00:00[2024-07-16 20:15:49.868801] 
+Downloading tensorflow_io_gcs_filesystem-0.37.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (5.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.1/5.1 MB 198.4 MB/s eta 0:00:00[2024-07-16 20:15:49.907732] 
+Downloading termcolor-2.4.0-py3-none-any.whl (7.7 kB)
+Downloading threadpoolctl-3.5.0-py3-none-any.whl (18 kB)
+Downloading tifffile-2024.7.2-py3-none-any.whl (225 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 225.9/225.9 kB 237.9 MB/s eta 0:00:00[2024-07-16 20:15:49.942673] 
+Downloading toml-0.10.2-py2.py3-none-any.whl (16 kB)
+Downloading tornado-6.4.1-cp38-abi3-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (436 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 436.8/436.8 kB 129.9 MB/s eta 0:00:00[2024-07-16 20:15:49.969547] 
+Downloading tqdm-4.66.4-py3-none-any.whl (78 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.3/78.3 kB 169.8 MB/s eta 0:00:00[2024-07-16 20:15:49.983135] 
+Downloading typing_extensions-4.12.2-py3-none-any.whl (37 kB)
+Downloading tzdata-2024.1-py2.py3-none-any.whl (345 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 345.4/345.4 kB 109.2 MB/s eta 0:00:00[2024-07-16 20:15:50.010176] 
+Downloading urllib3-2.2.2-py3-none-any.whl (121 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 121.4/121.4 kB 151.3 MB/s eta 0:00:00[2024-07-16 20:15:50.023610] 
+Downloading watchdog-4.0.1-py3-none-manylinux2014_x86_64.whl (83 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 83.0/83.0 kB 160.2 MB/s eta 0:00:00[2024-07-16 20:15:50.037001] 
+Downloading werkzeug-3.0.3-py3-none-any.whl (227 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 227.3/227.3 kB 112.0 MB/s eta 0:00:00[2024-07-16 20:15:50.052913] 
+Downloading wrapt-1.16.0-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (80 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 80.1/80.1 kB 116.7 MB/s eta 0:00:00[2024-07-16 20:15:50.065572] 
+Downloading yacs-0.1.8-py3-none-any.whl (14 kB)
+Downloading black-24.4.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 207.5 MB/s eta 0:00:00[2024-07-16 20:15:50.102457] 
+Downloading cloudpickle-3.0.0-py3-none-any.whl (20 kB)
+Downloading et_xmlfile-1.1.0-py3-none-any.whl (4.7 kB)
+Downloading filelock-3.15.4-py3-none-any.whl (16 kB)
+Downloading fsspec-2024.6.1-py3-none-any.whl (177 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 177.6/177.6 kB 92.3 MB/s eta 0:00:00[2024-07-16 20:15:50.150524] 
+Downloading namex-0.0.8-py3-none-any.whl (5.8 kB)
+Downloading optree-0.12.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (347 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 348.0/348.0 kB 128.5 MB/s eta 0:00:00[2024-07-16 20:15:50.181182] 
+Downloading python_dotenv-1.0.1-py3-none-any.whl (19 kB)
+Downloading sympy-1.13.0-py3-none-any.whl (6.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.2/6.2 MB 195.6 MB/s eta 0:00:00[2024-07-16 20:15:50.240035] 
+Downloading tabulate-0.9.0-py3-none-any.whl (35 kB)
+Downloading gitdb-4.0.11-py3-none-any.whl (62 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.7/62.7 kB 126.6 MB/s eta 0:00:00[2024-07-16 20:15:50.263766] 
+Downloading jsonschema-4.23.0-py3-none-any.whl (88 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 88.5/88.5 kB 170.7 MB/s eta 0:00:00[2024-07-16 20:15:50.276837] 
+Downloading Markdown-3.6-py3-none-any.whl (105 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 105.4/105.4 kB 174.4 MB/s eta 0:00:00[2024-07-16 20:15:50.289377] 
+Downloading markdown_it_py-3.0.0-py3-none-any.whl (87 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 87.5/87.5 kB 214.6 MB/s eta 0:00:00[2024-07-16 20:15:50.301877] 
+Downloading MarkupSafe-2.1.5-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (25 kB)
+Downloading mpmath-1.3.0-py3-none-any.whl (536 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 536.2/536.2 kB 129.4 MB/s eta 0:00:00[2024-07-16 20:15:50.332402] 
+Downloading mypy_extensions-1.0.0-py3-none-any.whl (4.7 kB)
+Downloading pathspec-0.12.1-py3-none-any.whl (31 kB)
+Downloading platformdirs-4.2.2-py3-none-any.whl (18 kB)
+Downloading pygments-2.18.0-py3-none-any.whl (1.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 129.2 MB/s eta 0:00:00[2024-07-16 20:15:50.388357] 
+Downloading PyYAML-6.0.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (738 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 738.9/738.9 kB 128.7 MB/s eta 0:00:00[2024-07-16 20:15:50.408364] 
+Downloading tensorboard_data_server-0.7.2-py3-none-manylinux_2_31_x86_64.whl (6.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.6/6.6 MB 208.9 MB/s eta 0:00:00[2024-07-16 20:15:50.454056] 
+Downloading tomli-2.0.1-py3-none-any.whl (12 kB)
+Downloading wheel-0.43.0-py3-none-any.whl (65 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 65.8/65.8 kB 203.7 MB/s eta 0:00:00[2024-07-16 20:15:50.475989] 
+Downloading zipp-3.19.2-py3-none-any.whl (9.0 kB)
+Downloading nvidia_nvjitlink_cu12-12.5.82-py3-none-manylinux2014_x86_64.whl (21.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 21.3/21.3 MB 212.3 MB/s eta 0:00:00[2024-07-16 20:15:50.605625] 
+Downloading portalocker-2.10.1-py3-none-any.whl (18 kB)
+Downloading toolz-0.12.1-py3-none-any.whl (56 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 56.1/56.1 kB 205.8 MB/s eta 0:00:00[2024-07-16 20:15:50.628852] 
+Downloading attrs-23.2.0-py3-none-any.whl (60 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 60.8/60.8 kB 167.1 MB/s eta 0:00:00[2024-07-16 20:15:50.640679] 
+Downloading jsonschema_specifications-2023.12.1-py3-none-any.whl (18 kB)
+Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+Downloading referencing-0.35.1-py3-none-any.whl (26 kB)
+Downloading rpds_py-0.19.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (356 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 356.0/356.0 kB 218.2 MB/s eta 0:00:00[2024-07-16 20:15:50.689625] 
+Downloading smmap-5.0.1-py3-none-any.whl (24 kB)
+Building wheels for collected packages: detectron2, fvcore, antlr4-python3-runtime
+  Building wheel for detectron2 (setup.py): started
+  Building wheel for detectron2 (setup.py): still running...
+  Building wheel for detectron2 (setup.py): finished with status 'done'
+  Created wheel for detectron2: filename=detectron2-0.6-cp39-cp39-linux_x86_64.whl size=5987756 sha256=a67ee1bef285f07576c5dbd1c2f4ca496d3eba2c8a293f4077afc4ee2c853478
+  Stored in directory: /tmp/pip-ephem-wheel-cache-688x18fp/wheels/59/b4/83/84bfca751fa4dcc59998468be8688eb50e97408a83af171d42
+  Building wheel for fvcore (setup.py): started
+  Building wheel for fvcore (setup.py): finished with status 'done'
+  Created wheel for fvcore: filename=fvcore-0.1.5.post20221221-py3-none-any.whl size=61397 sha256=4bccbcad4fb58989a218e235972734c9c49f121d17e10688f2fec8a52a13f3ae
+  Stored in directory: /tmp/pip-ephem-wheel-cache-688x18fp/wheels/83/42/02/66178d16e5c44dc26d309931834956baeda371956e86fbd876
+  Building wheel for antlr4-python3-runtime (setup.py): started
+  Building wheel for antlr4-python3-runtime (setup.py): finished with status 'done'
+  Created wheel for antlr4-python3-runtime: filename=antlr4_python3_runtime-4.9.3-py3-none-any.whl size=144551 sha256=8b0799a86fa7f72f41ba2d2105e9812d81f5de937b8b3d05d20e7b8a14f6c396
+  Stored in directory: /tmp/pip-ephem-wheel-cache-688x18fp/wheels/23/cf/80/f3efa822e6ab23277902ee9165fe772eeb1dfb8014f359020a
+Successfully built detectron2 fvcore antlr4-python3-runtime
+Installing collected packages: pytz, namex, mpmath, libclang, flatbuffers, antlr4-python3-runtime, zipp, wrapt, wheel, watchdog, urllib3, tzdata, typing-extensions, tqdm, tornado, toolz, tomli, toml, threadpoolctl, termcolor, tensorflow-io-gcs-filesystem, tensorboard-data-server, tenacity, tabulate, sympy, smmap, six, setuptools, rpds-py, pyyaml, python-dotenv, pyparsing, pygments, protobuf, portalocker, platformdirs, pillow, pathspec, packaging, nvidia-nvtx-cu12, nvidia-nvjitlink-cu12, nvidia-nccl-cu12, nvidia-curand-cu12, nvidia-cufft-cu12, nvidia-cuda-runtime-cu12, nvidia-cuda-nvrtc-cu12, nvidia-cuda-cupti-cu12, nvidia-cublas-cu12, numpy, networkx, mypy-extensions, mdurl, MarkupSafe, kiwisolver, joblib, itsdangerous, idna, grpcio, gast, fsspec, fonttools, filelock, et-xmlfile, cycler, cloudpickle, click, charset-normalizer, certifi, cachetools, blinker, attrs, absl-py, yacs, Werkzeug, triton, tifffile, scipy, requests, referencing, python-dateutil, pyarrow, optree, opt-einsum, openpyxl, opencv-python-headless, omegaconf, nvidia-cusparse-cu12, nvidia-cudnn-cu12, ml-dtypes, markdown-it-py, load_dotenv, lazy-loader, Jinja2, iopath, importlib-resources, importlib-metadata, imageio, h5py, gunicorn, google-pasta, gitdb, contourpy, black, astunparse, scikit-learn, scikit-image, rich, pydeck, pandas, nvidia-cusolver-cu12, matplotlib, markdown, jsonschema-specifications, hydra-core, gitpython, fvcore, Flask, torch, tensorboard, pycocotools, keras, jsonschema, torchvision, torchaudio, tensorflow, detectron2, altair, streamlit
+  Attempting uninstall: pytz
+    Found existing installation: pytz 2024.1
+    Uninstalling pytz-2024.1:
+      Successfully uninstalled pytz-2024.1
+  Attempting uninstall: namex
+    Found existing installation: namex 0.0.8
+    Uninstalling namex-0.0.8:
+      Successfully uninstalled namex-0.0.8
+  Attempting uninstall: mpmath
+    Found existing installation: mpmath 1.3.0
+    Uninstalling mpmath-1.3.0:
+      Successfully uninstalled mpmath-1.3.0
+  Attempting uninstall: libclang
+    Found existing installation: libclang 18.1.1
+    Uninstalling libclang-18.1.1:
+      Successfully uninstalled libclang-18.1.1
+  Attempting uninstall: flatbuffers
+    Found existing installation: flatbuffers 24.3.25
+    Uninstalling flatbuffers-24.3.25:
+      Successfully uninstalled flatbuffers-24.3.25
+  Attempting uninstall: zipp
+    Found existing installation: zipp 3.19.2
+    Uninstalling zipp-3.19.2:
+      Successfully uninstalled zipp-3.19.2
+  Attempting uninstall: wrapt
+    Found existing installation: wrapt 1.16.0
+    Uninstalling wrapt-1.16.0:
+      Successfully uninstalled wrapt-1.16.0
+  Attempting uninstall: wheel
+    Found existing installation: wheel 0.43.0
+    Uninstalling wheel-0.43.0:
+      Successfully uninstalled wheel-0.43.0
+  Attempting uninstall: watchdog
+    Found existing installation: watchdog 4.0.1
+    Uninstalling watchdog-4.0.1:
+      Successfully uninstalled watchdog-4.0.1
+  Attempting uninstall: urllib3
+    Found existing installation: urllib3 2.2.2
+    Uninstalling urllib3-2.2.2:
+      Successfully uninstalled urllib3-2.2.2
+  Attempting uninstall: tzdata
+    Found existing installation: tzdata 2024.1
+    Uninstalling tzdata-2024.1:
+      Successfully uninstalled tzdata-2024.1
+  Attempting uninstall: typing-extensions
+    Found existing installation: typing_extensions 4.12.2
+    Uninstalling typing_extensions-4.12.2:
+      Successfully uninstalled typing_extensions-4.12.2
+  Attempting uninstall: tornado
+    Found existing installation: tornado 6.4.1
+    Uninstalling tornado-6.4.1:
+      Successfully uninstalled tornado-6.4.1
+  Attempting uninstall: toolz
+    Found existing installation: toolz 0.12.1
+    Uninstalling toolz-0.12.1:
+      Successfully uninstalled toolz-0.12.1
+  Attempting uninstall: toml
+    Found existing installation: toml 0.10.2
+    Uninstalling toml-0.10.2:
+      Successfully uninstalled toml-0.10.2
+  Attempting uninstall: threadpoolctl
+    Found existing installation: threadpoolctl 3.5.0
+    Uninstalling threadpoolctl-3.5.0:
+      Successfully uninstalled threadpoolctl-3.5.0
+  Attempting uninstall: termcolor
+    Found existing installation: termcolor 2.4.0
+    Uninstalling termcolor-2.4.0:
+      Successfully uninstalled termcolor-2.4.0
+  Attempting uninstall: tensorflow-io-gcs-filesystem
+    Found existing installation: tensorflow-io-gcs-filesystem 0.37.1
+    Uninstalling tensorflow-io-gcs-filesystem-0.37.1:
+      Successfully uninstalled tensorflow-io-gcs-filesystem-0.37.1
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.9/site-packages/streamlit/runtime/scriptrun  
+  ner/script_runner.py:589 in _run_script                                       
+                                                                                
+  /mount/src/clasificacion_alada/appStreamlit.py:1 in <module>                  
+                                                                                
+  ❱   1 import detectron2                                                       
+      2 from detectron2.utils.logger import setup_logger                        
+      3 setup_logger()                                                          
+      4                                                                         
+────────────────────────────────────────────────────────────────────────────────
+ModuleNotFoundError: No module named 'detectron2'
+  Attempting uninstall: tensorboard-data-server
+    Found existing installation: tensorboard-data-server 0.7.2
+    Uninstalling tensorboard-data-server-0.7.2:
+      Successfully uninstalled tensorboard-data-server-0.7.2
+[20:17:53] ❗️ 
+2024-07-16 20:17:53.796 503 GET /script-health-check (127.0.0.1) 110.18ms
+  Attempting uninstall: tenacity
+    Found existing installation: tenacity 8.5.0
+    Uninstalling tenacity-8.5.0:
+      Successfully uninstalled tenacity-8.5.0
+  Attempting uninstall: sympy
+    Found existing installation: sympy 1.13.0
+    Uninstalling sympy-1.13.0:
+      Successfully uninstalled sympy-1.13.0
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.9/site-packages/streamlit/runtime/scriptrun  
+  ner/script_runner.py:589 in _run_script                                       
+                                                                                
+  /mount/src/clasificacion_alada/appStreamlit.py:1 in <module>                  
+                                                                                
+  ❱   1 import detectron2                                                       
+      2 from detectron2.utils.logger import setup_logger                        
+      3 setup_logger()                                                          
+      4                                                                         
+────────────────────────────────────────────────────────────────────────────────
+ModuleNotFoundError: No module named 'detectron2'
+2024-07-16 20:17:58.743 503 GET /script-health-check (127.0.0.1) 101.60ms
+  Attempting uninstall: smmap
+    Found existing installation: smmap 5.0.1
+    Uninstalling smmap-5.0.1:
+      Successfully uninstalled smmap-5.0.1
+  Attempting uninstall: six
+    Found existing installation: six 1.16.0
+    Uninstalling six-1.16.0:
+      Successfully uninstalled six-1.16.0
+  Attempting uninstall: setuptools
+    Found existing installation: setuptools 70.3.0
+    Uninstalling setuptools-70.3.0:
+      Successfully uninstalled setuptools-70.3.0
+  Attempting uninstall: rpds-py
+    Found existing installation: rpds-py 0.19.0
+    Uninstalling rpds-py-0.19.0:
+      Successfully uninstalled rpds-py-0.19.0
+  Attempting uninstall: python-dotenv
+    Found existing installation: python-dotenv 1.0.1
+    Uninstalling python-dotenv-1.0.1:
+      Successfully uninstalled python-dotenv-1.0.1
+  Attempting uninstall: pyparsing
+    Found existing installation: pyparsing 3.1.2
+    Uninstalling pyparsing-3.1.2:
+      Successfully uninstalled pyparsing-3.1.2
+  Attempting uninstall: pygments
+    Found existing installation: Pygments 2.18.0
+    Uninstalling Pygments-2.18.0:
+      Successfully uninstalled Pygments-2.18.0
+  Attempting uninstall: protobuf
+    Found existing installation: protobuf 4.25.3
+    Uninstalling protobuf-4.25.3:
+      Successfully uninstalled protobuf-4.25.3
+  Attempting uninstall: pillow
+    Found existing installation: pillow 10.3.0
+    Uninstalling pillow-10.3.0:
+      Successfully uninstalled pillow-10.3.0
+  Attempting uninstall: packaging
+    Found existing installation: packaging 24.1
+    Uninstalling packaging-24.1:
+      Successfully uninstalled packaging-24.1
+  Attempting uninstall: nvidia-nvtx-cu12
+    Found existing installation: nvidia-nvtx-cu12 12.1.105
+    Uninstalling nvidia-nvtx-cu12-12.1.105:
+      Successfully uninstalled nvidia-nvtx-cu12-12.1.105
+  Attempting uninstall: nvidia-nvjitlink-cu12
+    Found existing installation: nvidia-nvjitlink-cu12 12.5.82
+    Uninstalling nvidia-nvjitlink-cu12-12.5.82:
+      Successfully uninstalled nvidia-nvjitlink-cu12-12.5.82
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.9/site-packages/streamlit/runtime/scriptrun  
+  ner/script_runner.py:589 in _run_script                                       
+                                                                                
+  /mount/src/clasificacion_alada/appStreamlit.py:1 in <module>                  
+                                                                                
+  ❱   1 import detectron2                                                       
+      2 from detectron2.utils.logger import setup_logger                        
+      3 setup_logger()                                                          
+      4                                                                         
+────────────────────────────────────────────────────────────────────────────────
+ModuleNotFoundError: No module named 'detectron2'
+2024-07-16 20:18:03.753 503 GET /script-health-check (127.0.0.1) 102.86ms
+  Attempting uninstall: nvidia-nccl-cu12
+    Found existing installation: nvidia-nccl-cu12 2.20.5
+    Uninstalling nvidia-nccl-cu12-2.20.5:
+      Successfully uninstalled nvidia-nccl-cu12-2.20.5
+  Attempting uninstall: nvidia-curand-cu12
+    Found existing installation: nvidia-curand-cu12 10.3.2.106
+    Uninstalling nvidia-curand-cu12-10.3.2.106:
+      Successfully uninstalled nvidia-curand-cu12-10.3.2.106
+  Attempting uninstall: nvidia-cufft-cu12
+    Found existing installation: nvidia-cufft-cu12 11.0.2.54
+    Uninstalling nvidia-cufft-cu12-11.0.2.54:
+      Successfully uninstalled nvidia-cufft-cu12-11.0.2.54
+  Attempting uninstall: nvidia-cuda-runtime-cu12
+    Found existing installation: nvidia-cuda-runtime-cu12 12.1.105
+    Uninstalling nvidia-cuda-runtime-cu12-12.1.105:
+      Successfully uninstalled nvidia-cuda-runtime-cu12-12.1.105
+  Attempting uninstall: nvidia-cuda-nvrtc-cu12
+    Found existing installation: nvidia-cuda-nvrtc-cu12 12.1.105
+    Uninstalling nvidia-cuda-nvrtc-cu12-12.1.105:
+      Successfully uninstalled nvidia-cuda-nvrtc-cu12-12.1.105
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.9/site-packages/streamlit/runtime/scriptrun  
+  ner/script_runner.py:589 in _run_script                                       
+                                                                                
+  /mount/src/clasificacion_alada/appStreamlit.py:1 in <module>                  
+                                                                                
+  ❱   1 import detectron2                                                       
+      2 from detectron2.utils.logger import setup_logger                        
+      3 setup_logger()                                                          
+      4                                                                         
+────────────────────────────────────────────────────────────────────────────────
+ModuleNotFoundError: No module named 'detectron2'
+  Attempting uninstall: nvidia-cuda-cupti-cu12
+    Found existing installation: nvidia-cuda-cupti-cu12 12.1.105
+    Uninstalling nvidia-cuda-cupti-cu12-12.1.105:
+      Successfully uninstalled nvidia-cuda-cupti-cu12-12.1.105
+2024-07-16 20:18:08.741 503 GET /script-health-check (127.0.0.1) 101.96ms
+  Attempting uninstall: nvidia-cublas-cu12
+    Found existing installation: nvidia-cublas-cu12 12.1.3.1
+    Uninstalling nvidia-cublas-cu12-12.1.3.1:
+      Successfully uninstalled nvidia-cublas-cu12-12.1.3.1
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.9/site-packages/streamlit/runtime/scriptrun  
+  ner/script_runner.py:589 in _run_script                                       
+                                                                                
+  /mount/src/clasificacion_alada/appStreamlit.py:1 in <module>                  
+                                                                                
+  ❱   1 import detectron2                                                       
+      2 from detectron2.utils.logger import setup_logger                        
+      3 setup_logger()                                                          
+      4                                                                         
+────────────────────────────────────────────────────────────────────────────────
+ModuleNotFoundError: No module named 'detectron2'
+2024-07-16 20:18:13.756 503 GET /script-health-check (127.0.0.1) 102.37ms
+  Attempting uninstall: numpy
+    Found existing installation: numpy 1.26.2
+    Uninstalling numpy-1.26.2:
+      Successfully uninstalled numpy-1.26.2
+  Attempting uninstall: networkx
+    Found existing installation: networkx 3.2.1
+    Uninstalling networkx-3.2.1:
+      Successfully uninstalled networkx-3.2.1
+  Attempting uninstall: mdurl
+    Found existing installation: mdurl 0.1.2
+    Uninstalling mdurl-0.1.2:
+      Successfully uninstalled mdurl-0.1.2
+  Attempting uninstall: MarkupSafe
+    Found existing installation: MarkupSafe 2.1.5
+    Uninstalling MarkupSafe-2.1.5:
+      Successfully uninstalled MarkupSafe-2.1.5
+  Attempting uninstall: kiwisolver
+    Found existing installation: kiwisolver 1.4.5
+    Uninstalling kiwisolver-1.4.5:
+      Successfully uninstalled kiwisolver-1.4.5
+  Attempting uninstall: joblib
+    Found existing installation: joblib 1.4.2
+    Uninstalling joblib-1.4.2:
+      Successfully uninstalled joblib-1.4.2
+  Attempting uninstall: itsdangerous
+    Found existing installation: itsdangerous 2.2.0
+    Uninstalling itsdangerous-2.2.0:
+      Successfully uninstalled itsdangerous-2.2.0
+  Attempting uninstall: idna
+    Found existing installation: idna 3.7
+    Uninstalling idna-3.7:
+      Successfully uninstalled idna-3.7
+  Attempting uninstall: grpcio
+    Found existing installation: grpcio 1.64.1
+    Uninstalling grpcio-1.64.1:
+      Successfully uninstalled grpcio-1.64.1
+  Attempting uninstall: gast
+    Found existing installation: gast 0.6.0
+    Uninstalling gast-0.6.0:
+      Successfully uninstalled gast-0.6.0
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.9/site-packages/streamlit/runtime/scriptrun  
+  ner/script_runner.py:589 in _run_script                                       
+                                                                                
+  /mount/src/clasificacion_alada/appStreamlit.py:1 in <module>                  
+                                                                                
+  ❱   1 import detectron2                                                       
+      2 from detectron2.utils.logger import setup_logger                        
+      3 setup_logger()                                                          
+      4                                                                         
+────────────────────────────────────────────────────────────────────────────────
+ModuleNotFoundError: No module named 'detectron2'
+  Attempting uninstall: fsspec
+    Found existing installation: fsspec 2024.6.1
+    Uninstalling fsspec-2024.6.1:
+      Successfully uninstalled fsspec-2024.6.1
+2024-07-16 20:18:18.768 503 GET /script-health-check (127.0.0.1) 103.54ms
+  Attempting uninstall: fonttools
+    Found existing installation: fonttools 4.53.1
+    Uninstalling fonttools-4.53.1:
+      Successfully uninstalled fonttools-4.53.1
+  Attempting uninstall: filelock
+    Found existing installation: filelock 3.15.4
+    Uninstalling filelock-3.15.4:
+      Successfully uninstalled filelock-3.15.4
+  Attempting uninstall: et-xmlfile
+    Found existing installation: et-xmlfile 1.1.0
+    Uninstalling et-xmlfile-1.1.0:
+      Successfully uninstalled et-xmlfile-1.1.0
+  Attempting uninstall: cycler
+    Found existing installation: cycler 0.12.1
+    Uninstalling cycler-0.12.1:
+      Successfully uninstalled cycler-0.12.1
+  Attempting uninstall: click
+    Found existing installation: click 8.1.7
+    Uninstalling click-8.1.7:
+      Successfully uninstalled click-8.1.7
+  Attempting uninstall: charset-normalizer
+    Found existing installation: charset-normalizer 3.3.2
+    Uninstalling charset-normalizer-3.3.2:
+      Successfully uninstalled charset-normalizer-3.3.2
+  Attempting uninstall: certifi
+    Found existing installation: certifi 2024.7.4
+    Uninstalling certifi-2024.7.4:
+      Successfully uninstalled certifi-2024.7.4
+  Attempting uninstall: cachetools
+    Found existing installation: cachetools 5.4.0
+    Uninstalling cachetools-5.4.0:
+      Successfully uninstalled cachetools-5.4.0
+  Attempting uninstall: blinker
+    Found existing installation: blinker 1.8.2
+    Uninstalling blinker-1.8.2:
+      Successfully uninstalled blinker-1.8.2
+  Attempting uninstall: attrs
+    Found existing installation: attrs 23.2.0
+    Uninstalling attrs-23.2.0:
+      Successfully uninstalled attrs-23.2.0
+  Attempting uninstall: absl-py
+    Found existing installation: absl-py 2.1.0
+    Uninstalling absl-py-2.1.0:
+      Successfully uninstalled absl-py-2.1.0
+  Attempting uninstall: Werkzeug
+    Found existing installation: Werkzeug 3.0.3
+    Uninstalling Werkzeug-3.0.3:
+      Successfully uninstalled Werkzeug-3.0.3
+  Attempting uninstall: triton
+    Found existing installation: triton 2.3.1
+    Uninstalling triton-2.3.1:
+      Successfully uninstalled triton-2.3.1
+  Attempting uninstall: tifffile
+    Found existing installation: tifffile 2024.7.2
+    Uninstalling tifffile-2024.7.2:
+      Successfully uninstalled tifffile-2024.7.2
+  Attempting uninstall: scipy
+    Found existing installation: scipy 1.12.0
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.9/site-packages/streamlit/runtime/scriptrun  
+  ner/script_runner.py:589 in _run_script                                       
+                                                                                
+  /mount/src/clasificacion_alada/appStreamlit.py:1 in <module>                  
+                                                                                
+  ❱   1 import detectron2                                                       
+      2 from detectron2.utils.logger import setup_logger                        
+      3 setup_logger()                                                          
+      4                                                                         
+────────────────────────────────────────────────────────────────────────────────
+ModuleNotFoundError: No module named 'detectron2'
+    Uninstalling scipy-1.12.0:
+      Successfully uninstalled scipy-1.12.0
+2024-07-16 20:18:23.794 503 GET /script-health-check (127.0.0.1) 103.38ms
+  Attempting uninstall: requests
+    Found existing installation: requests 2.31.0
+    Uninstalling requests-2.31.0:
+      Successfully uninstalled requests-2.31.0
+  Attempting uninstall: referencing
+    Found existing installation: referencing 0.35.1
+    Uninstalling referencing-0.35.1:
+      Successfully uninstalled referencing-0.35.1
+  Attempting uninstall: python-dateutil
+    Found existing installation: python-dateutil 2.9.0.post0
+    Uninstalling python-dateutil-2.9.0.post0:
+      Successfully uninstalled python-dateutil-2.9.0.post0
+  Attempting uninstall: pyarrow
+    Found existing installation: pyarrow 16.1.0
+    Uninstalling pyarrow-16.1.0:
+      Successfully uninstalled pyarrow-16.1.0
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.9/site-packages/streamlit/runtime/scriptrun  
+  ner/script_runner.py:589 in _run_script                                       
+                                                                                
+  /mount/src/clasificacion_alada/appStreamlit.py:1 in <module>                  
+                                                                                
+  ❱   1 import detectron2                                                       
+      2 from detectron2.utils.logger import setup_logger                        
+      3 setup_logger()                                                          
+      4                                                                         
+────────────────────────────────────────────────────────────────────────────────
+ModuleNotFoundError: No module named 'detectron2'
+2024-07-16 20:18:28.813 503 GET /script-health-check (127.0.0.1) 118.12ms
+  Attempting uninstall: optree
+    Found existing installation: optree 0.12.1
+    Uninstalling optree-0.12.1:
+      Successfully uninstalled optree-0.12.1
+  Attempting uninstall: opt-einsum
+    Found existing installation: opt-einsum 3.3.0
+    Uninstalling opt-einsum-3.3.0:
+      Successfully uninstalled opt-einsum-3.3.0
+  Attempting uninstall: openpyxl
+    Found existing installation: openpyxl 3.1.5
+    Uninstalling openpyxl-3.1.5:
+      Successfully uninstalled openpyxl-3.1.5
+  Attempting uninstall: opencv-python-headless
+    Found existing installation: opencv-python-headless 4.10.0.84
+    Uninstalling opencv-python-headless-4.10.0.84:
+      Successfully uninstalled opencv-python-headless-4.10.0.84
+  Attempting uninstall: nvidia-cusparse-cu12
+    Found existing installation: nvidia-cusparse-cu12 12.1.0.106
+    Uninstalling nvidia-cusparse-cu12-12.1.0.106:
+      Successfully uninstalled nvidia-cusparse-cu12-12.1.0.106
+  Attempting uninstall: nvidia-cudnn-cu12
+    Found existing installation: nvidia-cudnn-cu12 8.9.2.26
+    Uninstalling nvidia-cudnn-cu12-8.9.2.26:
+      Successfully uninstalled nvidia-cudnn-cu12-8.9.2.26
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.9/site-packages/streamlit/runtime/scriptrun  
+  ner/script_runner.py:589 in _run_script                                       
+                                                                                
+  /mount/src/clasificacion_alada/appStreamlit.py:1 in <module>                  
+                                                                                
+  ❱   1 import detectron2                                                       
+      2 from detectron2.utils.logger import setup_logger                        
+      3 setup_logger()                                                          
+      4                                                                         
+────────────────────────────────────────────────────────────────────────────────
+ModuleNotFoundError: No module named 'detectron2'
+2024-07-16 20:18:33.745 503 GET /script-health-check (127.0.0.1) 101.93ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.9/site-packages/streamlit/runtime/scriptrun  
+  ner/script_runner.py:589 in _run_script                                       
+                                                                                
+  /mount/src/clasificacion_alada/appStreamlit.py:1 in <module>                  
+                                                                                
+  ❱   1 import detectron2                                                       
+      2 from detectron2.utils.logger import setup_logger                        
+      3 setup_logger()                                                          
+      4                                                                         
+────────────────────────────────────────────────────────────────────────────────
+ModuleNotFoundError: No module named 'detectron2'
+2024-07-16 20:18:38.747 503 GET /script-health-check (127.0.0.1) 102.11ms
+  Attempting uninstall: ml-dtypes
+    Found existing installation: ml-dtypes 0.3.2
+    Uninstalling ml-dtypes-0.3.2:
+      Successfully uninstalled ml-dtypes-0.3.2
+  Attempting uninstall: markdown-it-py
+    Found existing installation: markdown-it-py 3.0.0
+    Uninstalling markdown-it-py-3.0.0:
+      Successfully uninstalled markdown-it-py-3.0.0
+  Attempting uninstall: load_dotenv
+    Found existing installation: load-dotenv 0.1.0
+    Uninstalling load-dotenv-0.1.0:
+      Successfully uninstalled load-dotenv-0.1.0
+  Attempting uninstall: lazy-loader
+    Found existing installation: lazy_loader 0.4
+    Uninstalling lazy_loader-0.4:
+      Successfully uninstalled lazy_loader-0.4
+  Attempting uninstall: Jinja2
+    Found existing installation: Jinja2 3.1.4
+    Uninstalling Jinja2-3.1.4:
+      Successfully uninstalled Jinja2-3.1.4
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.9/site-packages/streamlit/runtime/scriptrun  
+  ner/script_runner.py:589 in _run_script                                       
+                                                                                
+  /mount/src/clasificacion_alada/appStreamlit.py:1 in <module>                  
+                                                                                
+  ❱   1 import detectron2                                                       
+      2 from detectron2.utils.logger import setup_logger                        
+      3 setup_logger()                                                          
+      4                                                                         
+────────────────────────────────────────────────────────────────────────────────
+ModuleNotFoundError: No module named 'detectron2'
+  Attempting uninstall: importlib-resources
+    Found existing installation: importlib_resources 6.4.0
+    Uninstalling importlib_resources-6.4.0:
+      Successfully uninstalled importlib_resources-6.4.0
+2024-07-16 20:18:43.743 503 GET /script-health-check (127.0.0.1) 102.30ms
+  Attempting uninstall: importlib-metadata
+    Found existing installation: importlib_metadata 8.0.0
+    Uninstalling importlib_metadata-8.0.0:
+      Successfully uninstalled importlib_metadata-8.0.0
+  Attempting uninstall: imageio
+    Found existing installation: imageio 2.34.2
+    Uninstalling imageio-2.34.2:
+      Successfully uninstalled imageio-2.34.2
+  Attempting uninstall: h5py
+    Found existing installation: h5py 3.11.0
+    Uninstalling h5py-3.11.0:
+      Successfully uninstalled h5py-3.11.0
+  Attempting uninstall: gunicorn
+    Found existing installation: gunicorn 20.1.0
+    Uninstalling gunicorn-20.1.0:
+      Successfully uninstalled gunicorn-20.1.0
+  Attempting uninstall: google-pasta
+    Found existing installation: google-pasta 0.2.0
+    Uninstalling google-pasta-0.2.0:
+      Successfully uninstalled google-pasta-0.2.0
+  Attempting uninstall: gitdb
+    Found existing installation: gitdb 4.0.11
+    Uninstalling gitdb-4.0.11:
+      Successfully uninstalled gitdb-4.0.11
+  Attempting uninstall: contourpy
+    Found existing installation: contourpy 1.2.1
+    Uninstalling contourpy-1.2.1:
+      Successfully uninstalled contourpy-1.2.1
+  Attempting uninstall: astunparse
+    Found existing installation: astunparse 1.6.3
+    Uninstalling astunparse-1.6.3:
+      Successfully uninstalled astunparse-1.6.3
+  Attempting uninstall: scikit-learn
+    Found existing installation: scikit-learn 1.5.1
+    Uninstalling scikit-learn-1.5.1:
+      Successfully uninstalled scikit-learn-1.5.1
+  Attempting uninstall: scikit-image
+    Found existing installation: scikit-image 0.24.0
+    Uninstalling scikit-image-0.24.0:
+      Successfully uninstalled scikit-image-0.24.0
+  Attempting uninstall: rich
+    Found existing installation: rich 13.7.1
+    Uninstalling rich-13.7.1:
+      Successfully uninstalled rich-13.7.1
+  Attempting uninstall: pydeck
+    Found existing installation: pydeck 0.9.1
+    Uninstalling pydeck-0.9.1:
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.9/site-packages/streamlit/runtime/scriptrun  
+  ner/script_runner.py:589 in _run_script                                       
+                                                                                
+  /mount/src/clasificacion_alada/appStreamlit.py:1 in <module>                  
+                                                                                
+  ❱   1 import detectron2                                                       
+      2 from detectron2.utils.logger import setup_logger                        
+      3 setup_logger()                                                          
+      4                                                                         
+────────────────────────────────────────────────────────────────────────────────
+ModuleNotFoundError: No module named 'detectron2'
+2024-07-16 20:18:48.751 503 GET /script-health-check (127.0.0.1) 102.31ms
+      Successfully uninstalled pydeck-0.9.1
+  Attempting uninstall: pandas
+    Found existing installation: pandas 2.2.1
+    Uninstalling pandas-2.2.1:
+      Successfully uninstalled pandas-2.2.1
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.9/site-packages/streamlit/runtime/scriptrun  
+  ner/script_runner.py:589 in _run_script                                       
+                                                                                
+  /mount/src/clasificacion_alada/appStreamlit.py:1 in <module>                  
+                                                                                
+  ❱   1 import detectron2                                                       
+      2 from detectron2.utils.logger import setup_logger                        
+      3 setup_logger()                                                          
+      4                                                                         
+────────────────────────────────────────────────────────────────────────────────
+ModuleNotFoundError: No module named 'detectron2'
+2024-07-16 20:18:53.794 503 GET /script-health-check (127.0.0.1) 102.42ms
+  Attempting uninstall: nvidia-cusolver-cu12
+    Found existing installation: nvidia-cusolver-cu12 11.4.5.107
+    Uninstalling nvidia-cusolver-cu12-11.4.5.107:
+      Successfully uninstalled nvidia-cusolver-cu12-11.4.5.107
+  Attempting uninstall: matplotlib
+    Found existing installation: matplotlib 3.8.3
+    Uninstalling matplotlib-3.8.3:
+      Successfully uninstalled matplotlib-3.8.3
+  Attempting uninstall: markdown
+    Found existing installation: Markdown 3.6
+    Uninstalling Markdown-3.6:
+      Successfully uninstalled Markdown-3.6
+  Attempting uninstall: jsonschema-specifications
+    Found existing installation: jsonschema-specifications 2023.12.1
+    Uninstalling jsonschema-specifications-2023.12.1:
+      Successfully uninstalled jsonschema-specifications-2023.12.1
+  Attempting uninstall: gitpython
+    Found existing installation: GitPython 3.1.43
+    Uninstalling GitPython-3.1.43:
+      Successfully uninstalled GitPython-3.1.43
+  Attempting uninstall: Flask
+    Found existing installation: Flask 3.0.3
+    Uninstalling Flask-3.0.3:
+      Successfully uninstalled Flask-3.0.3
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.9/site-packages/streamlit/runtime/scriptrun  
+  ner/script_runner.py:589 in _run_script                                       
+                                                                                
+  /mount/src/clasificacion_alada/appStreamlit.py:1 in <module>                  
+                                                                                
+  ❱   1 import detectron2                                                       
+      2 from detectron2.utils.logger import setup_logger                        
+      3 setup_logger()                                                          
+      4                                                                         
+────────────────────────────────────────────────────────────────────────────────
+ModuleNotFoundError: No module named 'detectron2'
+  Attempting uninstall: torch
+    Found existing installation: torch 2.3.1
+2024-07-16 20:18:58.826 503 GET /script-health-check (127.0.0.1) 126.20ms
+    Uninstalling torch-2.3.1:
+      Successfully uninstalled torch-2.3.1
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.9/site-packages/streamlit/runtime/scriptrun  
+  ner/script_runner.py:589 in _run_script                                       
+                                                                                
+  /mount/src/clasificacion_alada/appStreamlit.py:1 in <module>                  
+                                                                                
+  ❱   1 import detectron2                                                       
+      2 from detectron2.utils.logger import setup_logger                        
+      3 setup_logger()                                                          
+      4                                                                         
+────────────────────────────────────────────────────────────────────────────────
+ModuleNotFoundError: No module named 'detectron2'
+2024-07-16 20:19:03.767 503 GET /script-health-check (127.0.0.1) 120.49ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.9/site-packages/streamlit/runtime/scriptrun  
+  ner/script_runner.py:589 in _run_script                                       
+                                                                                
+  /mount/src/clasificacion_alada/appStreamlit.py:1 in <module>                  
+                                                                                
+  ❱   1 import detectron2                                                       
+      2 from detectron2.utils.logger import setup_logger                        
+      3 setup_logger()                                                          
+      4                                                                         
+────────────────────────────────────────────────────────────────────────────────
+ModuleNotFoundError: No module named 'detectron2'
+2024-07-16 20:19:08.745 503 GET /script-health-check (127.0.0.1) 102.20ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.9/site-packages/streamlit/runtime/scriptrun  
+  ner/script_runner.py:589 in _run_script                                       
+                                                                                
+  /mount/src/clasificacion_alada/appStreamlit.py:1 in <module>                  
+                                                                                
+  ❱   1 import detectron2                                                       
+      2 from detectron2.utils.logger import setup_logger                        
+      3 setup_logger()                                                          
+      4                                                                         
+────────────────────────────────────────────────────────────────────────────────
+ModuleNotFoundError: No module named 'detectron2'
+2024-07-16 20:19:13.765 503 GET /script-health-check (127.0.0.1) 113.85ms
+  Attempting uninstall: tensorboard
+    Found existing installation: tensorboard 2.16.2
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.9/site-packages/streamlit/runtime/scriptrun  
+  ner/script_runner.py:589 in _run_script                                       
+                                                                                
+  /mount/src/clasificacion_alada/appStreamlit.py:1 in <module>                  
+                                                                                
+  ❱   1 import detectron2                                                       
+      2 from detectron2.utils.logger import setup_logger                        
+      3 setup_logger()                                                          
+      4                                                                         
+────────────────────────────────────────────────────────────────────────────────
+ModuleNotFoundError: No module named 'detectron2'
+    Uninstalling tensorboard-2.16.2:
+      Successfully uninstalled tensorboard-2.16.2
+2024-07-16 20:19:18.758 503 GET /script-health-check (127.0.0.1) 113.30ms
+  Attempting uninstall: keras
+    Found existing installation: keras 3.1.1
+    Uninstalling keras-3.1.1:
+      Successfully uninstalled keras-3.1.1
+  Attempting uninstall: jsonschema
+    Found existing installation: jsonschema 4.23.0
+    Uninstalling jsonschema-4.23.0:
+      Successfully uninstalled jsonschema-4.23.0
+  Attempting uninstall: torchvision
+    Found existing installation: torchvision 0.18.1
+    Uninstalling torchvision-0.18.1:
+      Successfully uninstalled torchvision-0.18.1
+  Attempting uninstall: torchaudio
+    Found existing installation: torchaudio 2.3.1
+    Uninstalling torchaudio-2.3.1:
+      Successfully uninstalled torchaudio-2.3.1
+  Attempting uninstall: tensorflow
+    Found existing installation: tensorflow 2.16.2
+    Uninstalling tensorflow-2.16.2:
+      Successfully uninstalled tensorflow-2.16.2
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.9/site-packages/streamlit/runtime/scriptrun  
+  ner/script_runner.py:589 in _run_script                                       
+                                                                                
+  /mount/src/clasificacion_alada/appStreamlit.py:1 in <module>                  
+                                                                                
+  ❱   1 import detectron2                                                       
+      2 from detectron2.utils.logger import setup_logger                        
+      3 setup_logger()                                                          
+      4                                                                         
+────────────────────────────────────────────────────────────────────────────────
+ModuleNotFoundError: No module named 'detectron2'
+2024-07-16 20:19:23.766 503 GET /script-health-check (127.0.0.1) 119.40ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.9/site-packages/streamlit/runtime/scriptrun  
+  ner/script_runner.py:589 in _run_script                                       
+                                                                                
+  /mount/src/clasificacion_alada/appStreamlit.py:1 in <module>                  
+                                                                                
+  ❱   1 import detectron2                                                       
+      2 from detectron2.utils.logger import setup_logger                        
+      3 setup_logger()                                                          
+      4                                                                         
+────────────────────────────────────────────────────────────────────────────────
+ModuleNotFoundError: No module named 'detectron2'
+2024-07-16 20:19:28.741 503 GET /script-health-check (127.0.0.1) 102.58ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.9/site-packages/streamlit/runtime/scriptrun  
+  ner/script_runner.py:589 in _run_script                                       
+                                                                                
+  /mount/src/clasificacion_alada/appStreamlit.py:1 in <module>                  
+                                                                                
+  ❱   1 import detectron2                                                       
+      2 from detectron2.utils.logger import setup_logger                        
+      3 setup_logger()                                                          
+      4                                                                         
+────────────────────────────────────────────────────────────────────────────────
+ModuleNotFoundError: No module named 'detectron2'
+2024-07-16 20:19:33.740 503 GET /script-health-check (127.0.0.1) 102.73ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.9/site-packages/streamlit/runtime/scriptrun  
+  ner/script_runner.py:589 in _run_script                                       
+                                                                                
+  /mount/src/clasificacion_alada/appStreamlit.py:1 in <module>                  
+                                                                                
+  ❱   1 import detectron2                                                       
+      2 from detectron2.utils.logger import setup_logger                        
+      3 setup_logger()                                                          
+      4                                                                         
+────────────────────────────────────────────────────────────────────────────────
+ModuleNotFoundError: No module named 'detectron2'
+2024-07-16 20:19:38.758 503 GET /script-health-check (127.0.0.1) 102.54ms
+  Attempting uninstall: altair
+    Found existing installation: altair 5.3.0
+    Uninstalling altair-5.3.0:
+      Successfully uninstalled altair-5.3.0
+  Attempting uninstall: streamlit
+    Found existing installation: streamlit 1.36.0
+    Uninstalling streamlit-1.36.0:
+      Successfully uninstalled streamlit-1.36.0
+Successfully installed Flask-3.0.3 Jinja2-3.1.4 MarkupSafe-2.1.5 Werkzeug-3.0.3 absl-py-2.1.0 altair-5.3.0 antlr4-python3-runtime-4.9.3 astunparse-1.6.3 attrs-23.2.0 black-24.4.2 blinker-1.8.2 cachetools-5.4.0 certifi-2024.7.4 charset-normalizer-3.3.2 click-8.1.7 cloudpickle-3.0.0 contourpy-1.2.1 cycler-0.12.1 detectron2-0.6 et-xmlfile-1.1.0 filelock-3.15.4 flatbuffers-24.3.25 fonttools-4.53.1 fsspec-2024.6.1 fvcore-0.1.5.post20221221 gast-0.6.0 gitdb-4.0.11 gitpython-3.1.43 google-pasta-0.2.0 grpcio-1.64.1 gunicorn-20.1.0 h5py-3.11.0 hydra-core-1.3.2 idna-3.7 imageio-2.34.2 importlib-metadata-8.0.0 importlib-resources-6.4.0 iopath-0.1.9 itsdangerous-2.2.0 joblib-1.4.2 jsonschema-4.23.0 jsonschema-specifications-2023.12.1 keras-3.1.1 kiwisolver-1.4.5 lazy-loader-0.4 libclang-18.1.1 load_dotenv-0.1.0 markdown-3.6 markdown-it-py-3.0.0 matplotlib-3.8.3 mdurl-0.1.2 ml-dtypes-0.3.2 mpmath-1.3.0 mypy-extensions-1.0.0 namex-0.0.8 networkx-3.2.1 numpy-1.26.2 nvidia-cublas-cu12-12.1.3.1 nvidia-cuda-cupti-cu12-12.1.105 nvidia-cuda-nvrtc-cu12-12.1.105 nvidia-cuda-runtime-cu12-12.1.105 nvidia-cudnn-cu12-8.9.2.26 nvidia-cufft-cu12-11.0.2.54 nvidia-curand-cu12-10.3.2.106 nvidia-cusolver-cu12-11.4.5.107 nvidia-cusparse-cu12-12.1.0.106 nvidia-nccl-cu12-2.20.5 nvidia-nvjitlink-cu12-12.5.82 nvidia-nvtx-cu12-12.1.105 omegaconf-2.3.0 opencv-python-headless-4.10.0.84 openpyxl-3.1.5 opt-einsum-3.3.0 optree-0.12.1 packaging-24.1 pandas-2.2.1 pathspec-0.12.1 pillow-10.3.0 platformdirs-4.2.2 portalocker-2.10.1 protobuf-4.25.3 pyarrow-16.1.0 pycocotools-2.0.8 pydeck-0.9.1 pygments-2.18.0 pyparsing-3.1.2 python-dateutil-2.9.0.post0 python-dotenv-1.0.1 pytz-2024.1 pyyaml-6.0.1 referencing-0.35.1 requests-2.31.0 rich-13.7.1 rpds-py-0.19.0 scikit-image-0.24.0 scikit-learn-1.5.1 scipy-1.12.0 setuptools-70.3.0 six-1.16.0 smmap-5.0.1 streamlit-1.36.0 sympy-1.13.0 tabulate-0.9.0 tenacity-8.5.0 tensorboard-2.16.2 tensorboard-data-server-0.7.2 tensorflow-2.16.2 tensorflow-io-gcs-filesystem-0.37.1 termcolor-2.4.0 threadpoolctl-3.5.0 tifffile-2024.7.2 toml-0.10.2 tomli-2.0.1 toolz-0.12.1 torch-2.3.1 torchaudio-2.3.1 torchvision-0.18.1 tornado-6.4.1 tqdm-4.66.4 triton-2.3.1 typing-extensions-4.12.2 tzdata-2024.1 urllib3-2.2.2 watchdog-4.0.1 wheel-0.43.0 wrapt-1.16.0 yacs-0.1.8 zipp-3.19.2
+
+[notice] A new release of pip is available: 24.0 -> 24.1.2
+[notice] To update, run: pip install --upgrade pip
+Checking if Streamlit is installed
+Found Streamlit version 1.36.0 in the environment
+
+────────────────────────────────────────────────────────────────────────────────────────
+
+[20:19:48] 🔌 Disconnecting...
+[20:19:47] 🐍 Python dependencies were installed from /mount/src/clasificacion_alada/requirements.txt using pip.
+[20:19:47] 📦 Processed dependencies!
+
+
+
+[20:19:48] 🖥 Provisioning machine...
+[20:19:48] 🎛 Preparing system...
+[20:19:48] ⛓ Spinning up manager process...
+[20:19:55] 🔄 Updated app!

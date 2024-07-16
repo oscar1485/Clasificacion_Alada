@@ -2,7 +2,6 @@ import detectron2
 from detectron2.utils.logger import setup_logger
 setup_logger()
 
-import os
 from keras.models import load_model
 from keras.applications.imagenet_utils import preprocess_input
 import numpy as np
@@ -12,11 +11,13 @@ from detectron2.engine import DefaultPredictor
 from detectron2.config import get_cfg
 from detectron2.utils.visualizer import Visualizer
 from detectron2.data import MetadataCatalog
-from detectron2 import model_zoo
+from detectron2 import model_zoo 
+
 import streamlit as st
 from PIL import Image
 from skimage.transform import resize
 import pandas as pd
+import os
 import logging
 
 # Desactivar `tqdm`
@@ -31,6 +32,7 @@ def detect_birds(img):
     if img.shape[2] == 4:
         img = cv2.cvtColor(img, cv2.COLOR_RGBA2RGB)
 
+
     # Crear la configuración y cargar el modelo preentrenado
     cfg = get_cfg()
     cfg.merge_from_file(model_zoo.get_config_file("COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x.yaml"))
@@ -38,14 +40,14 @@ def detect_birds(img):
     cfg.MODEL.WEIGHTS = model_zoo.get_checkpoint_url("COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x.yaml")
     cfg.MODEL.DEVICE = "cpu"  # Usar CPU en lugar de GPU
     predictor = DefaultPredictor(cfg)
-
+    
     # Realizar la predicción
     outputs = predictor(img)
     classes_detected = outputs["instances"].pred_classes.cpu().numpy()
-
+    
     # Verificar si se detecta algún pájaro en la imagen
     bird_detected = any(cls in bird_classes for cls in classes_detected)
-
+    
     return bird_detected
 
 # Resto del código Streamlit
@@ -79,7 +81,7 @@ def load_bird_images(bird_name):
     bird_dir = os.path.join('datasetpreprocesado/test', bird_name.replace(' ', ' '))
     bird_name_buscar = bird_name.replace(' ', '+')
     st.markdown(f"[Ver más Información](https://www.google.com/search?q={bird_name_buscar})")
-
+    
     if os.path.exists(bird_dir):
         images = []
         for img_file in os.listdir(bird_dir):
@@ -101,21 +103,21 @@ def main():
     st.image("banner2.jpg", use_column_width=True)
     st.title("Clasificación Alada")
     st.header("Sistema Multiclase para la Identificación Aviar en Ibagué")
-
+    
     menu = ["Información del Proyecto", "Realizar Predicciones", "Listar Aves Entrenadas", "Agradecimientos"]
     choice = st.sidebar.selectbox("Selecciona una opción", menu)
 
     if choice == "Realizar Predicciones":
         st.subheader("Realizar Predicciones")
         img_file_buffer = st.file_uploader("Carga una imagen", type=["png", "jpg", "jpeg"])
-
+        
         if img_file_buffer is not None:
             image = np.array(Image.open(img_file_buffer))
             st.image(image, caption="Imagen", use_column_width=True)
-
+            
             # Validar si la imagen contiene aves usando Detectron2
             bird_detected = detect_birds(image)
-
+            
             if bird_detected:
                 if st.button("Identificar Ave"):
                     preds = model_prediction(image, model)
@@ -133,7 +135,7 @@ def main():
                         st.write("**Estado de Conservación:**", bird_info['Estado_Conservacion'])
                     else:
                         st.warning("No se encontró información adicional sobre esta ave.")
-
+                    
                     bird_images = load_bird_images(bird_name)
                     if bird_images:
                         st.subheader("Galería de Imágenes del Ave")
@@ -146,8 +148,8 @@ def main():
                 else:
                     st.warning("La imagen corresponde a un Ave, ya puedes dar clic en el botón para realizar la predicción.")
             else:
-                st.warning("La imagen no contiene pájaros. No se puede realizar la predicción. Por favor, carga una imagen que contenga un ave.")
-
+                st.warning("La imagen no contiene pájaros. No se puede realizar la predicción.Por favor, carga una imagen que contenga un ave.")
+        
         else:
             st.warning("Por favor, carga una imagen primero.")
 
@@ -165,26 +167,64 @@ def main():
             {"name": "FALCO+SPARVERIUS", "image": "static/imagen/FALCO SPARVERIUS_17.jpeg"},
             {"name": "HIRUNDO+RUSTICA", "image": "static/imagen/HIRUNDO RUSTICA_10.jpg"},
             {"name": "PANDION+HALIAETUS", "image": "static/imagen/PANDION HALIAETUS_5.jpg"},
-            {"name": "PILHERODIUS+PILEATUS", "image": "static/imagen/PILHERODIUS PILEATUS_5.jpg"},
-            {"name": "PITANGUS+SULPHURATUS", "image": "static/imagen/PITANGUS SULPHURATUS_6.jpg"},
-            {"name": "PYRRHOMYIAS+CINNAMOMEUS", "image": "static/imagen/PYRRHOMYIAS CINNAMOMEUS_3.jpg"},
-            {"name": "RYNCHOPS+NIGER", "image": "static/imagen/RYNCHOPS NIGER_5.jpg"},
-            {"name": "SETOPHAGA+FUSCA", "image": "static/imagen/SETOPHAGA FUSCA_10.jpg"},
-            {"name": "SYNALLAXIS+AZARAE", "image": "static/imagen/SYNALLAXIS AZARAE_7.jpg"},
-            {"name": "TYRANNUS+MELANCHOLICUS", "image": "static/imagen/TYRANNUS MELANCHOLICUS_7.jpg"}
+            {"name": "PILHERODIUS+PILEATUS", "image": "static/imagen/PILHERODIUS PILEATUS_14.jpeg"},
+            {"name": "PITANGUS+SULPHURATUS", "image": "static/imagen/PITANGUS SULPHURATUS_12.jpg"},
+            {"name": "PYRRHOMYIAS+CINNAMOMEUS", "image": "static/imagen/PYRRHOMYIAS CINNAMOMEUS_14.jpg"},
+            {"name": "RYNCHOPS+NIGER", "image": "static/imagen/RYNCHOPS NIGER_9.jpg"},
+            {"name": "SETOPHAGA+FUSCA", "image": "static/imagen/SETOPHAGA FUSCA_5.jpg"},
+            {"name": "SYNALLAXIS+AZARAE", "image": "static/imagen/SYNALLAXIS AZARAE_17.jpeg"},
+            {"name": "TYRANNUS+MELANCHOLICUS", "image": "static/imagen/TYRANNUS MELANCHOLICUS_12.jpg"},
         ]
-        for bird in birds_info:
-            bird_name = bird["name"].replace('+', ' ')
-            bird_image = bird["image"]
-            st.image(bird_image, caption=bird_name)
-    
-    elif choice == "Información del Proyecto":
-        st.subheader("Información del Proyecto")
-        st.write("Descripción del proyecto...")
-    
+
+        num_columns = 3
+        num_rows = int(np.ceil(len(birds_info) / num_columns))
+
+        for i in range(num_rows):
+            bird_row = birds_info[i * num_columns: (i + 1) * num_columns]
+
+            col1, col2, col3 = st.columns(3)
+
+            for j, bird in enumerate(bird_row):
+                if j == 0:
+                    with col1:
+                        st.image(bird["image"], caption=bird["name"], width=100)
+                        st.write(bird["name"])
+                        st.markdown(f"[Buscar en Google](https://www.google.com/search?q={bird['name']})")
+                elif j == 1:
+                    with col2:
+                        st.image(bird["image"], caption=bird["name"], width=100)
+                        st.write(bird["name"])
+                        st.markdown(f"[Buscar en Google](https://www.google.com/search?q={bird['name']})")
+                elif j == 2:
+                    with col3:
+                        st.image(bird["image"], caption=bird["name"], width=100)
+                        st.write(bird["name"])
+                        st.markdown(f"[Buscar en Google](https://www.google.com/search?q={bird['name']})")
+
     elif choice == "Agradecimientos":
         st.subheader("Agradecimientos")
-        st.write("Agradecimientos...")
+        st.markdown("""
+        Agradezco al Ministerio de Tecnologías de la Información y las Comunicaciones de Colombia por financiar la Maestría en Ciencia de Datos. 
+        Asimismo, a la Universidad Cooperativa de Colombia Campus Ibagué - Espinal por facilitar el apoyo del tiempo dentro del Plan de Trabajo para realizar la Maestría. 
+        Además, a la Universidad Oberta de Cataluña por permitir la formación impartida y la materialización de las competencias aprendidas en este proyecto, a mis tutores Bernat Bas Pujols y Pablo Fernandez Blanco.
+        """)
 
-if __name__ == "__main__":
+    elif choice == "Información del Proyecto":
+        st.markdown("""
+    ### Información del Proyecto
+    El proyecto "Clasificación Alada" es un sistema multiclase diseñado para la identificación de aves en la región de Ibagué, 
+    con un enfoque centrado en técnicas de Deep Learning. El objetivo principal es proporcionar una herramienta precisa y eficiente 
+    para la clasificación de aves a partir de imágenes. Este trabajo fue apoyado  por el Ministerio de Tecnologías de la Información y las Comunicaciones de Colombia y la Universidad Cooperativa de Colombia, Campus Ibagué - Espinal.
+
+    
+    **Oscar Augusto Diaz Triana**  
+    Universidad Oberta de Cataluña  
+    Master en Ciencia de Datos  
+    Deep Learning  
+    **Tutores de TF:** Bernat Bas Pujols, Pablo Fernandez Blanco  
+    **Profesor responsable de la asignatura:** Albert Solé  
+    **2024**
+    """)
+
+if __name__ == '__main__':
     main()

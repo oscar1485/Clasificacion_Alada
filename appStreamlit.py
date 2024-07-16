@@ -1,3 +1,6 @@
+import tqdm
+tqdm.tqdm.monitor_interval = 0  # Desactiva la barra de progreso
+
 import detectron2
 from detectron2.utils.logger import setup_logger
 setup_logger()
@@ -17,10 +20,6 @@ import streamlit as st
 from PIL import Image
 from skimage.transform import resize
 import pandas as pd
-import logging
-
-# Desactivar `tqdm`
-logging.getLogger('iopath.common.file_io').setLevel(logging.WARNING)
 
 # Definir clases de aves
 bird_classes = [14, 15, 16]  # Clases de aves en COCO dataset
@@ -152,17 +151,17 @@ def main():
             st.warning("Por favor, carga una imagen primero.")
 
     elif choice == "Listar Aves Entrenadas":
-        st.subheader("Listar Aves Entrenadas")
+        st.subheader("Listado de Aves Entrenadas")
         birds_info = [
-            {"name": "CATHARTES+AURA", "image": "static/imagen/CATHARTES AURA_7.jpg"},
-            {"name": "COEREBA+FLAVEOLA", "image": "static/imagen/COEREBA FLAVEOLA.jpg"},
-            {"name": "COLUMBA+LIVIA", "image": "static/imagen/COLUMBA LIVIA_9.jpg"},
-            {"name": "CORAGYPS+ATRATUS", "image": "static/imagen/CORAGYPS ATRATUS_19.jpg"},
-            {"name": "CROTOPHAGA+SULCIROSTRIS", "image": "static/imagen/CROTOPHAGA SULCIROSTRIS_3.jpg"},
-            {"name": "CYANOCORAX+YNCAS", "image": "static/imagen/CYANOCORAX YNCAS_3.jpg"},
+            {"name": "CATHARTES+AURA", "image": "static/imagen/CATHARTES AURA_2.jpg"},
+            {"name": "COEREBA+FLAVEOLA", "image": "static/imagen/COEREBA FLAVEOLA_1.jpg"},
+            {"name": "COLUMBA+LIVIA", "image": "static/imagen/COLUMBA LIVIA_7.jpg"},
+            {"name": "CORAGYPS+ATRATUS", "image": "static/imagen/CORAGYPS ATRATUS_10.jpg"},
+            {"name": "CROTOPHAGA+SULCIROSTRIS", "image": "static/imagen/CROTOPHAGA SULCIROSTRIS_7.jpg"},
+            {"name": "CYANOCORAX+YNCAS", "image": "static/imagen/CYANOCORAX YNCAS_8.jpg"},
             {"name": "EGRETTA+THULA", "image": "static/imagen/EGRETTA THULA_1.jpg"},
-            {"name": "FALCO+PEREGRINUS", "image": "static/imagen/FALCO PEREGRINUS_9.jpg"},
-            {"name": "FALCO+SPARVERIUS", "image": "static/imagen/FALCO SPARVERIUS_17.jpeg"},
+            {"name": "FALCO+PEREGRINUS", "image": "static/imagen/FALCO PEREGRINUS_6.jpg"},
+            {"name": "FALCO+SPARVERIUS", "image": "static/imagen/FALCO SPARVERIUS_1.jpg"},
             {"name": "HIRUNDO+RUSTICA", "image": "static/imagen/HIRUNDO RUSTICA_10.jpg"},
             {"name": "PANDION+HALIAETUS", "image": "static/imagen/PANDION HALIAETUS_5.jpg"},
             {"name": "PILHERODIUS+PILEATUS", "image": "static/imagen/PILHERODIUS PILEATUS_5.jpg"},

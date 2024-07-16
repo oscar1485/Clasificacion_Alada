@@ -98,7 +98,7 @@ def main():
         return
 
     st.image("banner2.jpg", use_column_width=True)
-    st.title("Clasificación Alada")
+    st.title("Clasificación Alada2")
     st.header("Sistema Multiclase para la Identificación Aviar en Ibagué")
 
     menu = ["Información del Proyecto", "Realizar Predicciones", "Listar Aves Entrenadas", "Agradecimientos"]

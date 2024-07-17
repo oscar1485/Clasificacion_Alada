@@ -2,33 +2,20 @@ import streamlit as st
 import subprocess
 import sys
 
-def install_detectron1():
+# Función para instalar detectron2 desde el repositorio de GitHub
+def install_detectron():
     subprocess.check_call([
         sys.executable, "-m", "pip", "install", "git+https://github.com/facebookresearch/detectron2.git"
     ])
- 
+
+# Verificar si detectron2 está instalado, si no, instalarlo
 try:
     import detectron2
 except ImportError:
     st.write("Instalando detectron2, por favor espere...")
-    install_detectron1()
-    import detectron2 
-# Función para instalar detectron2
-def install_detectron2():
-    subprocess.check_call([
-        sys.executable, "-m", "pip", "install", "detectron2", 
-        "-f", "https://dl.fbaipublicfiles.com/detectron2/wheels/cpu/torch1.10/index.html"
-    ])
-
-# Instalar detectron2 si no está instalado
-try:
-    import detectron2
-except ImportError:
-    st.write("Instalando detectron2, por favor espere...")
-    install_detectron2()
+    install_detectron()
     import detectron2
 
-import detectron2
 from detectron2.utils.logger import setup_logger
 setup_logger()
 
@@ -37,59 +24,52 @@ from keras.models import load_model
 from keras.applications.imagenet_utils import preprocess_input
 import numpy as np
 import cv2
-import torch
 from detectron2.engine import DefaultPredictor
 from detectron2.config import get_cfg
 from detectron2.utils.visualizer import Visualizer
 from detectron2.data import MetadataCatalog
 from detectron2 import model_zoo
-#import streamlit as st
 from PIL import Image
 from skimage.transform import resize
 import pandas as pd
-
-import os
 import tqdm
 
+# Desactivar barra de progreso en Streamlit
 if os.environ.get("STREAMLIT"):
-    tqdm.tqdm.monitor_interval = 0  # Desactiva la barra de progreso en Streamlit
+    tqdm.tqdm.monitor_interval = 0
 
 # Definir clases de aves
-bird_classes = [14, 15, 16]  # Clases de aves en COCO dataset
+bird_classes = [14, 15, 16]
 
 # Función para detectar aves en la imagen usando Detectron2
 def detect_birds(img):
-    # Convertir la imagen a RGB si tiene cuatro canales (RGBA)
     if img.shape[2] == 4:
         img = cv2.cvtColor(img, cv2.COLOR_RGBA2RGB)
 
-    # Crear la configuración y cargar el modelo preentrenado
     cfg = get_cfg()
     cfg.merge_from_file(model_zoo.get_config_file("COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x.yaml"))
-    cfg.MODEL.ROI_HEADS.SCORE_THRESH_TEST = 0.97  # Umbral de confianza para la detección
+    cfg.MODEL.ROI_HEADS.SCORE_THRESH_TEST = 0.97
     cfg.MODEL.WEIGHTS = model_zoo.get_checkpoint_url("COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x.yaml")
-    cfg.MODEL.DEVICE = "cpu"  # Usar CPU en lugar de GPU
+    cfg.MODEL.DEVICE = "cpu"
     predictor = DefaultPredictor(cfg)
 
-    # Realizar la predicción
     outputs = predictor(img)
     classes_detected = outputs["instances"].pred_classes.cpu().numpy()
 
-    # Verificar si se detecta algún pájaro en la imagen
     bird_detected = any(cls in bird_classes for cls in classes_detected)
-
     return bird_detected
 
-# Resto del código Streamlit
 MODEL_PATH = 'models/optimizado.keras'
 EXCEL_PATH = 'aves.xlsx'
-
 width_shape = 224
 height_shape = 224
 
-names = ['CATHARTES AURA', 'COEREBA FLAVEOLA', 'COLUMBA LIVIA', 'CORAGYPS ATRATUS', 'CROTOPHAGA SULCIROSTRIS', 'CYANOCORAX YNCAS',
-         'EGRETTA THULA', 'FALCO PEREGRINUS', 'FALCO SPARVERIUS', 'HIRUNDO RUSTICA', 'PANDION HALIAETUS', 'PILHERODIUS PILEATUS',
-         'PITANGUS SULPHURATUS', 'PYRRHOMYIAS CINNAMOMEUS', 'RYNCHOPS NIGER', 'SETOPHAGA FUSCA', 'SYNALLAXIS AZARAE', 'TYRANNUS MELANCHOLICUS']
+names = [
+    'CATHARTES AURA', 'COEREBA FLAVEOLA', 'COLUMBA LIVIA', 'CORAGYPS ATRATUS', 'CROTOPHAGA SULCIROSTRIS', 
+    'CYANOCORAX YNCAS', 'EGRETTA THULA', 'FALCO PEREGRINUS', 'FALCO SPARVERIUS', 'HIRUNDO RUSTICA', 
+    'PANDION HALIAETUS', 'PILHERODIUS PILEATUS', 'PITANGUS SULPHURATUS', 'PYRRHOMYIAS CINNAMOMEUS', 
+    'RYNCHOPS NIGER', 'SETOPHAGA FUSCA', 'SYNALLAXIS AZARAE', 'TYRANNUS MELANCHOLICUS'
+]
 
 def model_prediction(img, model):
     img_resize = resize(img, (width_shape, height_shape))
@@ -102,7 +82,7 @@ def get_bird_info(bird_name, excel_path):
     df = pd.read_excel(excel_path)
     bird_info = df[df['Nombre_Cientifico'] == bird_name]
     if not bird_info.empty:
-        bird_info = bird_info.iloc[0]  # Selecciona la primera fila (debería ser única)
+        bird_info = bird_info.iloc[0]
         return bird_info
     else:
         return None
@@ -145,7 +125,6 @@ def main():
             image = np.array(Image.open(img_file_buffer))
             st.image(image, caption="Imagen", use_column_width=True)
 
-            # Validar si la imagen contiene aves usando Detectron2
             bird_detected = detect_birds(image)
 
             if bird_detected:
@@ -179,7 +158,6 @@ def main():
                     st.warning("La imagen corresponde a un Ave, ya puedes dar clic en el botón para realizar la predicción.")
             else:
                 st.warning("La imagen no contiene pájaros. No se puede realizar la predicción. Por favor, carga una imagen que contenga un ave.")
-
         else:
             st.warning("Por favor, carga una imagen primero.")
 
@@ -197,26 +175,35 @@ def main():
             {"name": "FALCO+SPARVERIUS", "image": "static/imagen/FALCO SPARVERIUS_1.jpg"},
             {"name": "HIRUNDO+RUSTICA", "image": "static/imagen/HIRUNDO RUSTICA_10.jpg"},
             {"name": "PANDION+HALIAETUS", "image": "static/imagen/PANDION HALIAETUS_5.jpg"},
-            {"name": "PILHERODIUS+PILEATUS", "image": "static/imagen/PILHERODIUS PILEATUS_5.jpg"},
-            {"name": "PITANGUS+SULPHURATUS", "image": "static/imagen/PITANGUS SULPHURATUS_6.jpg"},
-            {"name": "PYRRHOMYIAS+CINNAMOMEUS", "image": "static/imagen/PYRRHOMYIAS CINNAMOMEUS_3.jpg"},
-            {"name": "RYNCHOPS+NIGER", "image": "static/imagen/RYNCHOPS NIGER_5.jpg"},
-            {"name": "SETOPHAGA+FUSCA", "image": "static/imagen/SETOPHAGA FUSCA_10.jpg"},
-            {"name": "SYNALLAXIS+AZARAE", "image": "static/imagen/SYNALLAXIS AZARAE_7.jpg"},
+            {"name": "PILHERODIUS+PILEATUS", "image": "static/imagen/PILHERODIUS PILEATUS_8.jpg"},
+            {"name": "PITANGUS+SULPHURATUS", "image": "static/imagen/PITANGUS SULPHURATUS_8.jpg"},
+            {"name": "PYRRHOMYIAS+CINNAMOMEUS", "image": "static/imagen/PYRRHOMYIAS CINNAMOMEUS_4.jpg"},
+            {"name": "RYNCHOPS+NIGER", "image": "static/imagen/RYNCHOPS NIGER_3.jpg"},
+            {"name": "SETOPHAGA+FUSCA", "image": "static/imagen/SETOPHAGA FUSCA_4.jpg"},
+            {"name": "SYNALLAXIS+AZARAE", "image": "static/imagen/SYNALLAXIS AZARAE_2.jpg"},
             {"name": "TYRANNUS+MELANCHOLICUS", "image": "static/imagen/TYRANNUS MELANCHOLICUS_7.jpg"}
         ]
+
         for bird in birds_info:
-            bird_name = bird["name"].replace('+', ' ')
-            bird_image = bird["image"]
-            st.image(bird_image, caption=bird_name)
-    
-    elif choice == "Información del Proyecto":
-        st.subheader("Información del Proyecto")
-        st.write("Descripción del proyecto...")
-    
+            st.subheader(bird["name"].replace("+", " "))
+            st.image(bird["image"], use_column_width=True)
+
     elif choice == "Agradecimientos":
         st.subheader("Agradecimientos")
-        st.write("Agradecimientos...")
+        st.image("static/imagen/fotogrupo.jpeg", use_column_width=True)
+        st.markdown("""
+            Este proyecto ha sido realizado gracias a la colaboración y el esfuerzo del equipo del Grupo de Investigación *EnRed* de la Universidad del Tolima, 
+            en especial a los autores: 
+            - **Javier Hernández Rojas**
+            - **John James Villalba Castro**
+            - **Christian Camilo Perdomo Acosta**
+            - **Henry Vega Castaño**
+            - **Diego Armando Loaiza Prado**
+        """)
+    
+    else:
+        st.subheader("Información del Proyecto")
+        st.write("Este proyecto consiste en el desarrollo de un sistema de clasificación de aves utilizando técnicas de Deep Learning. El objetivo es facilitar la identificación de especies de aves en la región de Tolima, Colombia.")
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()

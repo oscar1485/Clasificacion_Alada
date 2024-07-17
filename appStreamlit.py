@@ -2,16 +2,30 @@ import streamlit as st
 import subprocess
 import sys
 
-# Función para instalar paquetes
-def install(package):
-    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+def install_detectron1():
+    subprocess.check_call([
+        sys.executable, "-m", "pip", "install", "git+https://github.com/facebookresearch/detectron2.git"
+    ])
+ 
+try:
+    import detectron2
+except ImportError:
+    st.write("Instalando detectron2, por favor espere...")
+    install_detectron1()
+    import detectron2 
+# Función para instalar detectron2
+def install_detectron2():
+    subprocess.check_call([
+        sys.executable, "-m", "pip", "install", "detectron2", 
+        "-f", "https://dl.fbaipublicfiles.com/detectron2/wheels/cpu/torch1.10/index.html"
+    ])
 
 # Instalar detectron2 si no está instalado
 try:
     import detectron2
 except ImportError:
     st.write("Instalando detectron2, por favor espere...")
-    install("detectron2 -f https://dl.fbaipublicfiles.com/detectron2/wheels/cpu/torch1.10/index.html")
+    install_detectron2()
     import detectron2
 
 import detectron2

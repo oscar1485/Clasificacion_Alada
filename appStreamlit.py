@@ -5,7 +5,6 @@ import streamlit as st
 from PIL import Image
 from skimage.transform import resize
 import pandas as pd
-import openpyxl
 import os
 
 # Path del modelo preentrenado
@@ -72,7 +71,7 @@ def main():
     st.header("Sistema Multiclase para la Identificación Aviar en Ibagué")
 
     # Menú
-    menu = ["Información del Proyecto", "Realizar Predicciones", "Listar Aves Entrenadas", "Agradecimientos"]
+    menu = ["Información del Proyecto", "Realizar Predicciones", "Listar Aves Entrenadas", "Agradecimientos", "Trabajos Futuros"]
     choice = st.sidebar.selectbox("Selecciona una opción", menu)
 
     if choice == "Realizar Predicciones":
@@ -177,6 +176,17 @@ def main():
     elif choice == "Agradecimientos":
         st.subheader("Agradecimientos")
         st.write("Este proyecto ha sido posible gracias al apoyo del grupo de investigación en machine learning de la Universidad de Tolima y la colaboración de expertos ornitólogos de la región.")
+    
+    elif choice == "Trabajos Futuros":
+        st.subheader("Trabajos Futuros: Segmentación Semántica para Evaluación de Imágenes de Aves")
+
+        st.write("Uno de los próximos pasos es incorporar segmentación semántica para determinar si una imagen proporcionada corresponde efectivamente a un ave. Esta técnica permitirá mejorar la precisión del sistema al enfocarse no solo en la clasificación de especies, sino también en la identificación precisa de la presencia de aves en las imágenes. Esto es crucial para aplicaciones que requieren una detección precisa del objeto de interés.")
+
+        st.write("La segmentación semántica puede ayudar a distinguir entre aves y otros objetos en entornos complejos, lo que es especialmente útil en aplicaciones de monitoreo de fauna, conservación y estudios ecológicos.")
+
+        st.write("Este trabajo futuro también implicará la implementación de una arquitectura adicional de redes neuronales convolucionales adaptada específicamente para la segmentación semántica de aves en imágenes de campo, incorporando técnicas avanzadas como U-Net o Mask R-CNN.")
+
+        st.write("La integración de esta funcionalidad ampliará las capacidades del sistema actual, facilitando su uso en diversas aplicaciones de investigación y conservación.")
 
 if __name__ == '__main__':
     main()

@@ -1,3 +1,19 @@
+import streamlit as st
+import subprocess
+import sys
+
+# Función para instalar paquetes
+def install(package):
+    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+
+# Instalar detectron2 si no está instalado
+try:
+    import detectron2
+except ImportError:
+    st.write("Instalando detectron2, por favor espere...")
+    install("detectron2 -f https://dl.fbaipublicfiles.com/detectron2/wheels/cpu/torch1.10/index.html")
+    import detectron2
+
 import detectron2
 from detectron2.utils.logger import setup_logger
 setup_logger()
@@ -13,7 +29,7 @@ from detectron2.config import get_cfg
 from detectron2.utils.visualizer import Visualizer
 from detectron2.data import MetadataCatalog
 from detectron2 import model_zoo
-import streamlit as st
+#import streamlit as st
 from PIL import Image
 from skimage.transform import resize
 import pandas as pd

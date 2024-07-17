@@ -25,7 +25,7 @@ names = ['CATHARTES AURA', 'COEREBA FLAVEOLA', 'COLUMBA LIVIA', 'CORAGYPS ATRATU
 
 # Se recibe la imagen y el modelo, devuelve la predicción
 def model_prediction(img, model):
-    img_resize = resize(img, (width_shape, height_shape))
+    img_resize = resize(img, (width_shape, height_shape), anti_aliasing=True)
     x = preprocess_input(img_resize * 255)
     x = np.expand_dims(x, axis=0)
     preds = model.predict(x)
@@ -43,9 +43,6 @@ def get_bird_info(bird_name, excel_path):
 
 def load_bird_images(bird_name):
     bird_dir = os.path.join('datasetpreprocesado/test', bird_name.replace(' ', ' '))
-    
-    # Mostrar la ruta que está siendo intentada
-    #st.write(f"Intentando acceder a la ruta: {bird_dir}")
     
     bird_name_buscar = bird_name.replace(' ', '+')
     st.markdown(f"[Ver más Información](https://www.google.com/search?q={bird_name_buscar})")
@@ -68,58 +65,60 @@ def main():
     except Exception as e:
         st.error(f"Error al cargar el modelo: {e}")
         return
-    # Fondo o banner de la aplicación
+    
     st.image("banner2.jpg", use_column_width=True)
     
     st.title("Clasificación Alada")
     st.header("Sistema Multiclase para la Identificación Aviar en Ibagué")
-    
 
     # Menú
     menu = ["Información del Proyecto", "Realizar Predicciones", "Listar Aves Entrenadas", "Agradecimientos"]
     choice = st.sidebar.selectbox("Selecciona una opción", menu)
-
-    
-    
-   
 
     if choice == "Realizar Predicciones":
         st.subheader("Realizar Predicciones")
         img_file_buffer = st.file_uploader("Carga una imagen", type=["png", "jpg", "jpeg"])
         
         if img_file_buffer is not None:
-            image = np.array(Image.open(img_file_buffer))    
+            image = np.array(Image.open(img_file_buffer))
+            
+            if image.ndim == 2:  # Si la imagen es en escala de grises, conviértela a RGB
+                image = np.stack([image]*3, axis=-1)
+            elif image.shape[2] == 4:  # Si la imagen tiene un canal alfa, elimínalo
+                image = image[:, :, :3]
+            
             st.image(image, caption="Imagen", use_column_width=True)
         
         if st.button("Identificar Ave"):
             if img_file_buffer is not None:
-                preds = model_prediction(image, model)
-                bird_name = names[np.argmax(preds)]
-                confidence = np.max(preds)
-                st.success(f'El ave es: {bird_name} con una precisión del {confidence:.2%}')
+                try:
+                    preds = model_prediction(image, model)
+                    bird_name = names[np.argmax(preds)]
+                    confidence = np.max(preds)
+                    st.success(f'El ave es: {bird_name} con una precisión del {confidence:.2%}')
 
-                # Buscar información del ave en el archivo Excel
-                bird_info = get_bird_info(bird_name, EXCEL_PATH)
-                if bird_info is not None:
-                    st.write("**Nombre Científico:**", bird_info['Nombre_Cientifico'])
-                    st.write("**Nombre Común:**", bird_info['Nombre_Comun'])
-                    st.write("**Descripción General:**", bird_info['Descripcion_General'])
-                    st.write("**Distribución en el Tolima:**", bird_info['Distribucion_tolima'])
-                    st.write("**Distribución en Colombia:**", bird_info['Distribucion_Colombia'])
-                    st.write("**Estado de Conservación:**", bird_info['Estado_Conservacion'])
-                else:
-                    st.warning("No se encontró información adicional sobre esta ave.")
-                
-                # Cargar y mostrar imágenes del ave desde el directorio correspondiente
-                bird_images = load_bird_images(bird_name)
-                if bird_images:
-                    st.subheader("Galería de Imágenes del Ave")
-                    cols = st.columns(3)
-                    for i, img_path in enumerate(bird_images):
-                        img = Image.open(img_path)
-                        cols[i % 3].image(img, use_column_width=True)
-                else:
-                    st.warning("No se encontraron imágenes adicionales del ave en la galería.")
+                    bird_info = get_bird_info(bird_name, EXCEL_PATH)
+                    if bird_info is not None:
+                        st.write("**Nombre Científico:**", bird_info['Nombre_Cientifico'])
+                        st.write("**Nombre Común:**", bird_info['Nombre_Comun'])
+                        st.write("**Descripción General:**", bird_info['Descripcion_General'])
+                        st.write("**Distribución en el Tolima:**", bird_info['Distribucion_tolima'])
+                        st.write("**Distribución en Colombia:**", bird_info['Distribucion_Colombia'])
+                        st.write("**Estado de Conservación:**", bird_info['Estado_Conservacion'])
+                    else:
+                        st.warning("No se encontró información adicional sobre esta ave.")
+                    
+                    bird_images = load_bird_images(bird_name)
+                    if bird_images:
+                        st.subheader("Galería de Imágenes del Ave")
+                        cols = st.columns(3)
+                        for i, img_path in enumerate(bird_images):
+                            img = Image.open(img_path)
+                            cols[i % 3].image(img, use_column_width=True)
+                    else:
+                        st.warning("No se encontraron imágenes adicionales del ave en la galería.")
+                except ValueError as e:
+                    st.error(f"Error de predicción: {e}")
             else:
                 st.warning("Por favor, carga una imagen primero.")
 
@@ -152,11 +151,9 @@ def main():
         for i in range(num_rows):
             bird_row = birds_info[i * num_columns: (i + 1) * num_columns]
 
-            # Crear una fila de la tabla
             col1, col2, col3 = st.columns(3)
 
             for j, bird in enumerate(bird_row):
-                # Agregar imagen, nombre y enlace a Google a cada columna
                 if j == 0:
                     with col1:
                         st.image(bird["image"], caption=bird["name"], width=100)
@@ -173,30 +170,13 @@ def main():
                         st.write(bird["name"])
                         st.markdown(f"[Buscar en Google](https://www.google.com/search?q={bird['name']})")
 
+    elif choice == "Información del Proyecto":
+        st.subheader("Información del Proyecto")
+        st.write("El proyecto de identificación de aves utiliza técnicas de deep learning para reconocer distintas especies en la región de Tolima. El objetivo es crear una herramienta que permita a los investigadores y aficionados identificar aves de manera precisa y rápida.")
+        
     elif choice == "Agradecimientos":
         st.subheader("Agradecimientos")
-        st.markdown("""
-        Agradezco al Ministerio de Tecnologías de la Información y las Comunicaciones de Colombia por financiar la Maestría en Ciencia de Datos. 
-        Asimismo, a la Universidad Cooperativa de Colombia Campus Ibagué - Espinal por facilitar el apoyo del tiempo dentro del Plan de Trabajo para realizar la Maestría. 
-        Además, a la Universidad Oberta de Cataluña por permitir la formación impartida y la materialización de las competencias aprendidas en este proyecto, a mis tutores Bernat Bas Pujols y Pablo Fernandez Blanco.
-        """)
-
-    elif choice == "Información del Proyecto":
-        st.markdown("""
-    ### Información del Proyecto
-    El proyecto "Clasificación Alada" es un sistema multiclase diseñado para la identificación de aves en la región de Ibagué, 
-    con un enfoque centrado en técnicas de Deep Learning. El objetivo principal es proporcionar una herramienta precisa y eficiente 
-    para la clasificación de aves a partir de imágenes. Este trabajo fue apoyado  por el Ministerio de Tecnologías de la Información y las Comunicaciones de Colombia y la Universidad Cooperativa de Colombia, Campus Ibagué - Espinal.
-
-    
-    **Oscar Augusto Diaz Triana**  
-    Universidad Oberta de Cataluña  
-    Master en Ciencia de Datos  
-    Deep Learning  
-    **Tutores de TF:** Bernat Bas Pujols, Pablo Fernandez Blanco  
-    **Profesor responsable de la asignatura:** Albert Solé  
-    **2024**
-    """)
+        st.write("Este proyecto ha sido posible gracias al apoyo del grupo de investigación en machine learning de la Universidad de Tolima y la colaboración de expertos ornitólogos de la región.")
 
 if __name__ == '__main__':
     main()

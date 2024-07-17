@@ -171,11 +171,29 @@ def main():
 
     elif choice == "Información del Proyecto":
         st.subheader("Información del Proyecto")
-        st.write("El proyecto de identificación de aves utiliza técnicas de deep learning para reconocer distintas especies en la región de Tolima. El objetivo es crear una herramienta que permita a los investigadores y aficionados identificar aves de manera precisa y rápida.")
+        st.markdown("""
+    ### Información del Proyecto
+    El proyecto "Clasificación Alada" es un sistema multiclase diseñado para la identificación de aves en la región de Ibagué, 
+    con un enfoque centrado en técnicas de Deep Learning. El objetivo principal es proporcionar una herramienta precisa y eficiente 
+    para la clasificación de aves a partir de imágenes. Este trabajo fue apoyado  por el Ministerio de Tecnologías de la Información y las Comunicaciones de Colombia y la Universidad Cooperativa de Colombia, Campus Ibagué - Espinal.
+
+    
+    **Oscar Augusto Diaz Triana**  
+    Universidad Oberta de Cataluña  
+    Master en Ciencia de Datos  
+    Deep Learning  
+    **Tutores de TF:** Bernat Bas Pujols, Pablo Fernandez Blanco  
+    **Profesor responsable de la asignatura:** Albert Solé  
+    **2024**
+    """)
         
     elif choice == "Agradecimientos":
         st.subheader("Agradecimientos")
-        st.write("Este proyecto ha sido posible gracias al apoyo del grupo de investigación en machine learning de la Universidad de Tolima y la colaboración de expertos ornitólogos de la región.")
+        st.markdown("""
+        Agradezco al Ministerio de Tecnologías de la Información y las Comunicaciones de Colombia por financiar la Maestría en Ciencia de Datos. 
+        Asimismo, a la Universidad Cooperativa de Colombia Campus Ibagué - Espinal por facilitar el apoyo del tiempo dentro del Plan de Trabajo para realizar la Maestría. 
+        Además, a la Universidad Oberta de Cataluña por permitir la formación impartida y la materialización de las competencias aprendidas en este proyecto, a mis tutores Bernat Bas Pujols y Pablo Fernandez Blanco.
+        """)
     
     elif choice == "Trabajos Futuros":
         st.subheader("Trabajos Futuros: Segmentación Semántica para Evaluación de Imágenes de Aves")

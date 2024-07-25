@@ -2,6 +2,9 @@
 	"folders": [
 		{
 			"path": "."
+		},
+		{
+			"path": "../La_Nave_del_Conocimiento"
 		}
 	]
 }

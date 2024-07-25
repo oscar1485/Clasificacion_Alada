@@ -1,0 +1,42 @@
+Activa tu entorno virtual (si no está ya activado):
+
+bash
+Copiar código
+source /home/adminuser/venv/bin/activate
+Instala las dependencias necesarias:
+
+bash
+Copiar código
+pip install torch torchvision
+Instala detectron2:
+
+bash
+Copiar código
+pip install 'git+https://github.com/facebookresearch/detectron2.git'
+Verifica la instalación de detectron2:
+
+python
+Copiar código
+python -c "import detectron2; print('Detectron2 instalado correctamente')"
+Ejecuta tu script de Streamlit:
+
+bash
+Copiar código
+streamlit run appStreamlit.py --server.enableCORS false --server.enableXsrfProtection false
+Si continúas teniendo problemas, podrías intentar reinstalar detectron2 de la siguiente manera, que es un enfoque alternativo recomendado por los desarrolladores:
+
+Clona el repositorio de detectron2:
+
+bash
+Copiar código
+git clone https://github.com/facebookresearch/detectron2.git
+cd detectron2
+Instala detectron2 desde el repositorio clonado:
+
+bash
+Copiar código
+pip install -e .
+
+
+
+streamlit run appStreamlit.py --server.enableCORS false --server.enableXsrfProtection false

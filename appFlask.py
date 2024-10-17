@@ -33,7 +33,7 @@ def crear_app():
     # Cargamos el modelo preentrenado
     model = load_model(MODEL_PATH)
 
-    print('Modelo cargado exitosamente. Verificar http://127.0.0.1:5000/')
+    print('Modelo cargado exitosamente. Verificar http://127.0.0.1:10000/')
 
     # Realizamos la predicción usando la imagen cargada y el modelo
     def model_predict(img_path, model):
@@ -56,23 +56,28 @@ def crear_app():
     @app.route('/predict', methods=['GET', 'POST'])
     def upload():
         if request.method == 'POST':
-            # Obtiene el archivo del request
-            f = request.files['file']
+            try:
+                # Obtiene el archivo del request
+                f = request.files['file']
 
-            # Graba el archivo en ./uploads
-            basepath = os.path.dirname(__file__)
-            file_path = os.path.join(
-                basepath, 'uploads', secure_filename(f.filename))
-            f.save(file_path)
+                # Graba el archivo en ./uploads
+                basepath = os.path.dirname(__file__)
+                file_path = os.path.join(
+                    basepath, 'uploads', secure_filename(f.filename))
+                f.save(file_path)
 
-            # Predicción
-            preds = model_predict(file_path, model)
+                # Predicción
+                preds = model_predict(file_path, model)
 
-            print('PREDICCIÓN', names[np.argmax(preds)])
-            
-            # Enviamos el resultado de la predicción
-            result = str(names[np.argmax(preds)])              
-            return result
+                # Obtener la clase con mayor probabilidad
+                pred_class = names[np.argmax(preds)]
+                print('PREDICCIÓN', pred_class)
+
+                # Enviamos el resultado de la predicción
+                return pred_class
+            except Exception as e:
+                print(f'Error en la predicción: {str(e)}')
+                return 'Error en la predicción. Intente nuevamente.', 500
         return None
     return app
 

@@ -7,11 +7,14 @@ from keras.applications.imagenet_utils import preprocess_input
 # Flask 
 from flask import Flask, request, render_template
 from werkzeug.utils import secure_filename
+from flask import Flask, request, jsonify
 
 import os
 import numpy as np
 import cv2
 from dotenv import load_dotenv
+
+
 
 def crear_app():
     width_shape = 224
@@ -62,23 +65,23 @@ def crear_app():
 
                 # Graba el archivo en ./uploads
                 basepath = os.path.dirname(__file__)
-                file_path = os.path.join(
-                    basepath, 'uploads', secure_filename(f.filename))
+                file_path = os.path.join(basepath, 'uploads', secure_filename(f.filename))
                 f.save(file_path)
 
                 # Predicción
-                preds = model_predict(file_path, model)
+                preds = model_predict(file_path, model)  # Asegúrate de que esta función esté definida
 
                 # Obtener la clase con mayor probabilidad
                 pred_class = names[np.argmax(preds)]
-                print('PREDICCIÓN', pred_class)
+                print('PREDICCIÓN:', pred_class)
 
-                # Enviamos el resultado de la predicción
-                return pred_class
+                # Enviamos el resultado de la predicción en formato JSON
+                return jsonify({"predicción": pred_class}), 200
             except Exception as e:
                 print(f'Error en la predicción: {str(e)}')
-                return 'Error en la predicción. Intente nuevamente.', 500
-        return None
+                return jsonify({"error": "Error en la predicción. Intente nuevamente."}), 500
+
+        return jsonify({"message": "Método no permitido."}), 405  # Manejo para métodos GET
     return app
 
 

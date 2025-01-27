@@ -182,11 +182,8 @@ def main():
                     
     **Oscar Augusto Diaz Triana**
     **Fernando Gutierrez Portela**
-                     
     Universidad Cooperativa de Colombia - Campus Ibagué-Espinal 
-                     
     Programa de Ingeniería de Sistemas
-                      
     **2024**
     """)
         

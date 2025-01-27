@@ -179,8 +179,8 @@ def main():
 
     Este proyecto, desarrollado con una metodología interdisciplinaria, busca posicionarse como una referencia en la integración de tecnología de punta en la conservación de ecosistemas regionales.
 
+                    
     **Oscar Augusto Diaz Triana**
-                     
     **Fernando Gutierrez Portela**
                      
     Universidad Cooperativa de Colombia - Campus Ibagué-Espinal 

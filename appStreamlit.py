@@ -74,6 +74,13 @@ def load_bird_images(bird_name):
         return []
 
 def main():
+    st.markdown("""
+    <hr>
+    <p style="text-align: center; font-size: 14px;">
+        Universidad Cooperativa de Colombia - Campus Ibagué-Espinal <br>
+        Facultad de Ingeniería 2025
+    </p>
+    """, unsafe_allow_html=True)
     # Se intenta cargar el modelo
     try:
         model = load_model(MODEL_PATH)
@@ -232,10 +239,4 @@ def main():
 if __name__ == '__main__':
     main()
 
-    st.markdown("""
-    <hr>
-    <p style="text-align: center; font-size: 14px;">
-        Universidad Cooperativa de Colombia - Campus Ibagué-Espinal <br>
-        Facultad de Ingeniería 2025
-    </p>
-    """, unsafe_allow_html=True)
+

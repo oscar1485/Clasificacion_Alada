@@ -7,6 +7,23 @@ from skimage.transform import resize
 import pandas as pd
 import os
 
+
+html_content = """
+<div style="width: 100%; clear: both; display: flex; align-items: center; justify-content: space-between;">
+    <div style="width: 50%; display: flex; justify-content: flex-start;">
+        <img src="https://www.bing.com/images/blob?bcid=suFss51W2wgIpA" style="width: 100%; max-width: 500px; height: auto;">
+    </div>
+    <div style="width: 50%; text-align: right; padding-left: 0px;">
+        <p style="margin: 0px; font-weight: bold;">Laboratorio de Tecnologías Emergentes</p>
+        <p style="margin: 0px;">Universidad Cooperativa de Colombia, Campus Ibagué-Espinal</p>
+        <p style="margin: 0px;">Facultad de Ingeniería</p>
+        <p style="margin: 0px;">Programa de Ingeniería de Sistemas</p>
+        <p style="margin: 0px;">2025</p>
+    </div>
+</div>
+"""
+
+
 # Path del modelo preentrenado
 MODEL_PATH = 'models/optimizado.keras'
 
@@ -64,7 +81,7 @@ def main():
     except Exception as e:
         st.error(f"Error al cargar el modelo: {e}")
         return
-    
+    st.markdown(html_content, unsafe_allow_html=True)
     st.image("banner2.jpg", use_container_width=True)
     
     st.title("Tolima Birds AI")
@@ -116,7 +133,7 @@ def main():
                         cols = st.columns(3)
                         for i, img_path in enumerate(bird_images):
                             img = Image.open(img_path)
-                            cols[i % 3].image(img, use_column_width=True)
+                            cols[i % 3].image(img, use_container_width=True)
                     else:
                         st.warning("No se encontraron imágenes adicionales del ave en la galería.")
                 except ValueError as e:
@@ -209,6 +226,14 @@ def main():
         st.write("Este trabajo futuro también implicará la implementación de una arquitectura adicional de redes neuronales convolucionales adaptada específicamente para la segmentación semántica de aves en imágenes de campo, incorporando técnicas avanzadas como U-Net o Mask R-CNN.")
 
         st.write("La integración de esta funcionalidad ampliará las capacidades del sistema actual, facilitando su uso en diversas aplicaciones de investigación y conservación.")
+
+st.markdown("""
+<hr>
+<p style="text-align: center; font-size: 14px;">
+    Universidad Cooperativa de Colombia - Campus Ibagué-Espinal <br>
+    Facultad de Ingeniería 2025
+</p>
+""", unsafe_allow_html=True)
 
 if __name__ == '__main__':
     main()

@@ -178,17 +178,17 @@ def main():
     La iniciativa combina el poder de las redes neuronales convolucionales con un enfoque en la diversidad ecológica local, permitiendo a investigadores, estudiantes y conservacionistas acceder a una herramienta eficiente y de fácil uso para el monitoreo y estudio de las aves de Tolima. Además, el sistema contribuye a la generación de conocimiento científico y fomenta la educación ambiental en la comunidad, promoviendo el cuidado del entorno natural.
 
     Este proyecto, desarrollado con una metodología interdisciplinaria, busca posicionarse como una referencia en la integración de tecnología de punta en la conservación de ecosistemas regionales.
-
+    """)
                     
     
-    **Investigadores:**
-                    
-    Oscar Augusto Diaz Triana
-    Fernando Gutierrez Portela
-    Universidad Cooperativa de Colombia - Campus Ibagué-Espinal 
-    Programa de Ingeniería de Sistemas
-    2024
-    """)
+        st.subheader("**Investigadores:**")
+        
+        st.subheader("Oscar Augusto Diaz Triana")
+        st.subheader("Fernando Gutierrez Portela")
+        st.subheader("Universidad Cooperativa de Colombia - Campus Ibagué-Espinal") 
+        st.subheader("Programa de Ingeniería de Sistemas")
+        st.subheader("2024")
+    
         
     elif choice == "Agradecimientos":
         st.subheader("Agradecimientos")

@@ -65,7 +65,7 @@ def main():
         st.error(f"Error al cargar el modelo: {e}")
         return
     
-    st.image("banner2.jpg", use_column_width=True)
+    st.image("banner2.jpg", use_container_width=True)
     
     st.title("Clasificación Alada")
     st.header("Sistema Multiclase para la Identificación Aviar en Ibagué")
@@ -86,7 +86,7 @@ def main():
             elif image.shape[2] == 4:  # Si la imagen tiene un canal alfa, elimínalo
                 image = image[:, :, :3]
             
-            st.image(image, caption="Imagen", use_column_width=True)
+            st.image(image, caption="Imagen", use_container_width=True)
         
         if st.button("Identificar Ave"):
             if img_file_buffer is not None:

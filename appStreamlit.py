@@ -175,11 +175,10 @@ def main():
     
     Tolima Birds AI es un sistema innovador diseñado para la identificación y clasificación automatizada de aves en el departamento del Tolima, empleando técnicas avanzadas de inteligencia artificial. Este proyecto busca apoyar la conservación de la biodiversidad aviar de la región, facilitando la identificación precisa de especies mediante el análisis de imágenes y datos.
 
-La iniciativa combina el poder de las redes neuronales convolucionales con un enfoque en la diversidad ecológica local, permitiendo a investigadores, estudiantes y conservacionistas acceder a una herramienta eficiente y de fácil uso para el monitoreo y estudio de las aves de Tolima. Además, el sistema contribuye a la generación de conocimiento científico y fomenta la educación ambiental en la comunidad, promoviendo el cuidado del entorno natural.
+    La iniciativa combina el poder de las redes neuronales convolucionales con un enfoque en la diversidad ecológica local, permitiendo a investigadores, estudiantes y conservacionistas acceder a una herramienta eficiente y de fácil uso para el monitoreo y estudio de las aves de Tolima. Además, el sistema contribuye a la generación de conocimiento científico y fomenta la educación ambiental en la comunidad, promoviendo el cuidado del entorno natural.
 
-Este proyecto, desarrollado con una metodología interdisciplinaria, busca posicionarse como una referencia en la integración de tecnología de punta en la conservación de ecosistemas regionales.
+    Este proyecto, desarrollado con una metodología interdisciplinaria, busca posicionarse como una referencia en la integración de tecnología de punta en la conservación de ecosistemas regionales.
 
-    
     **Oscar Augusto Diaz Triana** 
     **Fernando Gutierrez Portela** 
     Universidad Cooperativa de Colombia - Campus Ibagué-Espinal  

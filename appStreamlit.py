@@ -76,6 +76,9 @@ def main():
 
     if choice == "Realizar Predicciones":
         st.subheader("Realizar Predicciones")
+        st.markdown("""
+        En esta sección, podrás cargar una imagen de un ave para identificar su especie utilizando el sistema Tolima Birds AI. Una vez cargada la imagen, el sistema procesará la información y mostrará los resultados, incluyendo el nombre de la especie, detalles relevantes sobre su hábitat y características principales, además de imágenes adicionales relacionadas con el ave identificada. Este proceso está diseñado para ofrecer una experiencia intuitiva y educativa, apoyando la investigación y conservación de la biodiversidad aviar en el Tolima.
+        """)
         img_file_buffer = st.file_uploader("Carga una imagen", type=["png", "jpg", "jpeg"])
         
         if img_file_buffer is not None:

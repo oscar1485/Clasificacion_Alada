@@ -76,7 +76,7 @@ def load_bird_images(bird_name):
 def main():
     #head desde el html
     st.markdown(html_content, unsafe_allow_html=True)
-    st.markdown("<br><br><br><br><br><br>", unsafe_allow_html=True)
+    st.markdown("<br><br><br><br>", unsafe_allow_html=True)
     st.image("banner2.jpg", use_container_width=True)
     # Se intenta cargar el modelo
     try:

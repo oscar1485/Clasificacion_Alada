@@ -227,13 +227,15 @@ def main():
 
         st.write("La integración de esta funcionalidad ampliará las capacidades del sistema actual, facilitando su uso en diversas aplicaciones de investigación y conservación.")
 
-st.markdown("""
-<hr>
-<p style="text-align: center; font-size: 14px;">
-    Universidad Cooperativa de Colombia - Campus Ibagué-Espinal <br>
-    Facultad de Ingeniería 2025
-</p>
-""", unsafe_allow_html=True)
+
 
 if __name__ == '__main__':
     main()
+
+    st.markdown("""
+    <hr>
+    <p style="text-align: center; font-size: 14px;">
+        Universidad Cooperativa de Colombia - Campus Ibagué-Espinal <br>
+        Facultad de Ingeniería 2025
+    </p>
+    """, unsafe_allow_html=True)

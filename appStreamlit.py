@@ -67,8 +67,8 @@ def main():
     
     st.image("banner2.jpg", use_container_width=True)
     
-    st.title("Clasificación Alada")
-    st.header("Sistema Multiclase para la Identificación Aviar en Ibagué")
+    st.title("Tolima Birds AI")
+    st.header("Sistema de Identificación Aviar Basado en Inteligencia Artificial")
 
     # Menú
     menu = ["Información del Proyecto", "Realizar Predicciones", "Listar Aves Entrenadas", "Agradecimientos", "Trabajos Futuros"]
@@ -173,17 +173,17 @@ def main():
         st.subheader("Información del Proyecto")
         st.markdown("""
     
-    El proyecto "Clasificación Alada" es un sistema multiclase diseñado para la identificación de aves en la región de Ibagué, 
-    con un enfoque centrado en técnicas de Deep Learning. El objetivo principal es proporcionar una herramienta precisa y eficiente 
-    para la clasificación de aves a partir de imágenes. Este trabajo fue apoyado  por el Ministerio de Tecnologías de la Información y las Comunicaciones de Colombia y la Universidad Cooperativa de Colombia, Campus Ibagué - Espinal.
+    Tolima Birds AI es un sistema innovador diseñado para la identificación y clasificación automatizada de aves en el departamento del Tolima, empleando técnicas avanzadas de inteligencia artificial. Este proyecto busca apoyar la conservación de la biodiversidad aviar de la región, facilitando la identificación precisa de especies mediante el análisis de imágenes y datos.
+
+La iniciativa combina el poder de las redes neuronales convolucionales con un enfoque en la diversidad ecológica local, permitiendo a investigadores, estudiantes y conservacionistas acceder a una herramienta eficiente y de fácil uso para el monitoreo y estudio de las aves de Tolima. Además, el sistema contribuye a la generación de conocimiento científico y fomenta la educación ambiental en la comunidad, promoviendo el cuidado del entorno natural.
+
+Este proyecto, desarrollado con una metodología interdisciplinaria, busca posicionarse como una referencia en la integración de tecnología de punta en la conservación de ecosistemas regionales.
 
     
-    **Oscar Augusto Diaz Triana**  
-    Universidad Oberta de Cataluña  
-    Master en Ciencia de Datos  
-    Deep Learning  
-    **Tutores de TF:** Bernat Bas Pujols, Pablo Fernandez Blanco  
-    **Profesor responsable de la asignatura:** Albert Solé  
+    **Oscar Augusto Diaz Triana** 
+    **Fernando Gutierrez Portela** 
+    Universidad Cooperativa de Colombia - Campus Ibagué-Espinal  
+    Programa de Ingeniería de Sistemas  
     **2024**
     """)
         

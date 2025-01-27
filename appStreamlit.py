@@ -183,19 +183,17 @@ def main():
     
         st.subheader("**Investigadores:**")
         
-        st.subheader("Oscar Augusto Diaz Triana")
-        st.subheader("Fernando Gutierrez Portela")
-        st.subheader("Universidad Cooperativa de Colombia - Campus Ibagué-Espinal") 
-        st.subheader("Programa de Ingeniería de Sistemas")
-        st.subheader("2024")
+        st.write("Oscar Augusto Diaz Triana")
+        st.write("Fernando Gutierrez Portela")
+        st.write("Universidad Cooperativa de Colombia - Campus Ibagué-Espinal") 
+        st.write("Programa de Ingeniería de Sistemas")
+        st.write("2024")
     
         
     elif choice == "Agradecimientos":
         st.subheader("Agradecimientos")
         st.markdown("""
-        Agradezco al Ministerio de Tecnologías de la Información y las Comunicaciones de Colombia por financiar la Maestría en Ciencia de Datos. 
-        Asimismo, a la Universidad Cooperativa de Colombia Campus Ibagué - Espinal por facilitar el apoyo del tiempo dentro del Plan de Trabajo para realizar la Maestría. 
-        Además, a la Universidad Oberta de Cataluña por permitir la formación impartida y la materialización de las competencias aprendidas en este proyecto, a mis tutores Bernat Bas Pujols y Pablo Fernandez Blanco.
+        Este trabajo ha sido posible gracias al apoyo de la Universidad Cooperativa de Colombia, así como al respaldo del Comité Nacional para el Desarrollo de la Investigación (CONADI), cuyo compromiso con la promoción de la investigación ha sido fundamental para el desarrollo de este proyecto.
         """)
     
     elif choice == "Trabajos Futuros":

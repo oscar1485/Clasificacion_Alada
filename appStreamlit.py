@@ -11,9 +11,9 @@ import os
 html_content = """
 <div style="width: 100%; clear: both; display: flex; align-items: center; justify-content: space-between;">
     <div style="width: 50%; display: flex; justify-content: flex-start;">
-        <img src="https://www.ucc.edu.co/institucional/acerca-de-la-universidad/Documents/logo_ucc_2018(CURVAS)-01.png" style="width: 100%; max-width: 500px; height: auto;">
+        <img src="https://www.ucc.edu.co/institucional/acerca-de-la-universidad/Documents/logo_ucc_2018(CURVAS)-01.png" style="width: 100%; max-width: 300px; height: auto;">
     </div>
-    <div style="width: 50%; text-align: right; padding-left: 0px; font-size: 12px;">
+    <div style="width: 50%; text-align: right; padding-left: 0px; font-size: 13px;">
         <p style="margin: 0px; font-weight: bold;">Laboratorio de Tecnologías Emergentes</p>
         <p style="margin: 0px;">Universidad Cooperativa de Colombia, Campus Ibagué-Espinal</p>
         <p style="margin: 0px;">Facultad de Ingeniería</p>
@@ -76,7 +76,7 @@ def load_bird_images(bird_name):
 def main():
     #head desde el html
     st.markdown(html_content, unsafe_allow_html=True)
-
+    st.markdown("<br><br><br><br><br><br>", unsafe_allow_html=True)
     st.image("banner2.jpg", use_container_width=True)
     # Se intenta cargar el modelo
     try:

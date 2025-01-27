@@ -187,7 +187,7 @@ def main():
     Universidad Cooperativa de Colombia - Campus Ibagué-Espinal 
     Programa de Ingeniería de Sistemas
     2024
-    """, unsafe_allow_html=True)
+    """)
         
     elif choice == "Agradecimientos":
         st.subheader("Agradecimientos")

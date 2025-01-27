@@ -209,9 +209,7 @@ def main():
         
         st.write("Oscar Augusto Diaz Triana")
         st.write("Fernando Gutierrez Portela")
-        st.write("Universidad Cooperativa de Colombia - Campus Ibagué-Espinal") 
-        st.write("Programa de Ingeniería de Sistemas")
-        st.write("2024")
+
     
         
     elif choice == "Agradecimientos":
